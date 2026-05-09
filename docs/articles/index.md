@@ -7,11 +7,9 @@ description: Essays, notes, and publishable ideas.
 
 Essays, notes, and publishable ideas.
 
-New: [How to Write Here](/articles/how-to-write-here)
-
 ## Essays
 
-[How to Write Here](/articles/how-to-write-here)
+No articles yet.
 
 ## Writing
 
