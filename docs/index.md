@@ -1,25 +1,15 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
-
-hero:
-  name: "shxmbxlx"
-  text: "Notes on building, learning, and turning ideas into value"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+title: shxmbxlx
+description: Notes on building, learning, and turning ideas into value.
+aside: false
 ---
 
+# shxmbxlx
+
+Notes on building, learning, and turning ideas into value.
+
+New: [How to Write Here](/articles/how-to-write-here) | [All Articles](/articles/)
+
+Want to publish something? Create a Markdown file in `docs/articles/`, then add it to the list on the articles page.
+
+© mmxxvi shxmbxlx

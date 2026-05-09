@@ -1,28 +1,27 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "shxmbxlx",
   description: "Notes on building, learning, and turning ideas into value",
+  appearance: true,
+  cleanUrls: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Articles", link: "/articles/" },
     ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+    outline: false,
+    sidebar: {
+      "/articles/": [
+        {
+          text: "Articles",
+          items: [
+            { text: "All articles", link: "/articles/" },
+            { text: "How to Write Here", link: "/articles/how-to-write-here" },
+          ],
+        },
+      ],
+    },
+  },
+});
