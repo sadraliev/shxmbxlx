@@ -9,9 +9,9 @@ Essays, notes, and publishable ideas.
 
 New: [How to Write Here](/articles/how-to-write-here)
 
-## All
+## Essays
 
-- [How to Write Here](/articles/how-to-write-here)
+[How to Write Here](/articles/how-to-write-here)
 
 ## Writing
 

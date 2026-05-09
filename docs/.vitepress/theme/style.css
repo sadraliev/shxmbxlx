@@ -75,7 +75,7 @@ html {
 
 body {
   color: var(--vp-c-text-1);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .VPNav {
@@ -87,10 +87,26 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.VPNavBarSearch,
+.VPNavBarExtra,
+.VPNavBarHamburger,
+.VPLocalNav.empty,
+.VPNavScreen {
+  display: none !important;
+}
+
+.VPNavBarAppearance {
+  display: flex !important;
+}
+
+.VPNavBar .content-body {
+  gap: 0;
+}
+
 .VPNavBarTitle .title,
 .VPNavBarMenuLink {
   font-family: var(--vp-font-family-base);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 400;
 }
 
@@ -121,7 +137,7 @@ body {
 
 .vp-doc h1 {
   margin-bottom: 20px;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.2;
@@ -131,7 +147,7 @@ body {
   margin: 30px 0 10px;
   border-top: 0;
   padding-top: 0;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -152,6 +168,10 @@ body {
   text-decoration: underline;
 }
 
+.vp-doc .header-anchor {
+  display: none;
+}
+
 .vp-doc ul,
 .vp-doc ol {
   padding-left: 1.25rem;
@@ -167,10 +187,78 @@ body {
   border-radius: calc(var(--radius) * 0.6);
   background: var(--muted);
   font-size: 0.9em;
+  word-break: break-word;
 }
 
 @media (min-width: 960px) {
   .VPDoc {
     padding-top: 44px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --vp-nav-height: 48px;
+  }
+
+  body {
+    font-size: 1.0625rem;
+  }
+
+  .VPNavBar .wrapper {
+    padding: 0;
+  }
+
+  .VPNavBar .container {
+    padding: 0 20px;
+  }
+
+  .VPNavBar .content {
+    padding-left: 12px;
+  }
+
+  .VPNavBar .content-body {
+    column-gap: 10px;
+  }
+
+  .VPNavBarTitle .title {
+    font-size: 1rem;
+  }
+
+  .VPDoc {
+    padding-top: 20px;
+    padding-bottom: 48px;
+  }
+
+  .VPDoc .container {
+    padding: 0 22px;
+  }
+
+  .VPDoc .content {
+    padding: 0;
+  }
+
+  .VPDoc.has-aside .content-container,
+  .VPDoc:not(.has-sidebar) .content,
+  .VPDoc:not(.has-sidebar) .content-container {
+    max-width: none;
+  }
+
+  .vp-doc {
+    line-height: 1.62;
+  }
+
+  .vp-doc h1 {
+    margin-bottom: 18px;
+    font-size: 1.6875rem;
+  }
+
+  .vp-doc h2 {
+    margin-top: 28px;
+    font-size: 1.1875rem;
+  }
+
+  .vp-doc p {
+    margin: 15px 0;
   }
 }
