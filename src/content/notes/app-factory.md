@@ -177,6 +177,10 @@ The same orchestrator that creates a project can also take it apart. App Factory
 
 The order matters. If the iac role were dropped first, the project's destroy would have no permissions to run. So removal does what creation did, only reversed: the chicken-or-egg dilemma, played backwards.
 
+---
+
+*Continued in [**From Template to Live App**](/notes/from-template-to-live-app) — the same orchestrator, one step further: it also forks the frontend and backend repos on top of the infrastructure.*
+
 [^1]: **Declarative** means you describe the result you want, not every step. Example: "I need one server" instead of "click here, then click there, then create a server manually."
 
 [^2]: **Idempotent** means you can run the same command many times and get the same result. Example: If the server already exists, Terraform will not create a second one — it will just keep the existing server.

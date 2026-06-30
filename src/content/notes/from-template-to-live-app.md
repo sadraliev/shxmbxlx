@@ -76,8 +76,10 @@ From `gh workflow run` to a login screen in the browser, there's no manual step 
 
 ## Learning by doing
 
-When I started, I treated the orchestrator's permissions as something I'd set once. The defaults felt complete for what I had in mind at the time.
+From day one I knew the orchestrator wasn't finished at v1. The question was what the new pieces would turn out to be.
 
-But each new template needed something slightly different than the one before it. Each time, I extended the defaults — and then realized projects that already existed didn't pick the new defaults up on their own.
+Permissions were one. Each new template wanted them slightly different — extending the defaults was easy, but projects already provisioned stayed frozen at whatever the defaults looked like when they were created.
 
-So I added three workflows for managing permissions on existing projects: `update-project-policies` to replace the whole list, and `set-project-inline-policy` and `remove-project-inline-policy` for finer changes. Each one came from using the system and writing the next small piece that smoothed something out.
+So a second layer grew around the orchestrator, for existing projects — ways to replace a whole policy set, or add and remove a single statement surgically. Each tool came from hitting the same friction twice and deciding to make the third time a one-liner.
+
+The job isn't to anticipate every workflow up front. It's to notice friction and make the next one cheap.
