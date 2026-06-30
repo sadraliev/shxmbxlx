@@ -10,13 +10,20 @@ const dateFmt = (d: Date) =>
   d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 ---
 
-<BaseLayout title="Essays — shxmbxlx" description="Essays and longer-form notes.">
+<BaseLayout title="Essays — shxmbxlx" description='"What do I know?" — Montaigne'>
   <article class="prose">
     <h1>Essays</h1>
-    <p>Essays and longer-form notes.</p>
+
+    <blockquote class="epigraph">
+      <p>
+        <span class="fr">&ldquo;Que sais-je?&rdquo;</span>
+        <span class="en">What do I know?</span>
+      </p>
+      <p class="cite">&mdash; Montaigne</p>
+    </blockquote>
 
     {essays.length === 0 ? (
-      <p><em>No essays yet.</em></p>
+      <p class="empty"><em>Nothing here yet.</em></p>
     ) : (
       <ul class="post-list">
         {essays.map((entry) => (
@@ -36,6 +43,40 @@ const dateFmt = (d: Date) =>
 </BaseLayout>
 
 <style>
+  /* Epigraph — quieter than a normal blockquote. Override .prose defaults. */
+  .prose .epigraph {
+    background: transparent;
+    border-left: 2px solid var(--border);
+    padding: 0.25rem 1rem;
+    margin: 1.25rem 0 2.5rem;
+    border-radius: 0;
+    color: var(--muted-foreground);
+  }
+  .epigraph p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  .fr {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--foreground);
+  }
+  .en {
+    margin-left: 0.5rem;
+    font-size: 0.92em;
+    color: var(--muted-foreground);
+  }
+  .cite {
+    margin-top: 0.25rem !important;
+    font-size: 0.85rem;
+    color: var(--muted-foreground);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .empty {
+    color: var(--muted-foreground);
+  }
+
   .post-list {
     list-style: none;
     margin: 1.5rem 0;
