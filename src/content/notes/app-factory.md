@@ -1,7 +1,7 @@
 ---
 title: App Factory
 description: From manual setup to an automatic project factory — a one-person platform-engineering experiment built on Terraform, GitHub Actions, and AWS OIDC.
-date: 2026-06-01
+date: 2026-04-01
 lang: en
 tags: ["platform-engineering", "terraform", "aws", "github-actions"]
 ---
