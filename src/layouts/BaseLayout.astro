@@ -6,14 +6,22 @@ import { ThemeToggle } from "../components/ThemeToggle";
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
 }
 
-const { title, description = "Notes on building, learning, and turning ideas into value." } = Astro.props;
+const {
+  title,
+  description = "Notes on building, learning, and turning ideas into value.",
+  ogImage = "/og-image.png",
+} = Astro.props;
 
 const pathname = Astro.url.pathname;
 const isEssays = pathname === "/essays" || pathname.startsWith("/essays/");
 const isNotes = pathname === "/notes" || pathname.startsWith("/notes/");
 const isHome = pathname === "/" || pathname === "";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
 ---
 
 <!doctype html>
@@ -24,7 +32,24 @@ const isHome = pathname === "/" || pathname === "";
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="shxmbxlx" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
     <script is:inline>
       (() => {
         const stored = localStorage.getItem("theme");
