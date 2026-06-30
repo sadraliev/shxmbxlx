@@ -1,0 +1,76 @@
+---
+import "../styles/globals.css";
+import Logo from "../components/Logo.astro";
+import { ThemeToggle } from "../components/ThemeToggle";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Notes on building, learning, and turning ideas into value." } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const isEssays = pathname === "/essays" || pathname.startsWith("/essays/");
+const isNotes = pathname === "/notes" || pathname.startsWith("/notes/");
+const isHome = pathname === "/" || pathname === "";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem("theme");
+        const pref = stored === "light" || stored === "dark" ? stored : "auto";
+        const isDark =
+          pref === "dark" ||
+          (pref === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", isDark);
+        document.documentElement.setAttribute("data-theme-pref", pref);
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <Logo />
+        <ThemeToggle client:load />
+      </div>
+    </header>
+
+    <div class="shell">
+      <aside class="sidebar">
+        <nav class="sidebar-nav" aria-label="Categories">
+          <ul>
+            <li>
+              <a href="/" class:list={["sidebar-link", { active: isHome }]}>home</a>
+            </li>
+            <li>
+              <a href="/essays" class:list={["sidebar-link", { active: isEssays }]}>essays</a>
+            </li>
+            <li>
+              <a href="/notes" class:list={["sidebar-link", { active: isNotes }]}>notes</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <slot />
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span>&copy; {new Date().getFullYear()} shxmbxlx</span>
+      </div>
+    </footer>
+  </body>
+</html>

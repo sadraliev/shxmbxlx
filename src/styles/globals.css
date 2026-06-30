@@ -1,0 +1,552 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Iowan Old Style", "Charter", "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --font-mono: ui-monospace, "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+/* Site palette — VitePress default, preserved 1:1 */
+:root {
+  --background: #ffffff;
+  --foreground: #3c3c43;
+  --card: #ffffff;
+  --card-foreground: #3c3c43;
+  --popover: #ffffff;
+  --popover-foreground: #3c3c43;
+  --primary: #3451b2;
+  --primary-foreground: #ffffff;
+  --secondary: #f6f6f7;
+  --secondary-foreground: #3c3c43;
+  --muted: #f6f6f7;
+  --muted-foreground: #67676c;
+  --accent: #f6f6f7;
+  --accent-foreground: #3c3c43;
+  --destructive: #b8272c;
+  --border: #e2e2e3;
+  --input: #e2e2e3;
+  --ring: #3451b2;
+  --radius: 0.5rem;
+  --sidebar: #f6f6f7;
+  --sidebar-foreground: #3c3c43;
+  --sidebar-primary: #3451b2;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f6f6f7;
+  --sidebar-accent-foreground: #3c3c43;
+  --sidebar-border: #e2e2e3;
+  --sidebar-ring: #3451b2;
+  --chart-1: #3451b2;
+  --chart-2: #18794e;
+  --chart-3: #915930;
+  --chart-4: #6f42c1;
+  --chart-5: #b8272c;
+
+  --max-width: 720px;
+  --max-width-wide: 1200px;
+  --nav-height: 64px;
+
+  color-scheme: light dark;
+  font-optical-sizing: auto;
+}
+
+.dark {
+  --background: #1b1b1f;
+  --foreground: #dfdfd6;
+  --card: #202127;
+  --card-foreground: #dfdfd6;
+  --popover: #202127;
+  --popover-foreground: #dfdfd6;
+  --primary: #a8b1ff;
+  --primary-foreground: #1b1b1f;
+  --secondary: #2e2e32;
+  --secondary-foreground: #dfdfd6;
+  --muted: #161618;
+  --muted-foreground: #98989f;
+  --accent: #2e2e32;
+  --accent-foreground: #dfdfd6;
+  --destructive: #f66f81;
+  --border: #3c3f44;
+  --input: #2e2e32;
+  --ring: #a8b1ff;
+  --sidebar: #161618;
+  --sidebar-foreground: #dfdfd6;
+  --sidebar-primary: #a8b1ff;
+  --sidebar-primary-foreground: #1b1b1f;
+  --sidebar-accent: #202127;
+  --sidebar-accent-foreground: #dfdfd6;
+  --sidebar-border: #2e2e32;
+  --sidebar-ring: #a8b1ff;
+  --chart-1: #a8b1ff;
+  --chart-2: #3dd68c;
+  --chart-3: #f9b44e;
+  --chart-4: #c8abfa;
+  --chart-5: #f66f81;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+/* ───────────── Typography defaults (links, code, blocks) ───────────── */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: color-mix(in oklch, var(--primary) 75%, var(--foreground));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Inline code only — NOT the spans inside <pre><code>. */
+:not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  color: var(--primary);
+  background-color: var(--muted);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  line-height: 1.7;
+  background-color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+}
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.25rem;
+  border-left: 3px solid var(--border);
+  color: var(--muted-foreground);
+  background: var(--muted);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+th,
+td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  color: var(--muted-foreground);
+  font-weight: 600;
+}
+
+/* ───────────── Site layout (header, sidebar, shell, footer) ───────────── */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+.site-header__inner {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  height: var(--nav-height);
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+.shell {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem 1.5rem 4rem;
+  align-items: start;
+  align-content: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: calc(var(--nav-height) + 2.5rem);
+}
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sidebar-link {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  margin-left: -0.75rem;
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  transition: color 0.12s ease, background-color 0.12s ease;
+}
+.sidebar-link:hover {
+  color: var(--foreground);
+  background: var(--muted);
+  text-decoration: none;
+}
+.sidebar-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+  font-weight: 500;
+}
+
+main {
+  min-width: 0;
+}
+
+.site-footer {
+  flex-shrink: 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted-foreground);
+  font-size: 0.85rem;
+}
+.site-footer__inner {
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .shell {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  .sidebar {
+    position: static;
+  }
+  .sidebar-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  .sidebar-link {
+    margin-left: 0;
+  }
+}
+
+/* ───────────── Prose (article body) ───────────── */
+.prose {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  color: var(--foreground);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--foreground);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+.prose h1 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+.prose h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.prose h3 {
+  font-size: 1.2rem;
+}
+.prose p {
+  margin: 1rem 0;
+}
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+.prose li {
+  margin: 0.4rem 0;
+}
+.prose li > p {
+  margin: 0.25rem 0;
+}
+
+/* ───────────── Reader Mode ─────────────
+ * Activated by data-reader on <html>. Hides chrome, narrows column,
+ * switches to serif typography, shows article as a card on tinted bg. */
+
+html[data-reader] {
+  --reader-font: var(--font-serif);
+  --reader-size: 1.18rem;
+  --reader-card-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 24px 64px rgba(0, 0, 0, 0.08);
+}
+
+html[data-reader] body {
+  background: var(--reader-page-bg, var(--background));
+  color: var(--foreground);
+}
+html[data-reader] .site-header,
+html[data-reader] .sidebar,
+html[data-reader] .site-footer {
+  display: none;
+}
+html[data-reader] .shell {
+  display: block;
+  max-width: none;
+  padding: 0;
+}
+html[data-reader] main {
+  max-width: 720px;
+  margin: 2.5rem auto 4rem;
+  padding: 4rem 3.25rem 5rem;
+  background: var(--background);
+  border-radius: 14px;
+  box-shadow: var(--reader-card-shadow);
+}
+@media (max-width: 768px) {
+  html[data-reader] main {
+    margin: 0 0 2rem;
+    padding: 3rem 1.5rem 4rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+html[data-reader] .prose {
+  max-width: none;
+  font-family: var(--reader-font);
+  font-size: var(--reader-size);
+  line-height: 1.75;
+  color: var(--foreground);
+}
+html[data-reader] .prose h1,
+html[data-reader] .prose h2,
+html[data-reader] .prose h3,
+html[data-reader] .prose h4 {
+  font-family: var(--reader-font);
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+}
+html[data-reader] .prose h1 {
+  font-size: 2.05em;
+  line-height: 1.15;
+}
+html[data-reader] .prose h2 {
+  font-size: 1.4em;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 2.5em;
+}
+html[data-reader] .prose h3 {
+  font-size: 1.15em;
+}
+html[data-reader] .prose a {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-color: var(--muted-foreground);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+html[data-reader] .prose a:hover {
+  text-decoration-color: var(--foreground);
+  color: var(--foreground);
+}
+html[data-reader] :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  background: var(--muted);
+}
+html[data-reader] .prose pre {
+  font-size: 0.88em;
+  background: var(--muted);
+  border-color: var(--border);
+}
+html[data-reader] .prose blockquote {
+  background: transparent;
+  border-left-color: var(--muted-foreground);
+  color: var(--muted-foreground);
+}
+html[data-reader] .article-head {
+  margin-bottom: 2.5rem;
+}
+html[data-reader] .article-head .kicker,
+html[data-reader] .article-head .meta {
+  font-family: var(--font-sans);
+  color: var(--muted-foreground);
+}
+
+/* --- Reader sizes --- */
+html[data-reader][data-reader-size="1"] { --reader-size: 0.95rem; }
+html[data-reader][data-reader-size="2"] { --reader-size: 1.08rem; }
+html[data-reader][data-reader-size="3"] { --reader-size: 1.18rem; }
+html[data-reader][data-reader-size="4"] { --reader-size: 1.32rem; }
+html[data-reader][data-reader-size="5"] { --reader-size: 1.5rem; }
+
+/* --- Reader fonts --- */
+html[data-reader][data-reader-font="serif"]    { --reader-font: var(--font-serif); }
+html[data-reader][data-reader-font="sans"]     { --reader-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif; }
+html[data-reader][data-reader-font="charter"]  { --reader-font: Charter, "Bitstream Charter", Georgia, serif; }
+html[data-reader][data-reader-font="georgia"]  { --reader-font: Georgia, serif; }
+html[data-reader][data-reader-font="iowan"]    { --reader-font: "Iowan Old Style", Georgia, serif; }
+html[data-reader][data-reader-font="palatino"] { --reader-font: Palatino, "Palatino Linotype", "Book Antiqua", serif; }
+html[data-reader][data-reader-font="times"]    { --reader-font: "Times New Roman", Times, serif; }
+html[data-reader][data-reader-font="newyork"]  { --reader-font: "New York", ui-serif, Georgia, serif; }
+
+/* --- Reader themes (override site tokens; 4 themes) --- */
+html[data-reader][data-reader-theme="white"] {
+  --background: #ffffff;
+  --muted: #f4f4f5;
+  --foreground: #1a1a1a;
+  --muted-foreground: #6a6a6a;
+  --border: #e5e5e5;
+  --primary: #2563eb;
+  --reader-page-bg: #ececec;
+}
+html[data-reader][data-reader-theme="sepia"] {
+  --background: #f5ecd9;
+  --muted: #ede2c4;
+  --foreground: #2b2520;
+  --muted-foreground: #6a5e4f;
+  --border: #d8c9a8;
+  --primary: #8c5a2e;
+  --reader-page-bg: #e6d6ab;
+}
+html[data-reader][data-reader-theme="gray"] {
+  --background: #4a4a4a;
+  --muted: #404040;
+  --foreground: #ececec;
+  --muted-foreground: #c0c0c0;
+  --border: #5e5e5e;
+  --primary: #a8d4ff;
+  --reader-page-bg: #2e2e2e;
+  --reader-card-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.25),
+    0 4px 12px rgba(0, 0, 0, 0.35),
+    0 24px 64px rgba(0, 0, 0, 0.45);
+}
+html[data-reader][data-reader-theme="black"] {
+  --background: #181818;
+  --muted: #202020;
+  --foreground: #e0e0d8;
+  --muted-foreground: #9a9a9a;
+  --border: #262626;
+  --primary: #a8b1ff;
+  --reader-page-bg: #000000;
+  --reader-card-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.6),
+    0 24px 64px rgba(0, 0, 0, 0.7);
+}
+
+/* --- View Transitions --- */
+@view-transition {
+  navigation: none;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}

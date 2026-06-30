@@ -1,0 +1,69 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ReaderControls } from "../../components/ReaderControls";
+
+export async function getStaticPaths() {
+  const essays = await getCollection("essays", ({ data }) =>
+    import.meta.env.PROD ? !data.draft : true,
+  );
+  return essays.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const dateFmt = (d: Date) =>
+  d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+---
+
+<BaseLayout title={`${entry.data.title} — shxmbxlx`} description={entry.data.description}>
+  <article class="prose">
+    <header class="article-head">
+      <div class="article-head__row">
+        <p class="kicker">Essay</p>
+        <ReaderControls client:load />
+      </div>
+      <h1>{entry.data.title}</h1>
+      <p class="meta">
+        <time datetime={entry.data.date.toISOString()}>{dateFmt(entry.data.date)}</time>
+        {entry.data.updated && (
+          <span>· updated {dateFmt(entry.data.updated)}</span>
+        )}
+      </p>
+    </header>
+    <Content />
+  </article>
+</BaseLayout>
+
+<style>
+  .article-head {
+    margin-bottom: 2rem;
+  }
+  .article-head__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+    margin: 0;
+  }
+  .article-head h1 {
+    margin: 0.5rem 0 0.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .meta {
+    color: var(--muted-foreground);
+    font-size: 0.85rem;
+    margin: 0;
+  }
+</style>

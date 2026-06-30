@@ -1,0 +1,188 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const essays = (await getCollection("essays", ({ data }) => !data.draft)).map((entry) => ({
+  kind: "essay" as const,
+  url: `/essays/${entry.id}`,
+  title: entry.data.title,
+  description: entry.data.description,
+  date: entry.data.date,
+}));
+
+const notes = (await getCollection("notes", ({ data }) => !data.draft)).map((entry) => ({
+  kind: "note" as const,
+  url: `/notes/${entry.id}`,
+  title: entry.data.title,
+  description: entry.data.description,
+  date: entry.data.date,
+}));
+
+const latest = [...essays, ...notes].sort(
+  (a, b) => b.date.getTime() - a.date.getTime(),
+);
+
+const dateFmt = (d: Date) =>
+  d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+---
+
+<BaseLayout title="shxmbxlx">
+  <section class="home">
+    <section class="about">
+      <p class="about__lead">
+        Hi, I'm <strong>Aibek Sadraliev</strong>. Software engineer.
+      </p>
+      <p class="about__bio">
+        I build web apps and the infrastructure they live on. I write here about
+        what I'm learning, what I'm breaking, and what I'm shipping &mdash; in
+        public, slowly, on purpose.
+      </p>
+    </section>
+
+    <section class="lane">
+      <header class="lane__head">
+        <h2>Latest</h2>
+      </header>
+
+      {latest.length === 0 ? (
+        <p class="empty">No posts yet.</p>
+      ) : (
+        <ul class="post-list">
+          {latest.slice(0, 10).map((post) => (
+            <li>
+              <a href={post.url}>
+                <span class={`kind kind--${post.kind}`}>{post.kind}</span>
+                <span class="post-title">{post.title}</span>
+                <time datetime={post.date.toISOString()}>{dateFmt(post.date)}</time>
+              </a>
+              {post.description && (
+                <p class="post-desc">{post.description}</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  </section>
+</BaseLayout>
+
+<style>
+  .home {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .about {
+    margin: 0 0 3rem;
+  }
+  .about__lead {
+    font-size: 1.15rem;
+    margin: 0 0 0.5rem;
+    color: var(--foreground);
+  }
+  .about__lead strong {
+    color: var(--foreground);
+    font-weight: 600;
+  }
+  .about__bio {
+    color: var(--muted-foreground);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .lane {
+    margin-top: 2rem;
+  }
+  .lane__head {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .lane__head h2 {
+    margin: 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted-foreground);
+    font-weight: 600;
+  }
+
+  .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-list li {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+  }
+  .post-list li:last-child {
+    border-bottom: none;
+  }
+  .post-list a {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: baseline;
+    column-gap: 0.85rem;
+    color: var(--foreground);
+  }
+  .post-list a:hover {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  .post-list a:hover .kind {
+    color: var(--muted-foreground);
+  }
+
+  .kind {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted-foreground);
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    line-height: 1.2;
+    align-self: center;
+  }
+
+  .post-title {
+    font-weight: 500;
+  }
+
+  .post-list time {
+    color: var(--muted-foreground);
+    font-size: 0.85rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .post-desc {
+    color: var(--muted-foreground);
+    font-size: 0.95rem;
+    margin: 0.35rem 0 0;
+    padding-left: calc(0.45rem + 0.85rem + 4ch);
+  }
+
+  .empty {
+    color: var(--muted-foreground);
+    font-style: italic;
+    padding: 0.5rem 0;
+  }
+
+  /* Mobile: collapse the date onto its own line under the title */
+  @media (max-width: 520px) {
+    .post-list a {
+      grid-template-columns: auto 1fr;
+      row-gap: 0.25rem;
+    }
+    .post-list time {
+      grid-column: 2 / 3;
+    }
+    .post-desc {
+      padding-left: 0;
+    }
+  }
+</style>
