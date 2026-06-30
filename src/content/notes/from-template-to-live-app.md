@@ -18,8 +18,8 @@ Running App Factory against all three templates is a single workflow dispatch:
 gh workflow run add-project.yml \
   -f project=pet-store \
   -f iac_template_repo=bp-iac-reactjs-nestjs-dev \
-  -f frontend_code_template=bp-app-react-vite-fe \
-  -f backend_code_template=bp-app-nestjs-be
+  -f frontend_template_repo=react-vite-app \
+  -f backend_template_repo=nestjs-app
 ```
 
 That's it. The chain runs for about ten minutes.
@@ -33,7 +33,7 @@ First, the infrastructure phase — the part the earlier post described. App Fac
 ```json
 {
   "instance_id": "i-0123456789abcdef0",
-  "instance_public_ip": "203.0.113.42",
+  "instance_public_ip": "xxx.xxx.xxx.xxx",
   "artifact_bucket_name": "acme-corp-pet-store-deploys",
   "frontend_role_arn": "arn:aws:iam::...:role/GitHubActions-pet-store-frontend",
   "backend_role_arn": "arn:aws:iam::...:role/GitHubActions-pet-store-backend",
