@@ -1,15 +1,15 @@
 ---
-title: "Не бывает говнокода — бывает работающий или не работающий код"
-description: "Черновик. История о том, как в 2013 году команда переписала весь рабочий, оплачиваемый сервис — SMSBazar.kg."
+title: "Working Code Is Good Code: What SMSBazar Taught Me"
+description: "In 2014 our team rewrote a working, paying service from scratch. What the SMSBazar rewrite taught me about the difference between bad code and broken code."
 date: 2026-05-26
-lang: ru
+lang: en
 draft: true
-tags: ["legacy", "history", "kyrgyzstan"]
+tags: ["startups", "essay", "legacy", "history", "kyrgyzstan"]
 ---
 
 > Черновик. Заметки к будущей статье.
 
-Рассказать, как в 2013 году команда переписала весь код — хотя на тот момент сервис работал исправно, и у него главное были пользователи, которые платили деньги.
+Рассказать, как в 2014 году команда переписала весь код — хотя на тот момент сервис работал исправно, и у него главное были пользователи, которые платили деньги.
 
 ## Источники
 

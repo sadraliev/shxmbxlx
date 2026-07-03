@@ -22,6 +22,24 @@ const latest = [...essays, ...notes].sort(
   (a, b) => b.date.getTime() - a.date.getTime(),
 );
 
+const draftEssays = (await getCollection("essays", ({ data }) => data.draft)).map((entry) => ({
+  kind: "essay" as const,
+  title: entry.data.title,
+  description: entry.data.description,
+  date: entry.data.date,
+}));
+
+const draftNotes = (await getCollection("notes", ({ data }) => data.draft)).map((entry) => ({
+  kind: "note" as const,
+  title: entry.data.title,
+  description: entry.data.description,
+  date: entry.data.date,
+}));
+
+const comingUp = [...draftEssays, ...draftNotes].sort(
+  (a, b) => a.date.getTime() - b.date.getTime(),
+);
+
 const dateFmt = (d: Date) =>
   d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 ---
@@ -36,6 +54,13 @@ const dateFmt = (d: Date) =>
         I build web apps and the infrastructure they live on. I write here about
         what I'm learning, what I'm breaking, and what I'm shipping &mdash; in
         public, slowly, on purpose.
+      </p>
+      <p class="about__socials">
+        <a href="https://github.com/sadraliev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="https://www.linkedin.com/in/sadraliev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a href="mailto:a.sadraliev@gmail.com">Email</a>
       </p>
     </section>
 
@@ -63,6 +88,27 @@ const dateFmt = (d: Date) =>
         </ul>
       )}
     </section>
+
+    {comingUp.length > 0 && (
+      <section class="lane">
+        <header class="lane__head">
+          <h2>Coming up</h2>
+        </header>
+        <ul class="post-list post-list--draft">
+          {comingUp.map((post) => (
+            <li>
+              <div class="post-row">
+                <span class={`kind kind--${post.kind}`}>{post.kind}</span>
+                <span class="post-title">{post.title}</span>
+              </div>
+              {post.description && (
+                <p class="post-desc">{post.description}</p>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
   </section>
 </BaseLayout>
 
@@ -89,6 +135,26 @@ const dateFmt = (d: Date) =>
     margin: 0;
     font-size: 1rem;
     line-height: 1.65;
+  }
+  .about__socials {
+    margin: 1rem 0 0;
+    font-size: 0.95rem;
+  }
+  .about__socials a {
+    color: var(--muted-foreground);
+    text-decoration: underline;
+    text-decoration-color: var(--border);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .about__socials a:hover {
+    color: var(--primary);
+    text-decoration-color: currentColor;
+  }
+  .about__socials .sep {
+    color: var(--muted-foreground);
+    opacity: 0.5;
+    padding: 0 0.5rem;
   }
 
   .lane {
@@ -120,12 +186,19 @@ const dateFmt = (d: Date) =>
   .post-list li:last-child {
     border-bottom: none;
   }
-  .post-list a {
+  .post-list a,
+  .post-row {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: baseline;
     column-gap: 0.85rem;
     color: var(--foreground);
+  }
+
+  .post-list--draft .post-row,
+  .post-list--draft .post-title,
+  .post-list--draft .post-desc {
+    color: var(--muted-foreground);
   }
   .post-list a:hover {
     color: var(--primary);
