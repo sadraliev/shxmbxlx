@@ -23,6 +23,8 @@ const notes = defineCollection({
     draft: z.boolean().default(false),
     lang: z.enum(["en", "ru", "ky"]).default("en"),
     tags: z.array(z.string()).default([]),
+    series: z.string().optional(),
+    order: z.number().int().positive().optional(),
   }),
 });
 
