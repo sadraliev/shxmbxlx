@@ -1,16 +1,13 @@
 ---
-title: "Coding Agent, Part 1: loop + llm + tool calling"
-description: "An agent is a loop, an LLM, and tool calling. Everything else is wrapping."
+title: "Anatomy of a Coding Agent: Building One From Scratch"
+description: "An agent is a loop, an LLM, and tool calling. Everything else is harness."
 date: 2026-07-05
-draft: true
+draft: false
 lang: en
 tags: ["ai-agents", "llm", "developer-tools", "typescript", "coding-agent"]
 series: "coding-agent"
 order: 1
 ---
-
-## The setup
-
 Earlier, I built an internal RAG-powered bot that drafts answers to new Telegram tickets based on similar past ones, so the team stops repeating itself.
 
 I got curious about coding agents. Not retrieval — something that reads files, runs commands, and decides what to do next on its own.
@@ -210,16 +207,5 @@ node agent.ts "count the lines of TypeScript in this repo, excluding node_module
 ```
 
 Full v1 — REPL, env validation, hooks — lives at [github.com/sadraliev/aida](https://github.com/sadraliev/aida/tree/v1), tag `v1`.
-
-## What's next
-
-Six things v1 doesn't do, one per future post.
-
-1. One tool, and it's `bash`. The model writes files by pasting `cat << EOF` and gets escaping wrong. **Part 2** — typed tools.
-2. It'll run `rm -rf` if asked. **Part 3** — permissions.
-3. No streaming. You watch a blank terminal until each turn finishes. **Part 4.**
-4. Dies past thirty turns from context overflow. **Part 5** — compaction.
-5. No sub-agents. **Part 6.**
-6. Forgets everything between processes. **Part 7** — memory and MCP.
 
 See you in Part 2.
