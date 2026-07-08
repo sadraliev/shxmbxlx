@@ -8,6 +8,7 @@ const essays = (await getCollection("essays", ({ data }) => !data.draft)).map((e
   title: entry.data.title,
   description: entry.data.description,
   date: entry.data.date,
+  lang: entry.data.lang,
 }));
 
 const notes = (await getCollection("notes", ({ data }) => !data.draft)).map((entry) => ({
@@ -16,6 +17,7 @@ const notes = (await getCollection("notes", ({ data }) => !data.draft)).map((ent
   title: entry.data.title,
   description: entry.data.description,
   date: entry.data.date,
+  lang: entry.data.lang,
 }));
 
 const latest = [...essays, ...notes].sort(
@@ -27,6 +29,7 @@ const draftEssays = (await getCollection("essays", ({ data }) => data.draft)).ma
   title: entry.data.title,
   description: entry.data.description,
   date: entry.data.date,
+  lang: entry.data.lang,
 }));
 
 const draftNotes = (await getCollection("notes", ({ data }) => data.draft)).map((entry) => ({
@@ -34,6 +37,7 @@ const draftNotes = (await getCollection("notes", ({ data }) => data.draft)).map(
   title: entry.data.title,
   description: entry.data.description,
   date: entry.data.date,
+  lang: entry.data.lang,
 }));
 
 const comingUp = [...draftEssays, ...draftNotes].sort(
@@ -74,7 +78,7 @@ const dateFmt = (d: Date) =>
       ) : (
         <ul class="post-list">
           {latest.slice(0, 10).map((post) => (
-            <li>
+            <li data-lang={post.lang}>
               <a href={post.url}>
                 <span class={`kind kind--${post.kind}`}>{post.kind}</span>
                 <span class="post-title">{post.title}</span>
@@ -96,7 +100,7 @@ const dateFmt = (d: Date) =>
         </header>
         <ul class="post-list post-list--draft">
           {comingUp.map((post) => (
-            <li>
+            <li data-lang={post.lang}>
               <div class="post-row">
                 <span class={`kind kind--${post.kind}`}>{post.kind}</span>
                 <span class="post-title">{post.title}</span>

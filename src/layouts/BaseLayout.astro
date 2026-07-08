@@ -2,17 +2,20 @@
 import "../styles/globals.css";
 import Logo from "../components/Logo.astro";
 import { ThemeToggle } from "../components/ThemeToggle";
+import { LangFilter } from "../components/LangFilter";
 
 interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  lang?: "en" | "ru" | "ky";
 }
 
 const {
   title,
   description = "Notes on building, learning, and turning ideas into value.",
   ogImage = "/og-image.png",
+  lang = "en",
 } = Astro.props;
 
 const pathname = Astro.url.pathname;
@@ -25,7 +28,7 @@ const ogImageURL = new URL(ogImage, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -61,12 +64,22 @@ const ogImageURL = new URL(ogImage, Astro.site);
         document.documentElement.setAttribute("data-theme-pref", pref);
       })();
     </script>
+    <script is:inline>
+      (() => {
+        const stored = localStorage.getItem("lang-filter");
+        const pref = stored === "en" || stored === "ru" || stored === "ky" ? stored : "en";
+        document.documentElement.setAttribute("data-lang-filter", pref);
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
       <div class="site-header__inner">
         <Logo />
-        <ThemeToggle client:load />
+        <div class="site-header__actions">
+          <LangFilter client:load />
+          <ThemeToggle client:load />
+        </div>
       </div>
     </header>
 
