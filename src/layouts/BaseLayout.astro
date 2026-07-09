@@ -1,5 +1,6 @@
 ---
 import "../styles/globals.css";
+import { ClientRouter } from "astro:transitions";
 import Logo from "../components/Logo.astro";
 import { ThemeToggle } from "../components/ThemeToggle";
 import { LangFilter } from "../components/LangFilter";
@@ -69,6 +70,18 @@ const ogImageURL = new URL(ogImage, Astro.site);
         const stored = localStorage.getItem("lang-filter");
         const pref = stored === "en" || stored === "ru" || stored === "ky" ? stored : "en";
         document.documentElement.setAttribute("data-lang-filter", pref);
+      })();
+    </script>
+    <ClientRouter />
+    <script is:inline>
+      (() => {
+        const ua = navigator.userAgent;
+        const isSafari = /^((?!chrome|android|crios|fxios|edg).)*safari/i.test(ua);
+        if (isSafari) {
+          document.addEventListener("astro:before-preparation", (e) => {
+            e.preventDefault();
+          });
+        }
       })();
     </script>
   </head>
