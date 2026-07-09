@@ -238,18 +238,6 @@ th {
   align-items: center;
   justify-content: space-between;
 }
-.site-header__actions {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-/* Language filter — hide posts whose lang does not match the active filter */
-html[data-lang-filter="en"] [data-lang]:not([data-lang="en"]),
-html[data-lang-filter="ru"] [data-lang]:not([data-lang="ru"]),
-html[data-lang-filter="ky"] [data-lang]:not([data-lang="ky"]) {
-  display: none;
-}
 
 body {
   display: flex;

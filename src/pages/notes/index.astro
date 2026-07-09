@@ -20,7 +20,7 @@ const dateFmt = (d: Date) =>
     ) : (
       <ul class="post-list">
         {notes.map((entry) => (
-          <li data-lang={entry.data.lang}>
+          <li>
             <a href={`/notes/${entry.id}`} class="post-link">
               <span class="post-title">{entry.data.title}</span>
               <time datetime={entry.data.date.toISOString()}>{dateFmt(entry.data.date)}</time>
