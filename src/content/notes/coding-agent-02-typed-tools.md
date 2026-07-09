@@ -2,7 +2,7 @@
 title: "Anatomy of an Agent's Toolkit"
 description: "Every agent has its own toolkit. Each tool does one job, with validated inputs and shaped outputs."
 date: 2026-07-07
-draft: true
+draft: false
 lang: en
 tags: ["ai-agents", "llm", "developer-tools", "typescript", "coding-agent"]
 series: "coding-agent"
