@@ -269,9 +269,9 @@ html[data-reader] body {
   background: var(--reader-page-bg, var(--background));
   color: var(--foreground);
 }
-html[data-reader] header,
-html[data-reader] nav,
-html[data-reader] footer {
+html[data-reader] body > header,
+html[data-reader] body > nav,
+html[data-reader] body > footer {
   display: none;
 }
 html[data-reader] main {
