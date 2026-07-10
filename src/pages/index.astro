@@ -2,6 +2,17 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostList from "../components/PostList.astro";
+import LinkRow from "../components/LinkRow.astro";
+
+const socials = [
+  { href: "https://github.com/sadraliev", label: "GitHub", external: true },
+  {
+    href: "https://www.linkedin.com/in/sadraliev/",
+    label: "LinkedIn",
+    external: true,
+  },
+  { href: "mailto:a.sadraliev@gmail.com", label: "Email" },
+];
 
 const essays = (await getCollection("essays", ({ data }) => !data.draft)).map(
   (entry) => ({
@@ -61,33 +72,7 @@ const comingUp = [...draftEssays, ...draftNotes]
         what I'm learning, what I'm breaking, and what I'm shipping &mdash; in
         public, slowly, on purpose.
       </p>
-      <p class="mt-4 mb-0 text-[0.95rem]">
-        <a
-          href="https://github.com/sadraliev"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-muted-foreground underline decoration-border decoration-1 underline-offset-[3px] hover:text-primary hover:decoration-current"
-          >GitHub</a
-        >
-        <span class="text-muted-foreground opacity-50 px-2" aria-hidden="true"
-          >·</span
-        >
-        <a
-          href="https://www.linkedin.com/in/sadraliev/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-muted-foreground underline decoration-border decoration-1 underline-offset-[3px] hover:text-primary hover:decoration-current"
-          >LinkedIn</a
-        >
-        <span class="text-muted-foreground opacity-50 px-2" aria-hidden="true"
-          >·</span
-        >
-        <a
-          href="mailto:a.sadraliev@gmail.com"
-          class="text-muted-foreground underline decoration-border decoration-1 underline-offset-[3px] hover:text-primary hover:decoration-current"
-          >Email</a
-        >
-      </p>
+      <LinkRow items={socials} class="mt-4 mb-0" />
     </section>
 
     <section class="mt-8">

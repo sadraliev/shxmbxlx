@@ -1,0 +1,39 @@
+---
+interface Item {
+  href: string;
+  label: string;
+  external?: boolean;
+}
+
+interface Props {
+  items: Item[];
+  class?: string;
+}
+
+const { items, class: className } = Astro.props;
+---
+
+<p class:list={["text-[0.95rem]", className]}>
+  {
+    items.map((item, i) => (
+      <>
+        {i > 0 && (
+          <span
+            class="text-muted-foreground opacity-50 px-2"
+            aria-hidden="true"
+          >
+            ·
+          </span>
+        )}
+        <a
+          href={item.href}
+          target={item.external ? "_blank" : undefined}
+          rel={item.external ? "noopener noreferrer" : undefined}
+          class="text-muted-foreground underline decoration-border decoration-1 underline-offset-[3px] hover:text-primary hover:decoration-current"
+        >
+          {item.label}
+        </a>
+      </>
+    ))
+  }
+</p>
