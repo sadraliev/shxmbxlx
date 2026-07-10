@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { ReaderControls } from "../../components/ReaderControls";
+import PostHeader from "../../components/PostHeader.astro";
 
 export async function getStaticPaths() {
   const essays = await getCollection("essays", ({ data }) =>
@@ -15,13 +15,6 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-
-const dateFmt = (d: Date) =>
-  d.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
 ---
 
 <BaseLayout
@@ -29,27 +22,12 @@ const dateFmt = (d: Date) =>
   description={entry.data.description}
 >
   <article class="prose">
-    <header class="mb-8">
-      <div class="flex items-center justify-between gap-4">
-        <p
-          class="uppercase tracking-widest text-xs text-muted-foreground m-0"
-        >
-          Essay
-        </p>
-        <ReaderControls client:load />
-      </div>
-      <h1 class="mt-2 mb-2 text-[2rem] leading-tight">{entry.data.title}</h1>
-      <p class="text-muted-foreground text-[0.85rem] m-0">
-        <time datetime={entry.data.date.toISOString()}
-          >{dateFmt(entry.data.date)}</time
-        >
-        {
-          entry.data.updated && (
-            <span>· updated {dateFmt(entry.data.updated)}</span>
-          )
-        }
-      </p>
-    </header>
+    <PostHeader
+      kind="Essay"
+      title={entry.data.title}
+      date={entry.data.date}
+      updated={entry.data.updated}
+    />
     <Content />
   </article>
 </BaseLayout>
