@@ -3,108 +3,82 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="404 — shxmbxlx" description="Page not found.">
-  <section class="not-found">
-    <p class="kicker">4 0 4</p>
+  <section class="max-w-[540px] mx-auto mt-16 text-left">
+    <p
+      class="font-mono text-[0.85rem] text-muted-foreground tracking-[0.4em] mt-0 mb-6"
+    >
+      4 0 4
+    </p>
 
-    <h1>
-      <span class="g1">P</span><span class="x">a</span><span class="g2">g</span><span class="x">e</span>
-      <span class="g1">n</span><span class="x">o</span><span class="g2">t</span>
-      <span class="g1">f</span><span class="x">o</span><span class="g2">u</span><span class="x">n</span><span class="g1">d</span>
+    <h1
+      class="font-mono font-semibold text-[clamp(2rem,6vw,3rem)] leading-tight m-0 mb-6 tracking-tight text-foreground"
+    >
+      <span class="text-foreground">P</span><span class="fade">a</span><span
+        class="text-foreground">g</span
+      ><span class="fade">e</span>
+      <span class="text-foreground">n</span><span class="fade">o</span><span
+        class="text-foreground">t</span
+      >
+      <span class="text-foreground">f</span><span class="fade">o</span><span
+        class="text-foreground">u</span
+      ><span class="fade">n</span><span class="text-foreground">d</span>
     </h1>
 
-    <p class="lede">
+    <p class="text-muted-foreground text-[1.05rem] mt-0 mb-8">
       The vowels are still here. The page isn't.
     </p>
 
-    <nav class="exits">
-      <a href="/">→ home</a>
-      <a href="/notes">→ notes</a>
+    <nav class="flex gap-6 mb-16">
+      <a
+        href="/"
+        class="font-mono text-foreground text-[0.95rem] no-underline hover:text-primary"
+        >→ home</a
+      >
+      <a
+        href="/notes"
+        class="font-mono text-foreground text-[0.95rem] no-underline hover:text-primary"
+        >→ notes</a
+      >
     </nav>
 
-    <p class="footnote">
-      <code>shxmbxlx</code> &mdash; even the wordmark loses its vowels around here.
+    <p
+      class="text-muted-foreground text-[0.85rem] border-t border-border pt-4 m-0"
+    >
+      <code
+        class="font-mono bg-muted px-[0.4em] py-[0.1em] rounded text-[0.9em]"
+        >shxmbxlx</code
+      > &mdash; even the wordmark loses its vowels around here.
     </p>
   </section>
 </BaseLayout>
 
 <style>
-  .not-found {
-    max-width: 540px;
-    margin: 4rem auto 0;
-    text-align: left;
-  }
-
-  .kicker {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--muted-foreground);
-    letter-spacing: 0.4em;
-    margin: 0 0 1.5rem;
-  }
-
-  h1 {
-    font-family: var(--font-mono);
-    font-weight: 600;
-    font-size: clamp(2rem, 6vw, 3rem);
-    line-height: 1.15;
-    margin: 0 0 1.5rem;
-    letter-spacing: -0.02em;
-    color: var(--foreground);
-  }
-
   /* Vowels fade in and out gently — they don't really belong here. */
-  .x {
+  .fade {
     color: var(--muted-foreground);
     animation: fade 4s ease-in-out infinite;
   }
-  .x:nth-child(even) { animation-delay: 0.5s; }
-  .x:nth-child(3n) { animation-delay: 1s; }
+  .fade:nth-child(even) {
+    animation-delay: 0.5s;
+  }
+  .fade:nth-child(3n) {
+    animation-delay: 1s;
+  }
 
   @keyframes fade {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.2; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .x { animation: none; opacity: 0.5; }
-  }
-
-  .g1, .g2 { color: var(--foreground); }
-
-  .lede {
-    color: var(--muted-foreground);
-    font-size: 1.05rem;
-    margin: 0 0 2rem;
-  }
-
-  .exits {
-    display: flex;
-    gap: 1.5rem;
-    margin: 0 0 4rem;
-  }
-  .exits a {
-    font-family: var(--font-mono);
-    color: var(--foreground);
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: color 0.15s ease;
-  }
-  .exits a:hover {
-    color: var(--primary);
-  }
-
-  .footnote {
-    color: var(--muted-foreground);
-    font-size: 0.85rem;
-    border-top: 1px solid var(--border);
-    padding-top: 1rem;
-    margin: 0;
-  }
-  .footnote code {
-    font-family: var(--font-mono);
-    background: var(--muted);
-    padding: 0.1em 0.4em;
-    border-radius: 4px;
-    font-size: 0.9em;
+    .fade {
+      animation: none;
+      opacity: 0.5;
+    }
   }
 </style>

@@ -7,101 +7,60 @@ const essays = (await getCollection("essays", ({ data }) => !data.draft)).sort(
 );
 
 const dateFmt = (d: Date) =>
-  d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+  d.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 ---
 
 <BaseLayout title="Essays — shxmbxlx" description='"Que sais-je?" — Montaigne'>
   <article class="prose">
     <h1>Essays</h1>
 
-    <blockquote class="epigraph">
-      <p class="fr">&ldquo;Que sais-je?&rdquo;</p>
-      <p class="cite">&mdash; Montaigne</p>
+    <blockquote
+      class="bg-transparent border-l-2 border-border rounded-none py-1 px-4 my-5 mb-10 text-muted-foreground"
+    >
+      <p class="m-0 leading-normal font-serif italic text-foreground">
+        &ldquo;Que sais-je?&rdquo;
+      </p>
+      <p
+        class="m-0 mt-1 leading-normal text-[0.85rem] text-muted-foreground tabular-nums"
+      >
+        &mdash; Montaigne
+      </p>
     </blockquote>
 
-    {essays.length === 0 ? (
-      <p class="empty"><em>Nothing here yet.</em></p>
-    ) : (
-      <ul class="post-list">
-        {essays.map((entry) => (
-          <li>
-            <a href={`/essays/${entry.id}`}>
-              <span class="post-title">{entry.data.title}</span>
-              <time datetime={entry.data.date.toISOString()}>{dateFmt(entry.data.date)}</time>
-            </a>
-            {entry.data.description && (
-              <p class="post-desc">{entry.data.description}</p>
-            )}
-          </li>
-        ))}
-      </ul>
-    )}
+    {
+      essays.length === 0 ? (
+        <p class="text-muted-foreground">
+          <em>Nothing here yet.</em>
+        </p>
+      ) : (
+        <ul class="list-none m-0 my-6 p-0">
+          {essays.map((entry) => (
+            <li class="border-b border-border py-[0.85rem]">
+              <a
+                href={`/essays/${entry.id}`}
+                class="flex justify-between items-baseline gap-4 text-foreground hover:text-primary hover:no-underline"
+              >
+                <span class="flex-1 font-medium">{entry.data.title}</span>
+                <time
+                  datetime={entry.data.date.toISOString()}
+                  class="text-muted-foreground text-[0.85rem] tabular-nums whitespace-nowrap"
+                >
+                  {dateFmt(entry.data.date)}
+                </time>
+              </a>
+              {entry.data.description && (
+                <p class="text-muted-foreground text-[0.95rem] mt-1 mb-0">
+                  {entry.data.description}
+                </p>
+              )}
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </article>
 </BaseLayout>
-
-<style>
-  /* Epigraph — quieter than a normal blockquote. Override .prose defaults. */
-  .prose .epigraph {
-    background: transparent;
-    border-left: 2px solid var(--border);
-    padding: 0.25rem 1rem;
-    margin: 1.25rem 0 2.5rem;
-    border-radius: 0;
-    color: var(--muted-foreground);
-  }
-  .epigraph p {
-    margin: 0;
-    line-height: 1.5;
-  }
-  .fr {
-    font-family: var(--font-serif);
-    font-style: italic;
-    color: var(--foreground);
-  }
-  .cite {
-    margin-top: 0.25rem !important;
-    font-size: 0.85rem;
-    color: var(--muted-foreground);
-    font-variant-numeric: tabular-nums;
-  }
-
-  .empty {
-    color: var(--muted-foreground);
-  }
-
-  .post-list {
-    list-style: none;
-    margin: 1.5rem 0;
-    padding: 0;
-  }
-  .post-list li {
-    border-bottom: 1px solid var(--border);
-    padding: 0.85rem 0;
-  }
-  .post-list a {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    color: var(--foreground);
-  }
-  .post-list a:hover {
-    color: var(--primary);
-    text-decoration: none;
-  }
-  .post-title {
-    flex: 1;
-    font-weight: 500;
-  }
-  .post-list time {
-    color: var(--muted-foreground);
-    font-size: 0.85rem;
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-  }
-  .post-desc {
-    color: var(--muted-foreground);
-    font-size: 0.95rem;
-    margin: 0.25rem 0 0;
-  }
-</style>

@@ -19,7 +19,6 @@ const {
 const pathname = Astro.url.pathname;
 const isEssays = pathname === "/essays" || pathname.startsWith("/essays/");
 const isNotes = pathname === "/notes" || pathname.startsWith("/notes/");
-const isHome = pathname === "/" || pathname === "";
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
@@ -57,7 +56,8 @@ const ogImageURL = new URL(ogImage, Astro.site);
         const pref = stored === "light" || stored === "dark" ? stored : "auto";
         const isDark =
           pref === "dark" ||
-          (pref === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          (pref === "auto" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
         document.documentElement.classList.toggle("dark", isDark);
         document.documentElement.setAttribute("data-theme-pref", pref);
       })();
@@ -66,7 +66,9 @@ const ogImageURL = new URL(ogImage, Astro.site);
     <script is:inline>
       (() => {
         const ua = navigator.userAgent;
-        const isSafari = /^((?!chrome|android|crios|fxios|edg).)*safari/i.test(ua);
+        const isSafari = /^((?!chrome|android|crios|fxios|edg).)*safari/i.test(
+          ua,
+        );
         if (isSafari) {
           document.addEventListener("astro:before-preparation", (e) => {
             e.preventDefault();
@@ -75,38 +77,46 @@ const ogImageURL = new URL(ogImage, Astro.site);
       })();
     </script>
   </head>
-  <body>
-    <header class="site-header">
-      <div class="site-header__inner">
+  <body class="flex flex-col min-h-screen">
+    <header class="border-b border-border bg-background sticky top-0 z-30">
+      <div class="container h-16 flex items-center justify-between">
         <Logo />
         <ThemeToggle client:load />
       </div>
     </header>
 
-    <div class="shell">
-      <aside class="sidebar">
-        <nav class="sidebar-nav" aria-label="Categories">
-          <ul>
-            <li>
-              <a href="/" class:list={["sidebar-link", { active: isHome }]}>home</a>
-            </li>
-            <li>
-              <a href="/essays" class:list={["sidebar-link", { active: isEssays }]}>essays</a>
-            </li>
-            <li>
-              <a href="/notes" class:list={["sidebar-link", { active: isNotes }]}>notes</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
+    <nav
+      class="container py-4 flex flex-wrap items-center text-[0.95rem]"
+      aria-label="Categories"
+    >
+      <a
+        href="/essays"
+        class:list={[
+          "underline decoration-border underline-offset-[3px] decoration-1 hover:text-primary hover:decoration-current",
+          isEssays ? "text-foreground font-medium" : "text-muted-foreground",
+        ]}>essays</a
+      >
+      <span
+        class="text-muted-foreground opacity-50 px-2"
+        aria-hidden="true">·</span
+      >
+      <a
+        href="/notes"
+        class:list={[
+          "underline decoration-border underline-offset-[3px] decoration-1 hover:text-primary hover:decoration-current",
+          isNotes ? "text-foreground font-medium" : "text-muted-foreground",
+        ]}>notes</a
+      >
+    </nav>
 
-      <main>
-        <slot />
-      </main>
-    </div>
+    <main class="flex-1 container pb-16">
+      <slot />
+    </main>
 
-    <footer class="site-footer">
-      <div class="site-footer__inner">
+    <footer
+      class="border-t border-border text-muted-foreground text-sm mt-auto"
+    >
+      <div class="container mx-auto px-6 py-6">
         <span>&copy; {new Date().getFullYear()} shxmbxlx</span>
       </div>
     </footer>
