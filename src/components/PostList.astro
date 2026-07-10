@@ -1,0 +1,36 @@
+---
+import PostListItem from "./PostListItem.astro";
+
+interface Item {
+  title: string;
+  description?: string;
+  date?: Date;
+  href?: string;
+  kind?: "essay" | "note";
+}
+
+interface Props {
+  items: Item[];
+  emptyMessage?: string;
+}
+
+const { items, emptyMessage = "Nothing here yet." } = Astro.props;
+---
+
+{
+  items.length === 0 ? (
+    <p class="text-muted-foreground italic py-2">{emptyMessage}</p>
+  ) : (
+    <ul class="list-none m-0 p-0">
+      {items.map((post) => (
+        <PostListItem
+          title={post.title}
+          description={post.description}
+          date={post.date}
+          href={post.href}
+          kind={post.kind}
+        />
+      ))}
+    </ul>
+  )
+}

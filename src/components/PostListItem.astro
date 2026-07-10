@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  date?: Date;
+  href?: string;
+  kind?: "essay" | "note";
+}
+
+import { formatDate } from "../lib/date";
+
+const { title, description, date, href, kind } = Astro.props;
+const showKind = Boolean(kind);
+
+const rowClass = showKind
+  ? "grid grid-cols-[auto_1fr_auto] items-baseline gap-x-[0.85rem] max-[520px]:grid-cols-[auto_1fr] max-[520px]:gap-y-1"
+  : "flex justify-between items-baseline gap-4 max-[520px]:flex-col max-[520px]:items-start max-[520px]:gap-1";
+
+const linkClass = href
+  ? "text-foreground hover:text-primary hover:no-underline group"
+  : "text-muted-foreground";
+
+const descPad = showKind
+  ? "pl-[calc(0.45rem+0.85rem+4ch)] max-[520px]:pl-0"
+  : "";
+---
+
+<li class="border-b border-border last:border-b-0 py-4">
+  {
+    href ? (
+      <a href={href} class:list={[rowClass, linkClass]}>
+        {kind && (
+          <span class="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-muted-foreground py-[0.15rem] px-[0.45rem] border border-border rounded self-center leading-[1.2] group-hover:text-muted-foreground">
+            {kind}
+          </span>
+        )}
+        <span class="flex-1 font-medium">{title}</span>
+        {date && (
+          <time
+            datetime={date.toISOString()}
+            class="text-muted-foreground text-[0.85rem] tabular-nums whitespace-nowrap max-[520px]:col-start-2"
+          >
+            {formatDate(date)}
+          </time>
+        )}
+      </a>
+    ) : (
+      <div class:list={[rowClass, linkClass]}>
+        {kind && (
+          <span class="font-mono text-[0.7rem] uppercase tracking-[0.1em] text-muted-foreground py-[0.15rem] px-[0.45rem] border border-border rounded self-center leading-[1.2]">
+            {kind}
+          </span>
+        )}
+        <span class="flex-1 font-medium">{title}</span>
+        {date && (
+          <time
+            datetime={date.toISOString()}
+            class="text-muted-foreground text-[0.85rem] tabular-nums whitespace-nowrap max-[520px]:col-start-2"
+          >
+            {formatDate(date)}
+          </time>
+        )}
+      </div>
+    )
+  }
+  {
+    description && (
+      <p
+        class:list={[
+          "text-muted-foreground text-[0.95rem] mt-[0.35rem] mb-0",
+          descPad,
+        ]}
+      >
+        {description}
+      </p>
+    )
+  }
+</li>
