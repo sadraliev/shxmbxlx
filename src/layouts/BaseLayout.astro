@@ -2,6 +2,7 @@
 import "../styles/globals.css";
 import { ClientRouter } from "astro:transitions";
 import Logo from "../components/Logo.astro";
+import SiteNav from "../components/SiteNav.astro";
 import { ThemeToggle } from "../components/ThemeToggle";
 
 interface Props {
@@ -15,10 +16,6 @@ const {
   description = "Notes on building, learning, and turning ideas into value.",
   ogImage = "/og-image.png",
 } = Astro.props;
-
-const pathname = Astro.url.pathname;
-const isEssays = pathname === "/essays" || pathname.startsWith("/essays/");
-const isNotes = pathname === "/notes" || pathname.startsWith("/notes/");
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const ogImageURL = new URL(ogImage, Astro.site);
@@ -85,29 +82,7 @@ const ogImageURL = new URL(ogImage, Astro.site);
       </div>
     </header>
 
-    <nav
-      class="container py-4 flex flex-wrap items-center text-[0.95rem]"
-      aria-label="Categories"
-    >
-      <a
-        href="/essays"
-        class:list={[
-          "underline decoration-border underline-offset-[3px] decoration-1 hover:text-primary hover:decoration-current",
-          isEssays ? "text-foreground font-medium" : "text-muted-foreground",
-        ]}>essays</a
-      >
-      <span
-        class="text-muted-foreground opacity-50 px-2"
-        aria-hidden="true">·</span
-      >
-      <a
-        href="/notes"
-        class:list={[
-          "underline decoration-border underline-offset-[3px] decoration-1 hover:text-primary hover:decoration-current",
-          isNotes ? "text-foreground font-medium" : "text-muted-foreground",
-        ]}>notes</a
-      >
-    </nav>
+    <SiteNav />
 
     <main class="flex-1 container pb-16">
       <slot />
