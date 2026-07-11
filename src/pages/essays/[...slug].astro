@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostHeader from "../../components/PostHeader.astro";
+import ShareButtons from "../../components/ShareButtons.astro";
 
 export async function getStaticPaths() {
   const essays = await getCollection("essays", ({ data }) =>
@@ -15,6 +16,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const shareUrl = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 
 <BaseLayout
@@ -29,5 +31,6 @@ const { Content } = await render(entry);
       updated={entry.data.updated}
     />
     <Content />
+    <ShareButtons title={entry.data.title} url={shareUrl} />
   </article>
 </BaseLayout>

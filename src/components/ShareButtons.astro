@@ -1,0 +1,95 @@
+---
+interface Props {
+  title: string;
+  url: string;
+}
+
+const { title, url } = Astro.props;
+
+const encoded = {
+  url: encodeURIComponent(url),
+  title: encodeURIComponent(title),
+};
+
+const targets = [
+  {
+    label: "X",
+    href: `https://twitter.com/intent/tweet?text=${encoded.title}&url=${encoded.url}`,
+  },
+  {
+    label: "LinkedIn",
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encoded.url}`,
+  },
+  {
+    label: "Telegram",
+    href: `https://t.me/share/url?url=${encoded.url}&text=${encoded.title}`,
+  },
+  {
+    label: "WhatsApp",
+    href: `https://wa.me/?text=${encoded.title}%20${encoded.url}`,
+  },
+];
+
+const linkClass =
+  "text-muted-foreground underline decoration-border decoration-1 underline-offset-[3px] hover:text-primary hover:decoration-current";
+const dotClass = "text-muted-foreground opacity-50 px-2";
+---
+
+<aside
+  class="mt-12 pt-6 border-t border-border text-[0.9rem]"
+  aria-label="Share this post"
+>
+  <span class="text-muted-foreground mr-2">Share:</span>
+  {
+    targets.map((t, i) => (
+      <>
+        {i > 0 && (
+          <span class:list={dotClass} aria-hidden="true">
+            ·
+          </span>
+        )}
+        <a
+          href={t.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class:list={linkClass}
+        >
+          {t.label}
+        </a>
+      </>
+    ))
+  }
+  <span class:list={dotClass} aria-hidden="true">·</span>
+  <button
+    type="button"
+    data-share-copy
+    data-url={url}
+    class:list={[linkClass, "bg-transparent border-0 p-0 cursor-pointer"]}
+  >
+    Copy link
+  </button>
+</aside>
+
+<script>
+  const bind = () => {
+    document.querySelectorAll<HTMLButtonElement>("[data-share-copy]").forEach((btn) => {
+      if (btn.dataset.bound === "1") return;
+      btn.dataset.bound = "1";
+      const original = btn.textContent;
+      btn.addEventListener("click", async () => {
+        const url = btn.dataset.url ?? window.location.href;
+        try {
+          await navigator.clipboard.writeText(url);
+          btn.textContent = "Copied";
+        } catch {
+          btn.textContent = "Copy failed";
+        }
+        setTimeout(() => {
+          btn.textContent = original;
+        }, 1500);
+      });
+    });
+  };
+  bind();
+  document.addEventListener("astro:page-load", bind);
+</script>
