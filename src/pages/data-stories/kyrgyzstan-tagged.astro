@@ -269,42 +269,6 @@ const timelineAxis = v.timeline.map((t) => ({ label: t.axisLabel, span: 1 }));
         <BarList bars={v.bioLinks} />
       </section>
 
-      <section id="how">
-        <div class="method">
-          <h3>How this was built — and what to trust</h3>
-          <ul>
-            <li>
-              <b>Source.</b> Public posts surfaced under <b>#kyrgyzstan</b>,
-              collected by scrolling the tag feed and de-duplicating into a local
-              database (<b>{v.hero.posts} posts / {v.hero.creators} creators</b>).
-            </li>
-            <li>
-              <b>Origin country</b> is inferred from each creator's public profile
-              (flag emoji, bio keywords, linked-site domain). We resolved <b
-                >{v.hero.profiled} of {v.hero.creators}</b
-              > creators so far — the country chart is a <b>sample, not a census</b
-              >, and undercounts.
-            </li>
-            <li>
-              <b>Language</b> is auto-detected from captions; very short or
-              emoji-only captions, and some short Cyrillic ones, are approximate.
-            </li>
-            <li>
-              <b>Not everything is a visitor.</b> The tag also carries local
-              businesses, news and diaspora — filtered out where the signal was
-              clear, but some noise remains.
-            </li>
-            <li>
-              Figures are best-effort estimates for storytelling, updated as more
-              profiles are resolved.
-            </li>
-          </ul>
-        </div>
-        <footer>
-          Generated {v.generated} · sampled estimate from public data · prototype
-          for review — not a published figure.
-        </footer>
-      </section>
     </div>
   </div>
 </BaseLayout>
@@ -408,6 +372,10 @@ const timelineAxis = v.timeline.map((t) => ({ label: t.axisLabel, span: 1 }));
     padding: 52px 0;
     border-bottom: 1px solid var(--line);
   }
+  .viz section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 72px;
+  }
   .shead {
     margin-bottom: 26px;
     max-width: 64ch;
@@ -443,31 +411,6 @@ const timelineAxis = v.timeline.map((t) => ({ label: t.axisLabel, span: 1 }));
     vertical-align: -1px;
   }
 
-  .method {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 22px 24px;
-  }
-  .method h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  .method ul {
-    margin: 0;
-    padding-left: 18px;
-    color: var(--ink-2);
-    font-size: 14px;
-    line-height: 1.7;
-  }
-  .method b {
-    color: var(--ink);
-  }
-  .viz footer {
-    padding: 34px 0 60px;
-    color: var(--muted);
-    font-size: 12.5px;
-  }
 
   #tip {
     position: fixed;

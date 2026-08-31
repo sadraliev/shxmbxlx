@@ -8,10 +8,7 @@
 export interface AggJson {
   meta: {
     total_posts: number;
-    total_authors: number;
-    profiled: number;
     foreign_authors: number;
-    generated_at: number;
     engagement: { likes: number };
     audience: {
       with_followers: number;
@@ -86,7 +83,7 @@ export interface Versus {
   local: { median: string; posts: string };
 }
 export interface StoryView {
-  hero: { countries: string; profiled: string; posts: string; creators: string; stats: Stat[] };
+  hero: { countries: string; stats: Stat[] };
   timeline: TimelineBar[];
   daily: DailyView;
   countriesA: Bar[];
@@ -105,7 +102,6 @@ export interface StoryView {
   professional: { proPct: number; categories: Bar[] };
   pyramid: Bar[];
   bioLinks: Bar[];
-  generated: string;
 }
 
 const nf = new Intl.NumberFormat("en-US");
@@ -133,9 +129,6 @@ export function transform(d: AggJson): StoryView {
 
   const hero = {
     countries: num(m.countries_count),
-    profiled: num(m.profiled),
-    posts: num(m.total_posts),
-    creators: num(m.total_authors),
     stats: [
       { n: num(m.foreign_authors), label: "foreign creators identified", accent: true },
       { n: num(m.countries_count), label: "home countries represented" },
@@ -263,6 +256,5 @@ export function transform(d: AggJson): StoryView {
     },
     pyramid: d.pyramid.map((t) => ({ label: t.label, value: t.pct, widthPct: width(t.pct, maxPy), variant: "aqua", tip: `${t.label}: ${t.count} creators (${t.pct}%)` })),
     bioLinks: d.bio_links.buckets.map((b) => ({ label: b.bucket, value: b.count, widthPct: width(b.count, maxBl), tip: `${b.bucket}: ${b.count} creators` })),
-    generated: new Date(m.generated_at * 1000).toISOString().slice(0, 10),
   };
 }
