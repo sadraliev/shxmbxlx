@@ -90,6 +90,7 @@ const timelineAxis = v.timeline.map((t) => ({ label: t.axisLabel, span: 1 }));
             bio, linked site). Kyrgyz and local accounts are excluded here — this
             is the visitors.
           </p>
+          <button class="story-btn" type="button" data-story>Share as story ↗</button>
         </div>
         <div class="grid2">
           <BarList bars={v.countriesA} />
@@ -142,13 +143,23 @@ const timelineAxis = v.timeline.map((t) => ({ label: t.axisLabel, span: 1 }));
           </p>
         </div>
         <div class="grid2">
-          <div>
+          <div data-story-region>
             <div class="colhead"><span class="cdot local"></span>Top local posters</div>
             <BarList bars={v.superfans.local} />
+            <button
+              class="story-btn"
+              type="button"
+              data-story-title="Kyrgyzstan's top local superfans">Share as story ↗</button
+            >
           </div>
-          <div>
+          <div data-story-region>
             <div class="colhead"><span class="cdot foreign"></span>Top foreign posters</div>
             <BarList bars={v.superfans.foreign} />
+            <button
+              class="story-btn"
+              type="button"
+              data-story-title="The visitors who kept posting #kyrgyzstan">Share as story ↗</button
+            >
           </div>
         </div>
       </section>
@@ -434,6 +445,27 @@ const timelineAxis = v.timeline.map((t) => ({ label: t.axisLabel, span: 1 }));
   .cdot.foreign {
     background: var(--accent);
   }
+  .story-btn {
+    margin-top: 18px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    color: var(--ink-2);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 7px 15px;
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .story-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .story-btn:disabled {
+    opacity: 0.55;
+    cursor: default;
+  }
 
 
   #tip {
@@ -478,5 +510,129 @@ const timelineAxis = v.timeline.map((t) => ({ label: t.axisLabel, span: 1 }));
       });
       el.addEventListener("mouseleave", () => (tip.style.opacity = "0"));
     }
+  }
+</script>
+
+<script>
+  // Prototype: render a section's bar data into a 1080×1920 Instagram-story
+  // image (read straight from the rendered DOM), then share (mobile) or download.
+  function wrap(g: CanvasRenderingContext2D, text: string, x: number, y: number, maxW: number, lh: number) {
+    let line = "";
+    for (const w of text.split(" ")) {
+      const t = line ? line + " " + w : w;
+      if (g.measureText(t).width > maxW && line) {
+        g.fillText(line, x, y);
+        line = w;
+        y += lh;
+      } else line = t;
+    }
+    g.fillText(line, x, y);
+    return y;
+  }
+
+  async function buildStory(region: HTMLElement, title: string): Promise<Blob> {
+    const rows = [...region.querySelectorAll(".bar")].slice(0, 9).map((b) => {
+      const lab = b.querySelector(".lab")!;
+      const display = b.querySelector(".v")!.textContent!.trim();
+      return {
+        flag: lab.querySelector(".fl")?.textContent?.trim() || "",
+        name: (lab.querySelector("a, span:not(.fl)") || lab).textContent!.trim(),
+        value: parseInt(display.replace(/\D/g, ""), 10) || 0,
+        display,
+      };
+    });
+    const max = Math.max(...rows.map((r) => r.value), 1);
+    const barColor = getComputedStyle(region.querySelector(".fill")!).backgroundColor;
+    const hasFlag = rows.some((r) => r.flag);
+
+    const W = 1080, H = 1920, PAD = 90;
+    const cv = document.createElement("canvas");
+    cv.width = W;
+    cv.height = H;
+    const g = cv.getContext("2d")!;
+    await document.fonts.ready;
+
+    g.fillStyle = "#1b1b1f";
+    g.fillRect(0, 0, W, H);
+    g.fillStyle = "#e0594c";
+    g.fillRect(0, 0, W, 12);
+
+    g.fillStyle = "#e0594c";
+    g.font = "600 32px 'IBM Plex Mono', ui-monospace, monospace";
+    g.fillText("INSTAGRAM FIELD REPORT · #KYRGYZSTAN", PAD, 190);
+
+    g.fillStyle = "#dfdfd6";
+    g.font = "600 92px 'Fraunces', Georgia, serif";
+    let y = wrap(g, title, PAD, 320, W - PAD * 2, 104) + 140;
+
+    g.font = "500 40px 'IBM Plex Sans', system-ui, sans-serif";
+    const flagW = hasFlag ? 78 : 0;
+    const nameW = Math.max(...rows.map((r) => g.measureText(r.name).width));
+    const barX = PAD + flagW + Math.min(Math.ceil(nameW) + 40, 430);
+    const barW = W - PAD - barX - 140;
+    for (const r of rows) {
+      if (r.flag) {
+        g.font = "42px sans-serif";
+        g.fillStyle = "#dfdfd6";
+        g.fillText(r.flag, PAD, y + 38);
+      }
+      g.fillStyle = "#dfdfd6";
+      g.font = "500 40px 'IBM Plex Sans', system-ui, sans-serif";
+      g.fillText(r.name, PAD + flagW, y + 38, barX - PAD - flagW - 24);
+      g.fillStyle = "#2e2e32";
+      g.fillRect(barX, y + 10, barW, 34);
+      g.fillStyle = barColor;
+      g.fillRect(barX, y + 10, Math.max(26, (barW * r.value) / max), 34);
+      g.fillStyle = "#dfdfd6";
+      g.font = "600 40px 'IBM Plex Mono', monospace";
+      g.textAlign = "right";
+      g.fillText(r.display, W - PAD, y + 40);
+      g.textAlign = "left";
+      y += 100;
+    }
+
+    g.fillStyle = "#98989f";
+    g.font = "500 34px 'IBM Plex Mono', monospace";
+    g.fillText("shxmbxlx.com", PAD, H - 130);
+    g.fillStyle = "#5a9bee";
+    g.font = "600 32px 'IBM Plex Sans', sans-serif";
+    g.fillText("full interactive story ↗", PAD, H - 78);
+
+    return await new Promise<Blob>((res) => cv.toBlob((b) => res(b!), "image/png"));
+  }
+
+  function download(blob: Blob, name: string) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  for (const btn of document.querySelectorAll<HTMLButtonElement>(".story-btn")) {
+    btn.addEventListener("click", async () => {
+      const region = (btn.closest("[data-story-region]") ||
+        btn.closest("section")) as HTMLElement;
+      const title =
+        btn.dataset.storyTitle ||
+        region.querySelector("h2, .colhead")!.textContent!.trim();
+      const label = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = "Rendering…";
+      try {
+        const blob = await buildStory(region, title);
+        const file = new File([blob], "kyrgyzstan-story.png", { type: "image/png" });
+        if (navigator.canShare?.({ files: [file] })) {
+          try {
+            await navigator.share({ files: [file], title: "Kyrgyzstan, Tagged" });
+          } catch (e) {
+            if ((e as Error).name !== "AbortError") download(blob, file.name);
+          }
+        } else download(blob, file.name);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = label;
+      }
+    });
   }
 </script>
