@@ -1,0 +1,515 @@
+---
+// Native data-story page. Imports the raw JSON (the only contract with the
+// collector repo), turns it into a render-ready view at build time, and
+// composes the panels from typed components — no data or render logic ships
+// to the browser (only a tiny tooltip script). Reached via a full page load
+// (data-astro-reload on the gallery card) so that script runs.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import raw from "../../data/kyrgyzstan-tagged.json";
+import { transform, type AggJson } from "../../lib/data-story";
+import BarList from "../../components/data-stories/BarList.astro";
+import StatGrid from "../../components/data-stories/StatGrid.astro";
+import Timeline from "../../components/data-stories/Timeline.astro";
+import TopPosts from "../../components/data-stories/TopPosts.astro";
+import Leaderboard from "../../components/data-stories/Leaderboard.astro";
+import Versus from "../../components/data-stories/Versus.astro";
+import Chips from "../../components/data-stories/Chips.astro";
+
+const v = transform(raw as AggJson);
+const timelineAxis = v.timeline.map((t) => ({ label: t.axisLabel, span: 1 }));
+---
+
+<BaseLayout
+  title="under #kyrgyzstan — shxmbxlx"
+  description="What the world posts under #kyrgyzstan — a data portrait pulled from Instagram: volume, day-by-day, origin countries, languages, creators, formats, virality and reach."
+>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"
+  />
+
+  <div class="viz">
+    <div id="tip"></div>
+
+    <div class="wrap">
+      <header class="hero">
+        <div class="kicker">
+          <span class="dot"></span><span class="eyebrow"
+            >Instagram field report · #kyrgyzstan</span
+          >
+        </div>
+        <h1>What the world posts under <em>#kyrgyzstan</em>.</h1>
+        <p class="lede">
+          We collected and analysed every public Instagram post we could find
+          under <b>#kyrgyzstan</b> — who posts them, where they're from, in what
+          language, and what it all reveals about how Kyrgyzstan shows up online.
+        </p>
+        <div class="herostats"><StatGrid stats={v.hero.stats} /></div>
+      </header>
+
+      <section id="time">
+        <div class="shead">
+          <span class="eyebrow">The volume</span>
+          <h2>How much the world posts Kyrgyzstan</h2>
+          <p>
+            Monthly posts under #kyrgyzstan, with the foreign share highlighted.
+            The tag's traffic climbs sharply through 2026.
+          </p>
+        </div>
+        <Timeline bars={v.timeline} axis={timelineAxis} height={220} gap={6} />
+        <div class="legend">
+          <span><i style="background:var(--accent)"></i>Foreign creators</span>
+          <span><i style="background:var(--data);opacity:.34"></i>All other posts</span>
+        </div>
+      </section>
+
+      <section id="daysummer">
+        <div class="shead">
+          <span class="eyebrow">Zoomed in · last 90 days</span>
+          <h2>Day by day through the peak</h2>
+          <p>
+            The same tag broken down by day over the most recent ~90 days — where
+            the surge actually lands.
+          </p>
+        </div>
+        <Timeline bars={v.daily.bars} axis={v.daily.axis} height={180} gap={2} />
+        <div class="legend">
+          <span><i style="background:var(--accent)"></i>Foreign</span>
+          <span><i style="background:var(--data);opacity:.34"></i>Other posts</span>
+        </div>
+      </section>
+
+      <section id="origin">
+        <div class="shead">
+          <span class="eyebrow">Where they came from</span>
+          <h2>{v.hero.countries} countries, one destination</h2>
+          <p>
+            Foreign creators by home country, inferred from their profile (flag,
+            bio, linked site). Kyrgyz and local accounts are excluded here — this
+            is the visitors.
+          </p>
+        </div>
+        <div class="grid2">
+          <BarList bars={v.countriesA} />
+          <BarList bars={v.countriesB} />
+        </div>
+      </section>
+
+      <section id="lang">
+        <div class="shead">
+          <span class="eyebrow">In their own words</span>
+          <h2>What language they post in</h2>
+          <p>
+            Auto-detected from captions. English dominates the travel crowd;
+            Russian and Kyrgyz mark the local and regional voice.
+          </p>
+        </div>
+        <BarList bars={v.languages} />
+      </section>
+
+      <section id="who2">
+        <div class="grid2">
+          <div>
+            <div class="shead">
+              <span class="eyebrow">Not tourists — creators</span>
+              <h2>{v.professional.proPct}% run a pro account</h2>
+              <p>Self-declared account categories.</p>
+            </div>
+            <BarList bars={v.professional.categories} />
+          </div>
+          <div>
+            <div class="shead">
+              <span class="eyebrow">Creator size</span>
+              <h2>Carried by the small</h2>
+              <p>Share of creators by follower tier.</p>
+            </div>
+            <BarList bars={v.pyramid} />
+          </div>
+        </div>
+      </section>
+
+      <section id="fans">
+        <div class="shead">
+          <span class="eyebrow">One-hit wonders &amp; superfans</span>
+          <h2>Who kept talking about Kyrgyzstan</h2>
+          <p>
+            A small core of local superfans post again and again, while <b
+              >{v.superfans.oncePct}</b
+            > of all creators showed up just once. Top posters, by number of
+            #kyrgyzstan posts:
+          </p>
+        </div>
+        <BarList bars={v.superfans.bars} />
+        <div class="legend" style="margin-top:14px">
+          <span><i style="background:var(--accent)"></i>Foreign</span>
+          <span><i style="background:var(--data)"></i>Local / unknown</span>
+        </div>
+      </section>
+
+      <section id="top">
+        <div class="shead">
+          <span class="eyebrow">Biggest reach</span>
+          <h2>The posts that carried Kyrgyzstan</h2>
+          <p>
+            Most-liked posts in the set. A single German creator's clip pulled
+            3.8M likes.
+          </p>
+        </div>
+        <TopPosts cards={v.cards} />
+      </section>
+
+      <section id="reach">
+        <div class="shead">
+          <span class="eyebrow">Reach</span>
+          <h2>The audience behind the tag</h2>
+          <p>
+            Combined following of the creators we've profiled — how far
+            #kyrgyzstan travels. One food giant skews the sum, so the <b>median</b
+            > shows the typical creator.
+          </p>
+        </div>
+        <StatGrid stats={v.reach} />
+      </section>
+
+      <section id="format">
+        <div class="grid2">
+          <div>
+            <div class="shead">
+              <span class="eyebrow">Format</span>
+              <h2>How they post</h2>
+              <p>Video and reels dominate — the format that carries travel now.</p>
+            </div>
+            <BarList bars={v.mediaTypes} />
+          </div>
+          <div>
+            <div class="shead">
+              <span class="eyebrow">Rhythm</span>
+              <h2>Which days they post</h2>
+              <p>Posts by weekday (Kyrgyzstan time).</p>
+            </div>
+            <BarList bars={v.weekday} />
+          </div>
+        </div>
+      </section>
+
+      <section id="perf">
+        <div class="shead">
+          <span class="eyebrow">Format performance</span>
+          <h2>Video is the whole game</h2>
+          <p>
+            Median likes per post by format — reels/video don't just outnumber
+            photos, they out-earn them by orders of magnitude.
+          </p>
+        </div>
+        <StatGrid stats={v.formatPerf} />
+      </section>
+
+      <section id="fvl">
+        <div class="shead">
+          <span class="eyebrow">Who gets the love</span>
+          <h2>Locals out-earn the visitors</h2>
+          <p>
+            Median likes per post — median, not average, so one viral hit doesn't
+            decide it. Locals post to established home audiences; visitors are
+            mostly smaller travel accounts.
+          </p>
+        </div>
+        <Versus versus={v.versus} />
+      </section>
+
+      <section id="viral">
+        <div class="shead">
+          <span class="eyebrow">The algorithm did the work</span>
+          <h2>Posts that beat their own audience</h2>
+          <p>
+            The reach multiplier — how many times a post's likes exceeded the
+            creator's follower count. <b>×113</b> means it drew 113× more likes
+            than they have followers: the algorithm, not their audience, carried
+            Kyrgyzstan.
+          </p>
+        </div>
+        <Leaderboard rows={v.virality} />
+      </section>
+
+      <section id="places">
+        <div class="grid2">
+          <div>
+            <div class="shead">
+              <span class="eyebrow">On the ground</span>
+              <h2>Where in Kyrgyzstan</h2>
+              <p>
+                Geotagged posts only — a minority tag a place, but the ones who
+                do map the classic route.
+              </p>
+            </div>
+            <BarList bars={v.locations} />
+          </div>
+          <div>
+            <div class="shead">
+              <span class="eyebrow">How they tag it</span>
+              <h2>Companion hashtags</h2>
+              <p>The tags that travel alongside #kyrgyzstan.</p>
+            </div>
+            <Chips hashtags={v.hashtags} />
+          </div>
+        </div>
+      </section>
+
+      <section id="funnel">
+        <div class="shead">
+          <span class="eyebrow">Where they send you next</span>
+          <h2>Off Instagram, into the chats</h2>
+          <p>
+            Bio links of the creators — they route attention to messaging apps
+            and video platforms, rarely to a plain website.
+          </p>
+        </div>
+        <BarList bars={v.bioLinks} />
+      </section>
+
+      <section id="how">
+        <div class="method">
+          <h3>How this was built — and what to trust</h3>
+          <ul>
+            <li>
+              <b>Source.</b> Public posts surfaced under <b>#kyrgyzstan</b>,
+              collected by scrolling the tag feed and de-duplicating into a local
+              database (<b>{v.hero.posts} posts / {v.hero.creators} creators</b>).
+            </li>
+            <li>
+              <b>Origin country</b> is inferred from each creator's public profile
+              (flag emoji, bio keywords, linked-site domain). We resolved <b
+                >{v.hero.profiled} of {v.hero.creators}</b
+              > creators so far — the country chart is a <b>sample, not a census</b
+              >, and undercounts.
+            </li>
+            <li>
+              <b>Language</b> is auto-detected from captions; very short or
+              emoji-only captions, and some short Cyrillic ones, are approximate.
+            </li>
+            <li>
+              <b>Not everything is a visitor.</b> The tag also carries local
+              businesses, news and diaspora — filtered out where the signal was
+              clear, but some noise remains.
+            </li>
+            <li>
+              Figures are best-effort estimates for storytelling, updated as more
+              profiles are resolved.
+            </li>
+          </ul>
+        </div>
+        <footer>
+          Generated {v.generated} · sampled estimate from public data · prototype
+          for review — not a published figure.
+        </footer>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .viz {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    --page: var(--background);
+    --surface: var(--card);
+    --ink: var(--foreground);
+    --ink-2: var(--muted-foreground);
+    --muted: var(--muted-foreground);
+    --line: var(--border);
+    --line-soft: var(--border);
+    --data-track: var(--secondary);
+    --accent: #bb382c;
+    --accent-soft: #e7d3cd;
+    --gold: #c08a1e;
+    --data: #2a68c4;
+    --data-2: #1a9e78;
+    --shadow: 0 1px 2px rgba(25, 21, 18, 0.05), 0 8px 24px -12px rgba(25, 21, 18, 0.14);
+  }
+  :global(.dark) .viz {
+    --accent: #e0594c;
+    --accent-soft: #3a2622;
+    --gold: #e0aa3e;
+    --data: #5a9bee;
+    --data-2: #2bb98c;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px -14px rgba(0, 0, 0, 0.6);
+  }
+  .viz a {
+    color: inherit;
+  }
+  .viz h1,
+  .viz h2,
+  .viz h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0;
+  }
+  .wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 22px;
+  }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .hero {
+    padding: 70px 0 34px;
+    border-bottom: 1px solid var(--line);
+  }
+  .kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+  .kicker .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .hero h1 {
+    font-size: clamp(38px, 7vw, 74px);
+    font-weight: 600;
+    max-width: 15ch;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .lede {
+    margin: 22px 0 0;
+    font-size: clamp(17px, 2.2vw, 20px);
+    color: var(--ink-2);
+    max-width: 60ch;
+  }
+  .herostats {
+    margin-top: 40px;
+  }
+
+  .viz section {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .shead {
+    margin-bottom: 26px;
+    max-width: 64ch;
+  }
+  .shead h2 {
+    font-size: clamp(24px, 3.4vw, 32px);
+  }
+  .shead p {
+    margin: 10px 0 0;
+    color: var(--ink-2);
+    font-size: 15.5px;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+  }
+
+  .legend {
+    display: flex;
+    gap: 18px;
+    margin-top: 14px;
+    font-size: 12.5px;
+    color: var(--ink-2);
+    flex-wrap: wrap;
+  }
+  .legend i {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 3px;
+    margin-right: 6px;
+    vertical-align: -1px;
+  }
+
+  .method {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+  }
+  .method h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .method ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--ink-2);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .method b {
+    color: var(--ink);
+  }
+  .viz footer {
+    padding: 34px 0 60px;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+
+  #tip {
+    position: fixed;
+    pointer-events: none;
+    z-index: 50;
+    background: var(--ink);
+    color: var(--page);
+    font-size: 12px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    padding: 5px 9px;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.1s;
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+  }
+
+  @media (max-width: 760px) {
+    .grid2 {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .viz * {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+  const tip = document.getElementById("tip");
+  if (tip) {
+    for (const el of document.querySelectorAll<HTMLElement>("[data-tip]")) {
+      el.addEventListener("mousemove", (e) => {
+        tip.textContent = el.getAttribute("data-tip");
+        tip.style.opacity = "1";
+        tip.style.left =
+          Math.min(e.clientX + 12, window.innerWidth - tip.offsetWidth - 8) + "px";
+        tip.style.top = e.clientY - 34 + "px";
+      });
+      el.addEventListener("mouseleave", () => (tip.style.opacity = "0"));
+    }
+  }
+</script>

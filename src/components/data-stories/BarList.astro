@@ -1,0 +1,102 @@
+---
+import type { Bar } from "../../lib/data-story";
+
+interface Props {
+  bars: Bar[];
+}
+
+const { bars } = Astro.props;
+---
+
+<div class="bars">
+  {
+    bars.map((b) => (
+      <div class="bar" data-tip={b.tip}>
+        <div class="lab">
+          {b.flag && <span class="fl">{b.flag}</span>}
+          {b.href ? (
+            <a class="ig" href={b.href} target="_blank" rel="noopener">
+              {b.label}
+            </a>
+          ) : (
+            <span>{b.label}</span>
+          )}
+        </div>
+        <div class="track">
+          <div class:list={["fill", b.variant]} style={`width:${b.widthPct}%`} />
+        </div>
+        <div class="v">{b.value}</div>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .bars {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .bar {
+    display: grid;
+    grid-template-columns: 132px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    cursor: default;
+  }
+  .lab {
+    font-size: 14px;
+    color: var(--ink-2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .fl {
+    font-size: 15px;
+    line-height: 1;
+  }
+  .track {
+    position: relative;
+    height: 12px;
+    background: var(--data-track);
+    border-radius: 0 4px 4px 0;
+  }
+  .fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 4px 4px 0;
+    background: var(--data);
+    transition: filter 0.12s;
+  }
+  .fill.aqua {
+    background: var(--data-2);
+  }
+  .fill.warm {
+    background: var(--accent);
+  }
+  .bar:hover .fill {
+    filter: brightness(1.08) saturate(1.1);
+  }
+  .v {
+    font-size: 13px;
+    color: var(--ink);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    min-width: 34px;
+    text-align: right;
+  }
+  .ig {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+  }
+  .ig:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+</style>

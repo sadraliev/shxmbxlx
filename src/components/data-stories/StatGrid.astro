@@ -1,0 +1,76 @@
+---
+import type { Stat } from "../../lib/data-story";
+
+interface Props {
+  stats: Stat[];
+}
+
+const { stats } = Astro.props;
+---
+
+<div class="statgrid">
+  {
+    stats.map((s) => (
+      <div class="stat">
+        <div class:list={["n", { accent: s.accent }]}>{s.n}</div>
+        <div class="l">
+          {s.label}
+          {s.link && (
+            <>
+              {" · "}
+              <a class="ig" href={s.link.href} target="_blank" rel="noopener">
+                {s.link.text}
+              </a>
+            </>
+          )}
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .statgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line-soft);
+    border: 1px solid var(--line-soft);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .stat {
+    background: var(--surface);
+    padding: 18px 18px 16px;
+  }
+  .n {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(26px, 4vw, 38px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .n.accent {
+    color: var(--accent);
+  }
+  .l {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 8px;
+    letter-spacing: 0.02em;
+  }
+  .ig {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+  }
+  .ig:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  @media (max-width: 680px) {
+    .statgrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

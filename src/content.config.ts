@@ -28,4 +28,16 @@ const notes = defineCollection({
   }),
 });
 
-export const collections = { essays, notes };
+const dataStories = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/data-stories" }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    date: z.coerce.date(),
+    draft: z.boolean().default(false),
+    // Accent colour for the gallery card (dot + hover cue).
+    accent: z.string().optional(),
+  }),
+});
+
+export const collections = { essays, notes, "data-stories": dataStories };

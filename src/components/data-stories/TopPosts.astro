@@ -1,0 +1,106 @@
+---
+import type { PostCard } from "../../lib/data-story";
+
+interface Props {
+  cards: PostCard[];
+}
+
+const { cards } = Astro.props;
+---
+
+<div class="cards">
+  {
+    cards.map((p) => (
+      <a class="card" href={p.href} target="_blank" rel="noopener">
+        <div class="top">
+          <div class="u">@{p.username}</div>
+          <div class="likes">{p.likes}</div>
+        </div>
+        <div class="meta">
+          {p.country ? (
+            <span class="pill">{p.country}</span>
+          ) : (
+            <span class="pill tbd">origin t.b.d.</span>
+          )}
+          <span>💬 {p.comments}</span>
+        </div>
+        <div class="cap">{p.caption}</div>
+      </a>
+    ))
+  }
+</div>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 15px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: inherit;
+  }
+  .top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .u {
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .likes {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 15px;
+  }
+  .meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 12.5px;
+    color: var(--muted);
+    flex-wrap: wrap;
+  }
+  .cap {
+    font-size: 13px;
+    color: var(--ink-2);
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .pill {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 2px 9px;
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .pill.tbd {
+    background: transparent;
+    border: 1px dashed var(--line);
+    color: var(--muted);
+  }
+  :global(.dark) .pill {
+    color: var(--gold);
+  }
+  @media (max-width: 680px) {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

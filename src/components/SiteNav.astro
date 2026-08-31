@@ -2,6 +2,8 @@
 const pathname = Astro.url.pathname;
 const isEssays = pathname === "/essays" || pathname.startsWith("/essays/");
 const isNotes = pathname === "/notes" || pathname.startsWith("/notes/");
+const isDataStories =
+  pathname === "/data-stories" || pathname.startsWith("/data-stories/");
 ---
 
 <nav
@@ -23,5 +25,14 @@ const isNotes = pathname === "/notes" || pathname.startsWith("/notes/");
       "underline decoration-border underline-offset-[3px] decoration-1 hover:text-primary hover:decoration-current",
       isNotes ? "text-foreground font-medium" : "text-muted-foreground",
     ]}>notes</a
+  >
+  <span class="text-muted-foreground opacity-50 px-2" aria-hidden="true">·</span
+  >
+  <a
+    href="/data-stories"
+    class:list={[
+      "underline decoration-border underline-offset-[3px] decoration-1 hover:text-primary hover:decoration-current",
+      isDataStories ? "text-foreground font-medium" : "text-muted-foreground",
+    ]}>data stories</a
   >
 </nav>
