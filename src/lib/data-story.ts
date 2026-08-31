@@ -17,6 +17,7 @@ export interface AggJson {
       median: number;
       top_username: string;
       top_count: number;
+      top_shortcode: string;
     };
     countries_count: number;
   };
@@ -34,7 +35,7 @@ export interface AggJson {
   bio_links: { buckets: { bucket: string; count: number }[] };
   format_perf: { type: string; median_likes: number; posts: number }[];
   foreign_vs_local: { foreign: { posts: number; median: number }; local: { posts: number; median: number } };
-  virality: { top: { u: string; l: number; fol: number; mult: number }[] };
+  virality: { top: { u: string; sc: string; l: number; fol: number; mult: number }[] };
   superfans: { top: { u: string; posts: number; country: string | null; foreign: number }[]; once_pct: number };
 }
 
@@ -98,7 +99,7 @@ export interface StoryView {
   versus: Versus;
   virality: ViralityRow[];
   formatPerf: Stat[];
-  superfans: { oncePct: string; bars: Bar[] };
+  superfans: { oncePct: string; local: Bar[]; foreign: Bar[] };
   professional: { proPct: number; categories: Bar[] };
   pyramid: Bar[];
   bioLinks: Bar[];
@@ -120,6 +121,7 @@ const cc2flag = (cc: string) =>
 
 const width = (value: number, max: number) => Math.max(4, (value / max) * 100);
 const ig = (u: string) => `https://www.instagram.com/${u}/`;
+const post = (sc: string) => `https://www.instagram.com/p/${sc}/`;
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -180,7 +182,7 @@ export function transform(d: AggJson): StoryView {
   const reach: Stat[] = [
     { n: fmt(au.combined), label: `combined followers · ${au.with_followers} creators profiled` },
     { n: fmt(au.median), label: "median creator — the typical reach", accent: true },
-    { n: fmt(au.top_count), label: "biggest single account", link: { href: ig(au.top_username), text: `@${au.top_username}` } },
+    { n: fmt(au.top_count), label: "biggest single account", link: { href: post(au.top_shortcode), text: `@${au.top_username}` } },
     { n: fmt(au.combined_no_top), label: "combined, minus that one giant" },
   ];
 
@@ -197,7 +199,7 @@ export function transform(d: AggJson): StoryView {
   const maxV = Math.max(...vtop.map((t) => t.mult));
   const virality: ViralityRow[] = vtop.map((t) => ({
     username: t.u,
-    href: ig(t.u),
+    href: post(t.sc),
     widthPct: width(t.mult, maxV),
     ratio: `${fmt(t.fol)}→${fmt(t.l)}`,
     mult: t.mult,
@@ -209,8 +211,19 @@ export function transform(d: AggJson): StoryView {
   const pho = fp.find((f) => f.type === "photo");
   if (vid && pho) formatPerf.push({ n: `${Math.round(vid.median_likes / pho.median_likes)}×`, label: "a video vs a photo", accent: true });
 
-  const sf = d.superfans.top.slice(0, 12);
-  const maxSf = Math.max(...sf.map((a) => a.posts));
+  const sfBars = (arr: AggJson["superfans"]["top"], variant?: "warm"): Bar[] => {
+    const max = Math.max(...arr.map((a) => a.posts));
+    return arr.map((a) => ({
+      label: `@${a.u}`,
+      value: a.posts,
+      widthPct: width(a.posts, max),
+      variant,
+      href: ig(a.u),
+      tip: `@${a.u}: ${a.posts} posts${a.country ? " · " + a.country : ""}`,
+    }));
+  };
+  const sfLocal = sfBars(d.superfans.top.filter((a) => a.foreign !== 1).slice(0, 10));
+  const sfForeign = sfBars(d.superfans.top.filter((a) => a.foreign === 1).slice(0, 10), "warm");
 
   const maxCat = Math.max(...d.professional.categories.map((c) => c.count));
   const maxPy = Math.max(...d.pyramid.map((t) => t.pct));
@@ -227,7 +240,7 @@ export function transform(d: AggJson): StoryView {
     hashtags: d.hashtags.slice(0, 18),
     cards: d.top_posts.slice(0, 10).map((p) => ({
       username: p.username,
-      href: `https://www.instagram.com/p/${p.shortcode}/`,
+      href: post(p.shortcode),
       likes: fmt(p.likes),
       comments: num(p.comments),
       country: p.country,
@@ -239,17 +252,7 @@ export function transform(d: AggJson): StoryView {
     versus,
     virality,
     formatPerf,
-    superfans: {
-      oncePct: `${d.superfans.once_pct}%`,
-      bars: sf.map((a) => ({
-        label: `@${a.u}`,
-        value: a.posts,
-        widthPct: width(a.posts, maxSf),
-        variant: a.foreign === 1 ? "warm" : undefined,
-        href: ig(a.u),
-        tip: `@${a.u}: ${a.posts} posts${a.country ? " · " + a.country : ""}`,
-      })),
-    },
+    superfans: { oncePct: `${d.superfans.once_pct}%`, local: sfLocal, foreign: sfForeign },
     professional: {
       proPct: d.professional.pro_pct,
       categories: d.professional.categories.map((c) => ({ label: c.name, value: c.count, widthPct: width(c.count, maxCat), tip: `${c.name}: ${c.count} creators` })),
