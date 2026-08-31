@@ -1,23 +1,18 @@
-// Data-story transform: turns the raw JSON exported by the collector (aug28's
-// agg.json) into a render-ready `StoryView`. All per-panel arithmetic —
-// bar heights, number formatting, tooltip text — happens here, at build time,
-// so the panel components stay dumb (just map over prepared data).
-//
-// The blog knows nothing about how the data is produced; the only contract
-// with the collector is the `AggJson` shape below. To update: drop a fresh
-// export over src/data/kyrgyzstan-tagged.json and rebuild.
+// Turns the collector's raw JSON into a render-ready `StoryView` at build time,
+// so the panel components just map over prepared data. The only contract with
+// the collector is `AggJson` below — to update, drop a fresh export over
+// src/data/kyrgyzstan-tagged.json and rebuild.
 
-// ─────────────────────────── raw input (the contract) ───────────────────────
+// Only the fields we actually render are typed; extra fields in the JSON are
+// ignored, and a missing one we use fails the build.
 export interface AggJson {
   meta: {
     total_posts: number;
     total_authors: number;
     profiled: number;
     foreign_authors: number;
-    span_min: number;
-    span_max: number;
     generated_at: number;
-    engagement: { likes: number; comments: number; avg: number };
+    engagement: { likes: number };
     audience: {
       with_followers: number;
       combined: number;
@@ -32,33 +27,24 @@ export interface AggJson {
   languages: { code: string; name: string; posts: number }[];
   media_types: { type: string; posts: number }[];
   weekday: { d: string; posts: number }[];
-  timeline: { ym: string; posts: number; authors: number; foreign_posts: number }[];
+  timeline: { ym: string; posts: number; foreign_posts: number }[];
   daily: { d: string; posts: number; foreign_posts: number }[];
   locations: { name: string; posts: number }[];
   hashtags: { tag: string; posts: number }[];
-  top_posts: {
-    username: string;
-    likes: number;
-    comments: number;
-    shortcode: string;
-    script: string;
-    country: string | null;
-    cap: string;
-  }[];
-  professional: { with_raw: number; pro_pct: number; categories: { name: string; count: number }[] };
-  pyramid: { key: string; label: string; count: number; pct: number }[];
-  bio_links: { authors_with_link: number; buckets: { bucket: string; count: number }[] };
-  format_perf: { type: string; median_likes: number; median_er: number; posts: number }[];
+  top_posts: { username: string; likes: number; comments: number; shortcode: string; country: string | null; cap: string }[];
+  professional: { pro_pct: number; categories: { name: string; count: number }[] };
+  pyramid: { label: string; count: number; pct: number }[];
+  bio_links: { buckets: { bucket: string; count: number }[] };
+  format_perf: { type: string; median_likes: number; posts: number }[];
   foreign_vs_local: { foreign: { posts: number; median: number }; local: { posts: number; median: number } };
-  virality: { n: number; points: { x: number; y: number; u: string; f: number | null }[]; top: { u: string; l: number; fol: number; mult: number }[] };
-  superfans: { top: { u: string; posts: number; country: string | null; foreign: number; followers: number | null }[]; dist: unknown; once_pct: number };
+  virality: { top: { u: string; l: number; fol: number; mult: number }[] };
+  superfans: { top: { u: string; posts: number; country: string | null; foreign: number }[]; once_pct: number };
 }
 
-// ─────────────────────────── render-ready output ────────────────────────────
 export interface Bar {
   label: string;
   flag?: string;
-  value: number | string;
+  value: number;
   widthPct: number;
   variant?: "aqua" | "warm";
   href?: string;
@@ -122,11 +108,10 @@ export interface StoryView {
   generated: string;
 }
 
-// ─────────────────────────── helpers ────────────────────────────────────────
 const nf = new Intl.NumberFormat("en-US");
-const num = (n: number) => nf.format(n || 0);
+const num = (n: number) => nf.format(n);
 
-/** Compact "1.2M" / "3.4K" formatting, matching the original infographic. */
+/** Compact "1.2M" / "3.4K" formatting. */
 function fmt(n: number): string {
   if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1) + "M";
   if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1) + "K";
@@ -134,20 +119,17 @@ function fmt(n: number): string {
 }
 
 /** Two-letter country code → flag emoji. */
-function cc2flag(cc: string): string {
-  if (!cc || cc.length !== 2) return "";
-  return String.fromCodePoint(...[...cc.toUpperCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
-}
+const cc2flag = (cc: string) =>
+  String.fromCodePoint(...[...cc.toUpperCase()].map((c) => 0x1f1e6 + c.charCodeAt(0) - 65));
 
 const width = (value: number, max: number) => Math.max(4, (value / max) * 100);
 const ig = (u: string) => `https://www.instagram.com/${u}/`;
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const LOCATION_NOISE = new Set(["Шерегеш", "Summer"]);
 
-// ─────────────────────────── transform ──────────────────────────────────────
 export function transform(d: AggJson): StoryView {
   const m = d.meta;
+  const au = m.audience;
 
   const hero = {
     countries: num(m.countries_count),
@@ -162,7 +144,6 @@ export function transform(d: AggJson): StoryView {
     ] as Stat[],
   };
 
-  // timeline (monthly)
   const maxT = Math.max(...d.timeline.map((t) => t.posts));
   const timeline: TimelineBar[] = d.timeline.map((t) => ({
     foreignH: (t.foreign_posts / maxT) * 100,
@@ -171,23 +152,16 @@ export function transform(d: AggJson): StoryView {
     tip: `${t.ym}: ${t.posts} posts · ${t.foreign_posts} foreign`,
   }));
 
-  // daily (last ~90 days)
-  const maxD = Math.max(...d.daily.map((x) => x.posts), 1);
+  const maxD = Math.max(...d.daily.map((x) => x.posts));
   const monthSpans: Record<string, number> = {};
-  for (const x of d.daily) {
-    const key = x.d.slice(0, 7);
-    monthSpans[key] = (monthSpans[key] || 0) + 1;
-  }
+  for (const x of d.daily) monthSpans[x.d.slice(0, 7)] = (monthSpans[x.d.slice(0, 7)] ?? 0) + 1;
   const daily: DailyView = {
     bars: d.daily.map((x) => ({
       foreignH: (x.foreign_posts / maxD) * 100,
       restH: ((x.posts - x.foreign_posts) / maxD) * 100,
       tip: `${x.d}: ${x.posts} posts · ${x.foreign_posts} foreign`,
     })),
-    axis: Object.entries(monthSpans).map(([ym, span]) => ({
-      label: MONTHS[parseInt(ym.slice(5, 7), 10) - 1],
-      span,
-    })),
+    axis: Object.entries(monthSpans).map(([ym, span]) => ({ label: MONTHS[+ym.slice(5, 7) - 1], span })),
   };
 
   // countries — top 24, split into two columns
@@ -201,45 +175,15 @@ export function transform(d: AggJson): StoryView {
     widthPct: width(c.authors, maxC),
     tip: `${c.name}: ${c.authors} creators`,
   });
-  const countriesA = cs.slice(0, half).map(countryBar);
-  const countriesB = cs.slice(half).map(countryBar);
 
   // languages — drop unresolved codes (name === code)
   const langs = d.languages.filter((l) => l.name !== l.code).slice(0, 12);
   const maxL = langs[0].posts;
-  const languages: Bar[] = langs.map((l) => ({
-    label: l.name,
-    value: l.posts,
-    widthPct: width(l.posts, maxL),
-    variant: "aqua",
-    tip: `${l.name}: ${l.posts} posts`,
-  }));
 
-  // locations — filter noise, strip trailing ", Kyrgyzstan"
-  const locs = d.locations.filter((l) => !LOCATION_NOISE.has(l.name)).slice(0, 9);
+  // locations — drop non-KG noise; label strips the trailing ", Kyrgyzstan"
+  const locs = d.locations.filter((l) => l.name !== "Шерегеш" && l.name !== "Summer").slice(0, 9);
   const maxLoc = locs[0].posts;
-  const locations: Bar[] = locs.map((l) => ({
-    label: l.name.replace(/, ?Kyrgyzstan$/, ""),
-    value: l.posts,
-    widthPct: width(l.posts, maxLoc),
-    tip: `${l.name}: ${l.posts} posts`,
-  }));
 
-  // hashtags
-  const hashtags = d.hashtags.slice(0, 18);
-
-  // top posts → cards
-  const cards: PostCard[] = d.top_posts.slice(0, 10).map((p) => ({
-    username: p.username,
-    href: `https://www.instagram.com/p/${p.shortcode}/`,
-    likes: fmt(p.likes),
-    comments: num(p.comments),
-    country: p.country,
-    caption: (p.cap || "").split("\n")[0] || "—",
-  }));
-
-  // reach / audience
-  const au = m.audience;
   const reach: Stat[] = [
     { n: fmt(au.combined), label: `combined followers · ${au.with_followers} creators profiled` },
     { n: fmt(au.median), label: "median creator — the typical reach", accent: true },
@@ -247,33 +191,15 @@ export function transform(d: AggJson): StoryView {
     { n: fmt(au.combined_no_top), label: "combined, minus that one giant" },
   ];
 
-  // media types
   const maxMt = Math.max(...d.media_types.map((x) => x.posts));
-  const mediaTypes: Bar[] = d.media_types.map((x) => ({
-    label: x.type,
-    value: x.posts,
-    widthPct: width(x.posts, maxMt),
-    tip: `${x.type}: ${x.posts} posts`,
-  }));
-
-  // weekday
   const maxWd = Math.max(...d.weekday.map((w) => w.posts));
-  const weekday: Bar[] = d.weekday.map((w) => ({
-    label: w.d,
-    value: w.posts,
-    widthPct: width(w.posts, maxWd),
-    variant: "aqua",
-    tip: `${w.d}: ${w.posts} posts`,
-  }));
 
-  // foreign vs local
   const fv = d.foreign_vs_local;
   const versus: Versus = {
     foreign: { median: num(fv.foreign.median), posts: num(fv.foreign.posts) },
     local: { median: num(fv.local.median), posts: num(fv.local.posts) },
   };
 
-  // virality leaderboard — top 8 by multiplier
   const vtop = d.virality.top.slice(0, 8);
   const maxV = Math.max(...vtop.map((t) => t.mult));
   const virality: ViralityRow[] = vtop.map((t) => ({
@@ -284,86 +210,59 @@ export function transform(d: AggJson): StoryView {
     mult: t.mult,
   }));
 
-  // format performance
   const fp = d.format_perf;
-  const formatPerf: Stat[] = fp.map((f) => ({
-    n: fmt(f.median_likes),
-    label: `${f.type} · median likes · ${f.posts} posts`,
-  }));
-  const vVid = fp.find((f) => f.type === "video");
-  const vPho = fp.find((f) => f.type === "photo");
-  if (vVid && vPho && vPho.median_likes) {
-    formatPerf.push({ n: `${Math.round(vVid.median_likes / vPho.median_likes)}×`, label: "a video vs a photo", accent: true });
-  }
+  const formatPerf: Stat[] = fp.map((f) => ({ n: fmt(f.median_likes), label: `${f.type} · median likes · ${f.posts} posts` }));
+  const vid = fp.find((f) => f.type === "video");
+  const pho = fp.find((f) => f.type === "photo");
+  if (vid && pho) formatPerf.push({ n: `${Math.round(vid.median_likes / pho.median_likes)}×`, label: "a video vs a photo", accent: true });
 
-  // superfans — top 12 ranked bars
   const sf = d.superfans.top.slice(0, 12);
   const maxSf = Math.max(...sf.map((a) => a.posts));
-  const superfans = {
-    oncePct: `${d.superfans.once_pct}%`,
-    bars: sf.map((a): Bar => ({
-      label: `@${a.u}`,
-      value: a.posts,
-      widthPct: width(a.posts, maxSf),
-      variant: a.foreign === 1 ? "warm" : undefined,
-      href: ig(a.u),
-      tip: `@${a.u}: ${a.posts} posts${a.country ? " · " + a.country : ""}`,
-    })),
-  };
 
-  // professional categories
   const maxCat = Math.max(...d.professional.categories.map((c) => c.count));
-  const professional = {
-    proPct: d.professional.pro_pct,
-    categories: d.professional.categories.map((c): Bar => ({
-      label: c.name,
-      value: c.count,
-      widthPct: width(c.count, maxCat),
-      tip: `${c.name}: ${c.count} creators`,
-    })),
-  };
-
-  // follower pyramid
   const maxPy = Math.max(...d.pyramid.map((t) => t.pct));
-  const pyramid: Bar[] = d.pyramid.map((t) => ({
-    label: t.label,
-    value: t.pct,
-    widthPct: width(t.pct, maxPy),
-    variant: "aqua",
-    tip: `${t.label}: ${t.count} creators (${t.pct}%)`,
-  }));
-
-  // bio links
   const maxBl = Math.max(...d.bio_links.buckets.map((b) => b.count));
-  const bioLinks: Bar[] = d.bio_links.buckets.map((b) => ({
-    label: b.bucket,
-    value: b.count,
-    widthPct: width(b.count, maxBl),
-    tip: `${b.bucket}: ${b.count} creators`,
-  }));
-
-  const generated = new Date(m.generated_at * 1000).toISOString().slice(0, 10);
 
   return {
     hero,
     timeline,
     daily,
-    countriesA,
-    countriesB,
-    languages,
-    locations,
-    hashtags,
-    cards,
+    countriesA: cs.slice(0, half).map(countryBar),
+    countriesB: cs.slice(half).map(countryBar),
+    languages: langs.map((l) => ({ label: l.name, value: l.posts, widthPct: width(l.posts, maxL), variant: "aqua", tip: `${l.name}: ${l.posts} posts` })),
+    locations: locs.map((l) => ({ label: l.name.replace(/, ?Kyrgyzstan$/, ""), value: l.posts, widthPct: width(l.posts, maxLoc), tip: `${l.name}: ${l.posts} posts` })),
+    hashtags: d.hashtags.slice(0, 18),
+    cards: d.top_posts.slice(0, 10).map((p) => ({
+      username: p.username,
+      href: `https://www.instagram.com/p/${p.shortcode}/`,
+      likes: fmt(p.likes),
+      comments: num(p.comments),
+      country: p.country,
+      caption: p.cap.split("\n")[0] || "—",
+    })),
     reach,
-    mediaTypes,
-    weekday,
+    mediaTypes: d.media_types.map((x) => ({ label: x.type, value: x.posts, widthPct: width(x.posts, maxMt), tip: `${x.type}: ${x.posts} posts` })),
+    weekday: d.weekday.map((w) => ({ label: w.d, value: w.posts, widthPct: width(w.posts, maxWd), variant: "aqua", tip: `${w.d}: ${w.posts} posts` })),
     versus,
     virality,
     formatPerf,
-    superfans,
-    professional,
-    pyramid,
-    bioLinks,
-    generated,
+    superfans: {
+      oncePct: `${d.superfans.once_pct}%`,
+      bars: sf.map((a) => ({
+        label: `@${a.u}`,
+        value: a.posts,
+        widthPct: width(a.posts, maxSf),
+        variant: a.foreign === 1 ? "warm" : undefined,
+        href: ig(a.u),
+        tip: `@${a.u}: ${a.posts} posts${a.country ? " · " + a.country : ""}`,
+      })),
+    },
+    professional: {
+      proPct: d.professional.pro_pct,
+      categories: d.professional.categories.map((c) => ({ label: c.name, value: c.count, widthPct: width(c.count, maxCat), tip: `${c.name}: ${c.count} creators` })),
+    },
+    pyramid: d.pyramid.map((t) => ({ label: t.label, value: t.pct, widthPct: width(t.pct, maxPy), variant: "aqua", tip: `${t.label}: ${t.count} creators (${t.pct}%)` })),
+    bioLinks: d.bio_links.buckets.map((b) => ({ label: b.bucket, value: b.count, widthPct: width(b.count, maxBl), tip: `${b.bucket}: ${b.count} creators` })),
+    generated: new Date(m.generated_at * 1000).toISOString().slice(0, 10),
   };
 }
