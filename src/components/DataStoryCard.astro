@@ -1,0 +1,75 @@
+---
+import { formatDate } from "../lib/date";
+
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  date?: Date;
+  // Force a full page load (bypass the client router) for links that point to
+  // a page whose inline render script must run on load.
+  reload?: boolean;
+  // Small per-story accent (dot + hover cue). Falls back to the site primary.
+  accent?: string;
+}
+
+const {
+  href,
+  title,
+  description,
+  date,
+  reload,
+  accent = "var(--primary)",
+} = Astro.props;
+---
+
+<a
+  href={href}
+  data-astro-reload={reload ? "" : undefined}
+  class="group block rounded-2xl border border-border bg-card p-6 no-underline transition duration-200 hover:-translate-y-0.5 hover:border-foreground/30"
+>
+  <div class="mb-5 flex items-center gap-2">
+    <span
+      class="inline-block h-1.5 w-1.5 rounded-full"
+      style={`background:${accent}`}
+    ></span>
+    <span
+      class="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-muted-foreground"
+      >Data story</span
+    >
+  </div>
+
+  <h3
+    class="mb-2.5 font-serif text-[1.5rem] font-medium leading-tight tracking-tight text-foreground transition-colors group-hover:text-primary"
+  >
+    {title}
+  </h3>
+
+  {
+    description && (
+      <p class="m-0 line-clamp-2 text-[0.9rem] leading-relaxed text-muted-foreground">
+        {description}
+      </p>
+    )
+  }
+
+  <div
+    class="mt-5 flex items-center justify-between border-t border-border pt-3.5"
+  >
+    {
+      date && (
+        <time
+          datetime={date.toISOString()}
+          class="text-[0.78rem] tabular-nums text-muted-foreground"
+        >
+          {formatDate(date)}
+        </time>
+      )
+    }
+    <span
+      class="text-[0.82rem] font-medium opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+      style={`color:${accent}`}
+      aria-hidden="true">Explore →</span
+    >
+  </div>
+</a>

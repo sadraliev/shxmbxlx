@@ -1,0 +1,66 @@
+---
+import type { Versus } from "../../lib/data-story";
+
+interface Props {
+  versus: Versus;
+}
+
+const { versus } = Astro.props;
+---
+
+<div class="versus">
+  <div class="vcard">
+    <div class="eyebrow">Foreign creators</div>
+    <div class="big accent">{versus.foreign.median}</div>
+    <div class="vl">median likes · {versus.foreign.posts} posts</div>
+  </div>
+  <div class="vcard">
+    <div class="eyebrow data">Local creators</div>
+    <div class="big data">{versus.local.median}</div>
+    <div class="vl">median likes · {versus.local.posts} posts</div>
+  </div>
+</div>
+
+<style>
+  .versus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .vcard {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+  }
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .eyebrow.data {
+    color: var(--data);
+  }
+  .big {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .big.accent {
+    color: var(--accent);
+  }
+  .big.data {
+    color: var(--data);
+  }
+  .vl {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+</style>

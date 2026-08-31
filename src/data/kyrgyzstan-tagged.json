@@ -1,0 +1,8714 @@
+{
+  "meta": {
+    "total_posts": 2126,
+    "total_authors": 1179,
+    "profiled": 432,
+    "foreign_authors": 238,
+    "span_min": 1498573112,
+    "span_max": 1788101582,
+    "generated_at": 1788125021,
+    "engagement": {
+      "likes": 76833085,
+      "comments": 902849,
+      "avg": 36242
+    },
+    "audience": {
+      "with_followers": 579,
+      "combined": 113005297,
+      "combined_no_top": 86679564,
+      "median": 12535,
+      "top_username": "abiresag",
+      "top_count": 26325733
+    },
+    "countries_count": 46
+  },
+  "countries": [
+    {
+      "code": "BE",
+      "name": "Belgium",
+      "authors": 20
+    },
+    {
+      "code": "KZ",
+      "name": "Kazakhstan",
+      "authors": 19
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "authors": 18
+    },
+    {
+      "code": "TR",
+      "name": "Turkey",
+      "authors": 15
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "authors": 15
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "authors": 13
+    },
+    {
+      "code": "KR",
+      "name": "South Korea",
+      "authors": 11
+    },
+    {
+      "code": "IT",
+      "name": "Italy",
+      "authors": 9
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "authors": 9
+    },
+    {
+      "code": "RU",
+      "name": "Russia",
+      "authors": 8
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "authors": 8
+    },
+    {
+      "code": "GR",
+      "name": "Greece",
+      "authors": 7
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "authors": 7
+    },
+    {
+      "code": "AE",
+      "name": "UAE",
+      "authors": 7
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "authors": 6
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "authors": 6
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "authors": 5
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia",
+      "authors": 5
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "authors": 5
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "authors": 4
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "authors": 4
+    },
+    {
+      "code": "UZ",
+      "name": "Uzbekistan",
+      "authors": 3
+    },
+    {
+      "code": "PH",
+      "name": "Philippines",
+      "authors": 3
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "authors": 3
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "authors": 3
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam",
+      "authors": 2
+    },
+    {
+      "code": "MA",
+      "name": "Morocco",
+      "authors": 2
+    },
+    {
+      "code": "GE",
+      "name": "Georgia",
+      "authors": 2
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "authors": 2
+    },
+    {
+      "code": "TJ",
+      "name": "Tajikistan",
+      "authors": 1
+    },
+    {
+      "code": "TH",
+      "name": "Thailand",
+      "authors": 1
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia",
+      "authors": 1
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia",
+      "authors": 1
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "authors": 1
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia",
+      "authors": 1
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "authors": 1
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan",
+      "authors": 1
+    },
+    {
+      "code": "MN",
+      "name": "Mongolia",
+      "authors": 1
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "authors": 1
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong",
+      "authors": 1
+    },
+    {
+      "code": "EG",
+      "name": "Egypt",
+      "authors": 1
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "authors": 1
+    },
+    {
+      "code": "BY",
+      "name": "Belarus",
+      "authors": 1
+    },
+    {
+      "code": "BR",
+      "name": "Brazil",
+      "authors": 1
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria",
+      "authors": 1
+    },
+    {
+      "code": "AR",
+      "name": "Argentina",
+      "authors": 1
+    }
+  ],
+  "languages": [
+    {
+      "code": "eng",
+      "name": "English",
+      "posts": 829
+    },
+    {
+      "code": "rus",
+      "name": "Russian",
+      "posts": 205
+    },
+    {
+      "code": "kir",
+      "name": "Kyrgyz",
+      "posts": 157
+    },
+    {
+      "code": "uzn",
+      "name": "Uzbek",
+      "posts": 104
+    },
+    {
+      "code": "srp",
+      "name": "Serbian",
+      "posts": 71
+    },
+    {
+      "code": "bul",
+      "name": "Bulgarian",
+      "posts": 42
+    },
+    {
+      "code": "nno",
+      "name": "nno",
+      "posts": 32
+    },
+    {
+      "code": "kor",
+      "name": "Korean",
+      "posts": 32
+    },
+    {
+      "code": "tur",
+      "name": "Turkish",
+      "posts": 26
+    },
+    {
+      "code": "tgl",
+      "name": "Tagalog",
+      "posts": 24
+    },
+    {
+      "code": "fra",
+      "name": "French",
+      "posts": 24
+    },
+    {
+      "code": "ind",
+      "name": "Indonesian",
+      "posts": 21
+    },
+    {
+      "code": "deu",
+      "name": "German",
+      "posts": 20
+    },
+    {
+      "code": "fin",
+      "name": "fin",
+      "posts": 18
+    }
+  ],
+  "media_types": [
+    {
+      "type": "video",
+      "posts": 1525
+    },
+    {
+      "type": "carousel",
+      "posts": 459
+    },
+    {
+      "type": "photo",
+      "posts": 142
+    }
+  ],
+  "foreign_vs_local": {
+    "foreign": {
+      "posts": 893,
+      "median": 1753
+    },
+    "local": {
+      "posts": 770,
+      "median": 10295
+    }
+  },
+  "weekday": [
+    {
+      "d": "Sun",
+      "posts": 285
+    },
+    {
+      "d": "Mon",
+      "posts": 277
+    },
+    {
+      "d": "Tue",
+      "posts": 284
+    },
+    {
+      "d": "Wed",
+      "posts": 303
+    },
+    {
+      "d": "Thu",
+      "posts": 289
+    },
+    {
+      "d": "Fri",
+      "posts": 379
+    },
+    {
+      "d": "Sat",
+      "posts": 309
+    }
+  ],
+  "timeline": [
+    {
+      "ym": "2025-01",
+      "posts": 6,
+      "authors": 6,
+      "foreign_posts": 4
+    },
+    {
+      "ym": "2025-02",
+      "posts": 11,
+      "authors": 8,
+      "foreign_posts": 4
+    },
+    {
+      "ym": "2025-03",
+      "posts": 15,
+      "authors": 9,
+      "foreign_posts": 3
+    },
+    {
+      "ym": "2025-04",
+      "posts": 5,
+      "authors": 5,
+      "foreign_posts": 2
+    },
+    {
+      "ym": "2025-05",
+      "posts": 13,
+      "authors": 11,
+      "foreign_posts": 5
+    },
+    {
+      "ym": "2025-06",
+      "posts": 16,
+      "authors": 13,
+      "foreign_posts": 7
+    },
+    {
+      "ym": "2025-07",
+      "posts": 25,
+      "authors": 21,
+      "foreign_posts": 13
+    },
+    {
+      "ym": "2025-08",
+      "posts": 18,
+      "authors": 16,
+      "foreign_posts": 6
+    },
+    {
+      "ym": "2025-09",
+      "posts": 13,
+      "authors": 13,
+      "foreign_posts": 8
+    },
+    {
+      "ym": "2025-10",
+      "posts": 22,
+      "authors": 22,
+      "foreign_posts": 9
+    },
+    {
+      "ym": "2025-11",
+      "posts": 19,
+      "authors": 17,
+      "foreign_posts": 10
+    },
+    {
+      "ym": "2025-12",
+      "posts": 21,
+      "authors": 17,
+      "foreign_posts": 7
+    },
+    {
+      "ym": "2026-01",
+      "posts": 28,
+      "authors": 20,
+      "foreign_posts": 11
+    },
+    {
+      "ym": "2026-02",
+      "posts": 41,
+      "authors": 26,
+      "foreign_posts": 11
+    },
+    {
+      "ym": "2026-03",
+      "posts": 58,
+      "authors": 35,
+      "foreign_posts": 22
+    },
+    {
+      "ym": "2026-04",
+      "posts": 65,
+      "authors": 47,
+      "foreign_posts": 30
+    },
+    {
+      "ym": "2026-05",
+      "posts": 120,
+      "authors": 92,
+      "foreign_posts": 35
+    },
+    {
+      "ym": "2026-06",
+      "posts": 265,
+      "authors": 195,
+      "foreign_posts": 108
+    },
+    {
+      "ym": "2026-07",
+      "posts": 397,
+      "authors": 281,
+      "foreign_posts": 175
+    },
+    {
+      "ym": "2026-08",
+      "posts": 846,
+      "authors": 637,
+      "foreign_posts": 391
+    }
+  ],
+  "daily": [
+    {
+      "d": "2026-06-02",
+      "posts": 2,
+      "foreign_posts": 1
+    },
+    {
+      "d": "2026-06-03",
+      "posts": 16,
+      "foreign_posts": 7
+    },
+    {
+      "d": "2026-06-04",
+      "posts": 5,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-06-05",
+      "posts": 11,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-06-06",
+      "posts": 5,
+      "foreign_posts": 2
+    },
+    {
+      "d": "2026-06-07",
+      "posts": 14,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-06-08",
+      "posts": 9,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-06-09",
+      "posts": 10,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-06-10",
+      "posts": 10,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-06-11",
+      "posts": 6,
+      "foreign_posts": 2
+    },
+    {
+      "d": "2026-06-12",
+      "posts": 4,
+      "foreign_posts": 2
+    },
+    {
+      "d": "2026-06-13",
+      "posts": 9,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-06-14",
+      "posts": 16,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-06-15",
+      "posts": 11,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-06-16",
+      "posts": 7,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-06-17",
+      "posts": 14,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-06-18",
+      "posts": 7,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-06-19",
+      "posts": 7,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-06-20",
+      "posts": 8,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-06-21",
+      "posts": 9,
+      "foreign_posts": 1
+    },
+    {
+      "d": "2026-06-22",
+      "posts": 6,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-06-23",
+      "posts": 10,
+      "foreign_posts": 7
+    },
+    {
+      "d": "2026-06-24",
+      "posts": 11,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-06-25",
+      "posts": 10,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-06-26",
+      "posts": 9,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-06-27",
+      "posts": 10,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-06-28",
+      "posts": 7,
+      "foreign_posts": 1
+    },
+    {
+      "d": "2026-06-29",
+      "posts": 6,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-06-30",
+      "posts": 10,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-07-01",
+      "posts": 7,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-07-02",
+      "posts": 10,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-07-03",
+      "posts": 7,
+      "foreign_posts": 1
+    },
+    {
+      "d": "2026-07-04",
+      "posts": 11,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-07-05",
+      "posts": 10,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-07-06",
+      "posts": 6,
+      "foreign_posts": 2
+    },
+    {
+      "d": "2026-07-07",
+      "posts": 14,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-07-08",
+      "posts": 6,
+      "foreign_posts": 2
+    },
+    {
+      "d": "2026-07-09",
+      "posts": 13,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-07-10",
+      "posts": 8,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-07-11",
+      "posts": 11,
+      "foreign_posts": 3
+    },
+    {
+      "d": "2026-07-12",
+      "posts": 13,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-07-13",
+      "posts": 11,
+      "foreign_posts": 7
+    },
+    {
+      "d": "2026-07-14",
+      "posts": 14,
+      "foreign_posts": 8
+    },
+    {
+      "d": "2026-07-15",
+      "posts": 12,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-07-16",
+      "posts": 19,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-07-17",
+      "posts": 13,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-07-18",
+      "posts": 12,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-07-19",
+      "posts": 17,
+      "foreign_posts": 7
+    },
+    {
+      "d": "2026-07-20",
+      "posts": 13,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-07-21",
+      "posts": 17,
+      "foreign_posts": 7
+    },
+    {
+      "d": "2026-07-22",
+      "posts": 13,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-07-23",
+      "posts": 11,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-07-24",
+      "posts": 16,
+      "foreign_posts": 4
+    },
+    {
+      "d": "2026-07-25",
+      "posts": 15,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-07-26",
+      "posts": 17,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-07-27",
+      "posts": 15,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-07-28",
+      "posts": 14,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-07-29",
+      "posts": 15,
+      "foreign_posts": 7
+    },
+    {
+      "d": "2026-07-30",
+      "posts": 18,
+      "foreign_posts": 8
+    },
+    {
+      "d": "2026-07-31",
+      "posts": 19,
+      "foreign_posts": 10
+    },
+    {
+      "d": "2026-08-01",
+      "posts": 19,
+      "foreign_posts": 7
+    },
+    {
+      "d": "2026-08-02",
+      "posts": 25,
+      "foreign_posts": 15
+    },
+    {
+      "d": "2026-08-03",
+      "posts": 23,
+      "foreign_posts": 13
+    },
+    {
+      "d": "2026-08-04",
+      "posts": 27,
+      "foreign_posts": 10
+    },
+    {
+      "d": "2026-08-05",
+      "posts": 12,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-08-06",
+      "posts": 22,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-08-07",
+      "posts": 22,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-08-08",
+      "posts": 20,
+      "foreign_posts": 10
+    },
+    {
+      "d": "2026-08-09",
+      "posts": 17,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-08-10",
+      "posts": 18,
+      "foreign_posts": 11
+    },
+    {
+      "d": "2026-08-11",
+      "posts": 30,
+      "foreign_posts": 15
+    },
+    {
+      "d": "2026-08-12",
+      "posts": 25,
+      "foreign_posts": 11
+    },
+    {
+      "d": "2026-08-13",
+      "posts": 16,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-08-14",
+      "posts": 27,
+      "foreign_posts": 8
+    },
+    {
+      "d": "2026-08-15",
+      "posts": 19,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-08-16",
+      "posts": 27,
+      "foreign_posts": 13
+    },
+    {
+      "d": "2026-08-17",
+      "posts": 21,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-08-18",
+      "posts": 29,
+      "foreign_posts": 11
+    },
+    {
+      "d": "2026-08-19",
+      "posts": 27,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-08-20",
+      "posts": 26,
+      "foreign_posts": 15
+    },
+    {
+      "d": "2026-08-21",
+      "posts": 23,
+      "foreign_posts": 5
+    },
+    {
+      "d": "2026-08-22",
+      "posts": 17,
+      "foreign_posts": 6
+    },
+    {
+      "d": "2026-08-23",
+      "posts": 17,
+      "foreign_posts": 11
+    },
+    {
+      "d": "2026-08-24",
+      "posts": 34,
+      "foreign_posts": 18
+    },
+    {
+      "d": "2026-08-25",
+      "posts": 27,
+      "foreign_posts": 8
+    },
+    {
+      "d": "2026-08-26",
+      "posts": 31,
+      "foreign_posts": 9
+    },
+    {
+      "d": "2026-08-27",
+      "posts": 26,
+      "foreign_posts": 8
+    },
+    {
+      "d": "2026-08-28",
+      "posts": 160,
+      "foreign_posts": 100
+    },
+    {
+      "d": "2026-08-29",
+      "posts": 51,
+      "foreign_posts": 28
+    },
+    {
+      "d": "2026-08-30",
+      "posts": 8,
+      "foreign_posts": 0
+    }
+  ],
+  "locations": [
+    {
+      "name": "Kyrgyzstan",
+      "posts": 27
+    },
+    {
+      "name": "Bishkek, Kyrgyzstan",
+      "posts": 11
+    },
+    {
+      "name": "The Kyrgyz Republic",
+      "posts": 4
+    },
+    {
+      "name": "Karakol, Kyrgyzstan",
+      "posts": 4
+    },
+    {
+      "name": "Burana Tower",
+      "posts": 2
+    },
+    {
+      "name": "Bokonbayevo",
+      "posts": 2
+    },
+    {
+      "name": "Ala-Kul Pass, Kyrgyzstan",
+      "posts": 2
+    },
+    {
+      "name": "Шерегеш",
+      "posts": 1
+    },
+    {
+      "name": "Ущелье Джеты-Огуз",
+      "posts": 1
+    },
+    {
+      "name": "Водопад Девичьи Слезы",
+      "posts": 1
+    },
+    {
+      "name": "Tossor, Ysyk-Köl, Kyrgyzstan",
+      "posts": 1
+    },
+    {
+      "name": "Summer",
+      "posts": 1
+    }
+  ],
+  "hashtags": [
+    {
+      "tag": "travel",
+      "posts": 246
+    },
+    {
+      "tag": "centralasia",
+      "posts": 203
+    },
+    {
+      "tag": "bishkek",
+      "posts": 187
+    },
+    {
+      "tag": "бишкек",
+      "posts": 102
+    },
+    {
+      "tag": "kyrgyzstantravel",
+      "posts": 81
+    },
+    {
+      "tag": "mountains",
+      "posts": 80
+    },
+    {
+      "tag": "visitkyrgyzstan",
+      "posts": 78
+    },
+    {
+      "tag": "nature",
+      "posts": 61
+    },
+    {
+      "tag": "reels",
+      "posts": 61
+    },
+    {
+      "tag": "travelkyrgyzstan",
+      "posts": 57
+    },
+    {
+      "tag": "travelgram",
+      "posts": 55
+    },
+    {
+      "tag": "kırgızistan",
+      "posts": 52
+    },
+    {
+      "tag": "uzbekistan",
+      "posts": 51
+    },
+    {
+      "tag": "kazakhstan",
+      "posts": 46
+    },
+    {
+      "tag": "mountain",
+      "posts": 42
+    },
+    {
+      "tag": "kirgizistan",
+      "posts": 41
+    },
+    {
+      "tag": "hiking",
+      "posts": 40
+    },
+    {
+      "tag": "horseriding",
+      "posts": 37
+    },
+    {
+      "tag": "fyp",
+      "posts": 37
+    },
+    {
+      "tag": "karakol",
+      "posts": 36
+    }
+  ],
+  "top_posts": [
+    {
+      "username": "allyasyamimi",
+      "likes": 3765766,
+      "comments": 5373,
+      "shortcode": "DaxARTZJoJ7",
+      "script": "lat",
+      "country": "Germany",
+      "cap": "i said what?"
+    },
+    {
+      "username": "adamboro",
+      "likes": 1985953,
+      "comments": 3490,
+      "shortcode": "DOOUy7XEZbS",
+      "script": "lat",
+      "country": null,
+      "cap": "How does this country exist 😭🤯 \n————————\n📝 KYRGYZSTAN BUCKET LIST 📝:\nKyrgyzstan is one of "
+    },
+    {
+      "username": "lumusab",
+      "likes": 1955645,
+      "comments": 4392,
+      "shortcode": "DToWAkSDF8u",
+      "script": "lat",
+      "country": "Netherlands",
+      "cap": "Kyrgyzstan’s stays have the craziest views ever\n\n📍Altyn Arashan, Kyrgyzstan\n\n#kyrgyzstan #"
+    },
+    {
+      "username": "aidanatazhidinova",
+      "likes": 1591637,
+      "comments": 9379,
+      "shortcode": "DaqTQ1HuMr3",
+      "script": "cyr",
+      "country": null,
+      "cap": "Жаратканга кайрылып, Андан жардам жана кечирим сурагыла😭🤲🏻\n\n#баткен #кыргызстан #reels #ре"
+    },
+    {
+      "username": "meder6ek",
+      "likes": 1565780,
+      "comments": 27534,
+      "shortcode": "DbvdhFjqnjJ",
+      "script": "cyr",
+      "country": null,
+      "cap": "Фильм «Мончок» — совсем скоро. 🎬🔥"
+    },
+    {
+      "username": "simonnikolaus_",
+      "likes": 1289295,
+      "comments": 4074,
+      "shortcode": "Db5omGgIiZz",
+      "script": "lat",
+      "country": null,
+      "cap": "highly recommend it\n\n#travel #cinematography #travelgram #kyrgyzstan🇰🇬 #bali"
+    },
+    {
+      "username": "wiktoriawanders",
+      "likes": 1254636,
+      "comments": 1972,
+      "shortcode": "DA01ztYN-1f",
+      "script": "lat",
+      "country": null,
+      "cap": "I’m really happy to announce that...\n\n(if you’d like to travel with me, don’t forget to fo"
+    },
+    {
+      "username": "kgz_russ",
+      "likes": 1058471,
+      "comments": 3632,
+      "shortcode": "DY_yViagliH",
+      "script": "lat",
+      "country": "Kyrgyzstan",
+      "cap": "📍Kyrgyzstan 🐴🏔️🇰🇬🌿"
+    },
+    {
+      "username": "alexbroggitravels",
+      "likes": 933220,
+      "comments": 1973,
+      "shortcode": "DF8C2ENvvVY",
+      "script": "lat",
+      "country": null,
+      "cap": "It’s an unreal feeling being on horse back riding through the Kyrgyzstan mountains. This i"
+    },
+    {
+      "username": "lukedamant",
+      "likes": 898608,
+      "comments": 1888,
+      "shortcode": "C60oCSIPWti",
+      "script": "lat",
+      "country": null,
+      "cap": "$2 Happy End to my Kyrgyzstan Trip 🇰🇬\n\n#travel #kyrgyzstan"
+    },
+    {
+      "username": "alexbroggitravels",
+      "likes": 867716,
+      "comments": 805,
+      "shortcode": "DGrDG9tzVsC",
+      "script": "lat",
+      "country": null,
+      "cap": "Detailed Kyrgyzstan TRAVEL GUIDE on everything you need to know in my bio!! 🇰🇬 #travel #ky"
+    },
+    {
+      "username": "gd_1_24",
+      "likes": 766811,
+      "comments": 1279,
+      "shortcode": "DZfl3Crs-VV",
+      "script": "none",
+      "country": null,
+      "cap": "06.06.2026🤍"
+    }
+  ],
+  "professional": {
+    "with_raw": 579,
+    "pro_pct": 88,
+    "categories": [
+      {
+        "name": "Digital creator",
+        "count": 56
+      },
+      {
+        "name": "Personal blog",
+        "count": 42
+      },
+      {
+        "name": "Reel creator",
+        "count": 31
+      },
+      {
+        "name": "Blogger",
+        "count": 29
+      },
+      {
+        "name": "Photographer",
+        "count": 19
+      },
+      {
+        "name": "Artist",
+        "count": 13
+      },
+      {
+        "name": "Travel Company",
+        "count": 10
+      },
+      {
+        "name": "Local & travel website",
+        "count": 7
+      }
+    ]
+  },
+  "pyramid": [
+    {
+      "key": "nano",
+      "label": "< 1K",
+      "count": 60,
+      "pct": 10
+    },
+    {
+      "key": "micro",
+      "label": "1K–10K",
+      "count": 199,
+      "pct": 34
+    },
+    {
+      "key": "mid",
+      "label": "10K–100K",
+      "count": 213,
+      "pct": 37
+    },
+    {
+      "key": "macro",
+      "label": "100K–1M",
+      "count": 93,
+      "pct": 16
+    },
+    {
+      "key": "mega",
+      "label": "1M+",
+      "count": 14,
+      "pct": 2
+    }
+  ],
+  "bio_links": {
+    "authors_with_link": 344,
+    "buckets": [
+      {
+        "bucket": "Website / other",
+        "count": 143
+      },
+      {
+        "bucket": "Messaging",
+        "count": 111
+      },
+      {
+        "bucket": "YouTube",
+        "count": 86
+      },
+      {
+        "bucket": "Link hubs",
+        "count": 61
+      },
+      {
+        "bucket": "TikTok",
+        "count": 35
+      },
+      {
+        "bucket": "Facebook",
+        "count": 7
+      }
+    ]
+  },
+  "format_perf": [
+    {
+      "type": "video",
+      "median_likes": 11066,
+      "median_er": 0,
+      "posts": 1525
+    },
+    {
+      "type": "carousel",
+      "median_likes": 524,
+      "median_er": 5.6,
+      "posts": 459
+    },
+    {
+      "type": "photo",
+      "median_likes": 24,
+      "median_er": 3.2,
+      "posts": 136
+    }
+  ],
+  "virality": {
+    "n": 1186,
+    "points": [
+      {
+        "x": 34,
+        "y": 1,
+        "u": "elgatoway",
+        "f": 1
+      },
+      {
+        "x": 698060,
+        "y": 12,
+        "u": "maalaimalar",
+        "f": null
+      },
+      {
+        "x": 115917,
+        "y": 6,
+        "u": "indiacomhindi",
+        "f": 1
+      },
+      {
+        "x": 56318,
+        "y": 1,
+        "u": "digitaljantantratv",
+        "f": 1
+      },
+      {
+        "x": 3058,
+        "y": 0,
+        "u": "jodhpurnews18",
+        "f": 1
+      },
+      {
+        "x": 1669880,
+        "y": 345,
+        "u": "tv9bharatvarsh",
+        "f": 1
+      },
+      {
+        "x": 8452,
+        "y": 7,
+        "u": "epicexpeditions__",
+        "f": 1
+      },
+      {
+        "x": 7757,
+        "y": 2,
+        "u": "eun.nice",
+        "f": 1
+      },
+      {
+        "x": 3478562,
+        "y": 83,
+        "u": "thanthitv",
+        "f": null
+      },
+      {
+        "x": 26727,
+        "y": 11,
+        "u": "indiadotcom",
+        "f": 1
+      },
+      {
+        "x": 228634,
+        "y": 12,
+        "u": "dna_india",
+        "f": 1
+      },
+      {
+        "x": 2468,
+        "y": 1,
+        "u": "007_carla",
+        "f": 1
+      },
+      {
+        "x": 589,
+        "y": 35,
+        "u": "asan1ekovv_",
+        "f": null
+      },
+      {
+        "x": 6349485,
+        "y": 3690,
+        "u": "abpnewstv",
+        "f": 1
+      },
+      {
+        "x": 10491,
+        "y": 266,
+        "u": "women.wrestling.kgz",
+        "f": 0
+      },
+      {
+        "x": 947,
+        "y": 8,
+        "u": "musabghannam",
+        "f": 1
+      },
+      {
+        "x": 485,
+        "y": 196,
+        "u": "a.msv_1",
+        "f": 1
+      },
+      {
+        "x": 282,
+        "y": 15,
+        "u": "la_cime_",
+        "f": null
+      },
+      {
+        "x": 485,
+        "y": 123,
+        "u": "a.msv_1",
+        "f": 1
+      },
+      {
+        "x": 16848,
+        "y": 154,
+        "u": "mrv.trzglu",
+        "f": 1
+      },
+      {
+        "x": 206,
+        "y": 5,
+        "u": "ottoluglio_fotografo",
+        "f": 1
+      },
+      {
+        "x": 206,
+        "y": 3,
+        "u": "ottoluglio_fotografo",
+        "f": 1
+      },
+      {
+        "x": 84,
+        "y": 18,
+        "u": "bekzhan_guide",
+        "f": 0
+      },
+      {
+        "x": 1252,
+        "y": 6,
+        "u": "suztravelogue",
+        "f": 1
+      },
+      {
+        "x": 455,
+        "y": 69,
+        "u": "bekspheretrips",
+        "f": 0
+      },
+      {
+        "x": 436,
+        "y": 69,
+        "u": "mirko_bena",
+        "f": 1
+      },
+      {
+        "x": 317,
+        "y": 11,
+        "u": "samvise",
+        "f": null
+      },
+      {
+        "x": 2642,
+        "y": 181,
+        "u": "_agynov_",
+        "f": 1
+      },
+      {
+        "x": 68710,
+        "y": 1310,
+        "u": "cj_janesh",
+        "f": 1
+      },
+      {
+        "x": 617,
+        "y": 3,
+        "u": "solnickovaalzbeta",
+        "f": 1
+      },
+      {
+        "x": 3074,
+        "y": 3,
+        "u": "sofia_nehman",
+        "f": 1
+      },
+      {
+        "x": 33643,
+        "y": 70,
+        "u": "rauf__365",
+        "f": null
+      },
+      {
+        "x": 1942,
+        "y": 3,
+        "u": "93tiziano",
+        "f": 1
+      },
+      {
+        "x": 3761,
+        "y": 34,
+        "u": "eldiiyar_01",
+        "f": 1
+      },
+      {
+        "x": 1237,
+        "y": 31,
+        "u": "karinalaaaaa",
+        "f": 0
+      },
+      {
+        "x": 306,
+        "y": 1,
+        "u": "thenasser_",
+        "f": null
+      },
+      {
+        "x": 41,
+        "y": 10,
+        "u": "jumgal_guest_house",
+        "f": 0
+      },
+      {
+        "x": 58388,
+        "y": 472,
+        "u": "misuzu_kyrgyzstan",
+        "f": 1
+      },
+      {
+        "x": 1957,
+        "y": 4,
+        "u": "aitigyl13",
+        "f": null
+      },
+      {
+        "x": 947,
+        "y": 9,
+        "u": "musabghannam",
+        "f": 1
+      },
+      {
+        "x": 4599,
+        "y": 43,
+        "u": "marcelmojz",
+        "f": 1
+      },
+      {
+        "x": 1073,
+        "y": 116,
+        "u": "norrrson",
+        "f": 1
+      },
+      {
+        "x": 2555,
+        "y": 41,
+        "u": "fonokuya",
+        "f": 1
+      },
+      {
+        "x": 2720,
+        "y": 36,
+        "u": "lubov.by_anne",
+        "f": 0
+      },
+      {
+        "x": 405,
+        "y": 65,
+        "u": "gulkhan_myktybekovna",
+        "f": 1
+      },
+      {
+        "x": 625,
+        "y": 36,
+        "u": "biglovemessage",
+        "f": null
+      },
+      {
+        "x": 625,
+        "y": 44,
+        "u": "biglovemessage",
+        "f": null
+      },
+      {
+        "x": 59466,
+        "y": 3,
+        "u": "beatricefelici_",
+        "f": 1
+      },
+      {
+        "x": 625,
+        "y": 27,
+        "u": "biglovemessage",
+        "f": null
+      },
+      {
+        "x": 77,
+        "y": 35,
+        "u": "ppppplutoooo",
+        "f": 0
+      },
+      {
+        "x": 43,
+        "y": 7,
+        "u": "armani_el13",
+        "f": 1
+      },
+      {
+        "x": 219,
+        "y": 41,
+        "u": "sultanalievgo",
+        "f": null
+      },
+      {
+        "x": 278,
+        "y": 0,
+        "u": "br_bharat_bulletin_",
+        "f": 1
+      },
+      {
+        "x": 96589,
+        "y": 44824,
+        "u": "kyrgyzstan.reels",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 39266,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 660500,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 7470,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 8006,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 2659,
+        "y": 18217,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 41621,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 49009,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 11512,
+        "y": 50258,
+        "u": "farohiddin.nazirov",
+        "f": 1
+      },
+      {
+        "x": 10659,
+        "y": 20403,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 41524,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 4140,
+        "y": 32436,
+        "u": "rasul_abdukodirov",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 85756,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 13770,
+        "y": 75494,
+        "u": "thenomads.travel",
+        "f": 0
+      },
+      {
+        "x": 553728,
+        "y": 138737,
+        "u": "bakktybekovass",
+        "f": 1
+      },
+      {
+        "x": 3673,
+        "y": 113502,
+        "u": "akmatov21t",
+        "f": null
+      },
+      {
+        "x": 31452,
+        "y": 462,
+        "u": "kyrgyzpic",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 26656,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 316529,
+        "y": 13725,
+        "u": "sam_gainss",
+        "f": null
+      },
+      {
+        "x": 10659,
+        "y": 199375,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 48654,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 157490,
+        "y": 423134,
+        "u": "gaston_luna",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 226768,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 119663,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 63401,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 12531,
+        "y": 86305,
+        "u": "omurkadyrv",
+        "f": 0
+      },
+      {
+        "x": 7645600,
+        "y": 404235,
+        "u": "joe_hattab",
+        "f": 1
+      },
+      {
+        "x": 128406,
+        "y": 92237,
+        "u": "black.sail_",
+        "f": 1
+      },
+      {
+        "x": 17298,
+        "y": 1955645,
+        "u": "lumusab",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 105037,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 5479,
+        "y": 25376,
+        "u": "ilja_giessbrecht",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 4541,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 77648,
+        "y": 485376,
+        "u": "gulsanat_.kyrgyz",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 48796,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 2426,
+        "y": 6942,
+        "u": "ardak.kv",
+        "f": 1
+      },
+      {
+        "x": 11625,
+        "y": 323462,
+        "u": "fredkales",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 28224,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 5382,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 5238,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 102598,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 26687,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 225271,
+        "y": 4682,
+        "u": "jony_traveler",
+        "f": 0
+      },
+      {
+        "x": 36194,
+        "y": 109229,
+        "u": "soul_pr",
+        "f": 0
+      },
+      {
+        "x": 83284,
+        "y": 44498,
+        "u": "phillippfeiffer_",
+        "f": 1
+      },
+      {
+        "x": 142464,
+        "y": 66377,
+        "u": "kgznk",
+        "f": 0
+      },
+      {
+        "x": 16222,
+        "y": 8636,
+        "u": "optimus___soul",
+        "f": null
+      },
+      {
+        "x": 408141,
+        "y": 59142,
+        "u": "rizaa.kg",
+        "f": 1
+      },
+      {
+        "x": 19286,
+        "y": 4134,
+        "u": "paweljagiello_photography",
+        "f": 1
+      },
+      {
+        "x": 11512,
+        "y": 83645,
+        "u": "farohiddin.nazirov",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 28772,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 225271,
+        "y": 102230,
+        "u": "jony_traveler",
+        "f": 0
+      },
+      {
+        "x": 6346,
+        "y": 23854,
+        "u": "ularbek_arykbaev",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 29915,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 62549,
+        "y": 17068,
+        "u": "ibraim.explorer",
+        "f": 0
+      },
+      {
+        "x": 6837,
+        "y": 7324,
+        "u": "nicolas_monnot_photos",
+        "f": 1
+      },
+      {
+        "x": 2659,
+        "y": 687,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 133819,
+        "y": 48125,
+        "u": "travelproof_tjark",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 37357,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 13741,
+        "y": 14958,
+        "u": "alatoovision",
+        "f": 0
+      },
+      {
+        "x": 111770,
+        "y": 806,
+        "u": "sulaimanov_azamat_",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 49974,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 17810,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 13741,
+        "y": 26152,
+        "u": "alatoovision",
+        "f": 0
+      },
+      {
+        "x": 12332,
+        "y": 22503,
+        "u": "grahovandrei",
+        "f": 0
+      },
+      {
+        "x": 265764,
+        "y": 129766,
+        "u": "entre2poles",
+        "f": 1
+      },
+      {
+        "x": 31044,
+        "y": 7387,
+        "u": "natadecoco_ee",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 79735,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 18047,
+        "y": 72123,
+        "u": "kyrgyzgirl__",
+        "f": 0
+      },
+      {
+        "x": 47268,
+        "y": 30000,
+        "u": "amandakhoo",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 24689,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 19030,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 59529,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 9450,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 4758,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 5762,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 142464,
+        "y": 53576,
+        "u": "kgznk",
+        "f": 0
+      },
+      {
+        "x": 16480,
+        "y": 2434,
+        "u": "line_nverse",
+        "f": 0
+      },
+      {
+        "x": 36256,
+        "y": 3,
+        "u": "sinemexplorer",
+        "f": 1
+      },
+      {
+        "x": 1831,
+        "y": 115715,
+        "u": "icejacksparrow",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 122461,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 33899,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 225043,
+        "y": 249871,
+        "u": "kaiumovkr",
+        "f": 1
+      },
+      {
+        "x": 142464,
+        "y": 511243,
+        "u": "kgznk",
+        "f": 0
+      },
+      {
+        "x": 15125,
+        "y": 133829,
+        "u": "aiamannoy",
+        "f": 0
+      },
+      {
+        "x": 4636,
+        "y": 385326,
+        "u": "travellerbaha",
+        "f": 0
+      },
+      {
+        "x": 1233,
+        "y": 28810,
+        "u": "softnomadgirl",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 23456,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 68614,
+        "y": 87838,
+        "u": "rezazianur",
+        "f": null
+      },
+      {
+        "x": 35948,
+        "y": 142406,
+        "u": "kokboru_teke",
+        "f": null
+      },
+      {
+        "x": 12421,
+        "y": 77012,
+        "u": "koolcatzy",
+        "f": null
+      },
+      {
+        "x": 7668,
+        "y": 74719,
+        "u": "pamir_nomad",
+        "f": 0
+      },
+      {
+        "x": 12332,
+        "y": 30044,
+        "u": "grahovandrei",
+        "f": 0
+      },
+      {
+        "x": 7813663,
+        "y": 102723,
+        "u": "vkadre_kz",
+        "f": 1
+      },
+      {
+        "x": 2525,
+        "y": 119116,
+        "u": "shinbiwoory",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 34506,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 48295,
+        "y": 27069,
+        "u": "turatbekov30",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 23886,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 283550,
+        "y": 933220,
+        "u": "alexbroggitravels",
+        "f": 1
+      },
+      {
+        "x": 12531,
+        "y": 5236,
+        "u": "omurkadyrv",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 40018,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 18323,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 19655,
+        "y": 763,
+        "u": "boots_and_borders",
+        "f": 1
+      },
+      {
+        "x": 28542,
+        "y": 53026,
+        "u": "reinmartens",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 83788,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 15533,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 53468,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 14892,
+        "y": 18062,
+        "u": "kyrgyzstanphototours",
+        "f": 0
+      },
+      {
+        "x": 18047,
+        "y": 16230,
+        "u": "kyrgyzgirl__",
+        "f": 0
+      },
+      {
+        "x": 134920,
+        "y": 23366,
+        "u": "_gulll_____",
+        "f": 1
+      },
+      {
+        "x": 19094,
+        "y": 33201,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 10659,
+        "y": 4408,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 17152,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 38675,
+        "y": 10848,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 19094,
+        "y": 33414,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 12531,
+        "y": 34618,
+        "u": "omurkadyrv",
+        "f": 0
+      },
+      {
+        "x": 924345,
+        "y": 248819,
+        "u": "hairidin_22",
+        "f": 1
+      },
+      {
+        "x": 26125,
+        "y": 69165,
+        "u": "medet.mp4",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 238807,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 225271,
+        "y": 48003,
+        "u": "jony_traveler",
+        "f": 0
+      },
+      {
+        "x": 140563,
+        "y": 81186,
+        "u": "iwin.oo",
+        "f": 0
+      },
+      {
+        "x": 19094,
+        "y": 544,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 315988,
+        "y": 83258,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 13770,
+        "y": 16201,
+        "u": "thenomads.travel",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 13066,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 538,
+        "y": 16016,
+        "u": "horse_ride_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 47268,
+        "y": 35140,
+        "u": "amandakhoo",
+        "f": 1
+      },
+      {
+        "x": 16902,
+        "y": 13176,
+        "u": "dana_turumbekova",
+        "f": 0
+      },
+      {
+        "x": 10183,
+        "y": 22835,
+        "u": "woozeist",
+        "f": 1
+      },
+      {
+        "x": 11512,
+        "y": 3840,
+        "u": "farohiddin.nazirov",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 139848,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 10659,
+        "y": 14774,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 8937,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 9882,
+        "y": 118334,
+        "u": "nurgulzh_00",
+        "f": 0
+      },
+      {
+        "x": 260945,
+        "y": 80998,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 42979,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 3237,
+        "y": 10179,
+        "u": "nuraikaaah",
+        "f": 0
+      },
+      {
+        "x": 4122,
+        "y": 55458,
+        "u": "gekkula",
+        "f": null
+      },
+      {
+        "x": 1074,
+        "y": 137,
+        "u": "alessio_sbrokked",
+        "f": null
+      },
+      {
+        "x": 2659,
+        "y": 38787,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 2048,
+        "y": 262,
+        "u": "lanelle_m_phillips",
+        "f": 1
+      },
+      {
+        "x": 408141,
+        "y": 52178,
+        "u": "rizaa.kg",
+        "f": 1
+      },
+      {
+        "x": 1351,
+        "y": 24033,
+        "u": "daniel.autostory",
+        "f": null
+      },
+      {
+        "x": 36606,
+        "y": 3,
+        "u": "_olessia_",
+        "f": 1
+      },
+      {
+        "x": 10680,
+        "y": 1322,
+        "u": "aiya.krgz",
+        "f": 1
+      },
+      {
+        "x": 52463,
+        "y": 16149,
+        "u": "louisjames.bb",
+        "f": 1
+      },
+      {
+        "x": 226787,
+        "y": 23796,
+        "u": "whereintheworldiselshu",
+        "f": 1
+      },
+      {
+        "x": 19094,
+        "y": 12865,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 11611,
+        "y": 106934,
+        "u": "sydykovich21",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 15243,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 32726,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 108184,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 20528,
+        "y": 14437,
+        "u": "maddieandluke_travels",
+        "f": 1
+      },
+      {
+        "x": 83962,
+        "y": 19259,
+        "u": "kateacrossborderss",
+        "f": 0
+      },
+      {
+        "x": 283550,
+        "y": 413716,
+        "u": "alexbroggitravels",
+        "f": 1
+      },
+      {
+        "x": 111770,
+        "y": 693288,
+        "u": "sulaimanov_azamat_",
+        "f": 0
+      },
+      {
+        "x": 226787,
+        "y": 282682,
+        "u": "whereintheworldiselshu",
+        "f": 1
+      },
+      {
+        "x": 2982,
+        "y": 20266,
+        "u": "aia_08kg",
+        "f": 0
+      },
+      {
+        "x": 52463,
+        "y": 87312,
+        "u": "louisjames.bb",
+        "f": 1
+      },
+      {
+        "x": 36256,
+        "y": 62439,
+        "u": "sinemexplorer",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 14870,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 68421,
+        "y": 277672,
+        "u": "_antonhugo",
+        "f": 1
+      },
+      {
+        "x": 10659,
+        "y": 9036,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 375147,
+        "y": 140996,
+        "u": "orolbai_uulu_myktybek",
+        "f": 0
+      },
+      {
+        "x": 62549,
+        "y": 164713,
+        "u": "ibraim.explorer",
+        "f": 0
+      },
+      {
+        "x": 31044,
+        "y": 40398,
+        "u": "natadecoco_ee",
+        "f": 1
+      },
+      {
+        "x": 94588,
+        "y": 3765766,
+        "u": "allyasyamimi",
+        "f": 1
+      },
+      {
+        "x": 52463,
+        "y": 50391,
+        "u": "louisjames.bb",
+        "f": 1
+      },
+      {
+        "x": 3525,
+        "y": 129909,
+        "u": "jakypbekovv1",
+        "f": 0
+      },
+      {
+        "x": 368113,
+        "y": 185198,
+        "u": "asshot.inc",
+        "f": 1
+      },
+      {
+        "x": 800828,
+        "y": 6758,
+        "u": "travelcomic",
+        "f": 1
+      },
+      {
+        "x": 163680,
+        "y": 3142,
+        "u": "nazar.23.melnikov",
+        "f": 1
+      },
+      {
+        "x": 12089,
+        "y": 18083,
+        "u": "korolek_ptichka__",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 15846,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 33475,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 4894,
+        "y": 4301,
+        "u": "law.moon_",
+        "f": 0
+      },
+      {
+        "x": 2503876,
+        "y": 3,
+        "u": "aiperikubikkyzy",
+        "f": 0
+      },
+      {
+        "x": 76903,
+        "y": 33608,
+        "u": "gostepbysteppe",
+        "f": 1
+      },
+      {
+        "x": 83284,
+        "y": 45643,
+        "u": "phillippfeiffer_",
+        "f": 1
+      },
+      {
+        "x": 6688,
+        "y": 7237,
+        "u": "not_another_fitness_girl",
+        "f": 0
+      },
+      {
+        "x": 207121,
+        "y": 15907,
+        "u": "meder.utanov",
+        "f": 0
+      },
+      {
+        "x": 38568,
+        "y": 6180,
+        "u": "bbyzalma",
+        "f": 1
+      },
+      {
+        "x": 32832,
+        "y": 2126,
+        "u": "kanat_sharipbekov",
+        "f": 0
+      },
+      {
+        "x": 39791,
+        "y": 47096,
+        "u": "sarahfayollle",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 8519,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 13741,
+        "y": 7742,
+        "u": "alatoovision",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 39191,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 139954,
+        "y": 58835,
+        "u": "marinewanders",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 16508,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 6837,
+        "y": 1302,
+        "u": "nicolas_monnot_photos",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 69884,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 2659,
+        "y": 13174,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 43843,
+        "y": 41228,
+        "u": "kyrgyzstan.guide",
+        "f": 0
+      },
+      {
+        "x": 491,
+        "y": 28352,
+        "u": "bu_rhan5020",
+        "f": 0
+      },
+      {
+        "x": 62549,
+        "y": 43729,
+        "u": "ibraim.explorer",
+        "f": 0
+      },
+      {
+        "x": 31044,
+        "y": 13721,
+        "u": "natadecoco_ee",
+        "f": 1
+      },
+      {
+        "x": 354314,
+        "y": 147224,
+        "u": "gypsyinsneakers",
+        "f": 1
+      },
+      {
+        "x": 1161362,
+        "y": 3806,
+        "u": "adamradclifts",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 8529,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 11611,
+        "y": 11147,
+        "u": "sydykovich21",
+        "f": 0
+      },
+      {
+        "x": 37344,
+        "y": 32603,
+        "u": "bakha_traveler",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 27609,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 122097,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 11611,
+        "y": 68201,
+        "u": "sydykovich21",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 3772,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 4364,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 225271,
+        "y": 36898,
+        "u": "jony_traveler",
+        "f": 0
+      },
+      {
+        "x": 14892,
+        "y": 2146,
+        "u": "kyrgyzstanphototours",
+        "f": 0
+      },
+      {
+        "x": 48960,
+        "y": 3,
+        "u": "nazima_ulanbekova_",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 7687,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 153468,
+        "y": 14396,
+        "u": "alexey.overlanding",
+        "f": 1
+      },
+      {
+        "x": 6688,
+        "y": 1574,
+        "u": "not_another_fitness_girl",
+        "f": 0
+      },
+      {
+        "x": 38675,
+        "y": 4625,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 26240,
+        "y": 4863,
+        "u": "itslyudi",
+        "f": null
+      },
+      {
+        "x": 8330,
+        "y": 10637,
+        "u": "iimuubin",
+        "f": null
+      },
+      {
+        "x": 12189,
+        "y": 4287,
+        "u": "maxisabroad",
+        "f": 1
+      },
+      {
+        "x": 16480,
+        "y": 3,
+        "u": "line_nverse",
+        "f": 0
+      },
+      {
+        "x": 154401,
+        "y": 3411,
+        "u": "nomad_kyrgyzstanru",
+        "f": null
+      },
+      {
+        "x": 1771,
+        "y": 2458,
+        "u": "hidden_gems_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 59466,
+        "y": 3158,
+        "u": "beatricefelici_",
+        "f": 1
+      },
+      {
+        "x": 741893,
+        "y": 9081,
+        "u": "24_kg",
+        "f": 0
+      },
+      {
+        "x": 283550,
+        "y": 163745,
+        "u": "alexbroggitravels",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 6316,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 77005,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 351127,
+        "y": 15422,
+        "u": "we_project",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 53683,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 256018,
+        "y": 9474,
+        "u": "bns_terry",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 8334,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 4008,
+        "y": 10621,
+        "u": "biyikhousekg",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 37282,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 4122,
+        "y": 57449,
+        "u": "gekkula",
+        "f": null
+      },
+      {
+        "x": 2695,
+        "y": 4773,
+        "u": "_mad1n_kka_",
+        "f": 1
+      },
+      {
+        "x": 12535,
+        "y": 13755,
+        "u": "jaewoofilm",
+        "f": 1
+      },
+      {
+        "x": 16541,
+        "y": 701,
+        "u": "muhtesem_kyrgyzstan_travel",
+        "f": 0
+      },
+      {
+        "x": 6010,
+        "y": 4563,
+        "u": "nomad.fight.co",
+        "f": 1
+      },
+      {
+        "x": 9882,
+        "y": 2817,
+        "u": "nurgulzh_00",
+        "f": 0
+      },
+      {
+        "x": 6888,
+        "y": 4932,
+        "u": "aika.ur",
+        "f": 0
+      },
+      {
+        "x": 32796,
+        "y": 20295,
+        "u": "elaman__kyrgyz",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 34298,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 137475,
+        "y": 6621,
+        "u": "atalar_izi",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 23980,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 6989,
+        "y": 4444,
+        "u": "rustam_traveler",
+        "f": 0
+      },
+      {
+        "x": 16211,
+        "y": 5753,
+        "u": "sagynbekulanov",
+        "f": 0
+      },
+      {
+        "x": 365,
+        "y": 20,
+        "u": "ankitabarbi",
+        "f": 1
+      },
+      {
+        "x": 9882,
+        "y": 12600,
+        "u": "nurgulzh_00",
+        "f": 0
+      },
+      {
+        "x": 68421,
+        "y": 11522,
+        "u": "_antonhugo",
+        "f": 1
+      },
+      {
+        "x": 1771,
+        "y": 406,
+        "u": "hidden_gems_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 142464,
+        "y": 21802,
+        "u": "kgznk",
+        "f": 0
+      },
+      {
+        "x": 6888,
+        "y": 14256,
+        "u": "aika.ur",
+        "f": 0
+      },
+      {
+        "x": 13770,
+        "y": 1553,
+        "u": "thenomads.travel",
+        "f": 0
+      },
+      {
+        "x": 351347,
+        "y": 44358,
+        "u": "jaysonrobertson",
+        "f": 1
+      },
+      {
+        "x": 6688,
+        "y": 1234,
+        "u": "not_another_fitness_girl",
+        "f": 0
+      },
+      {
+        "x": 32538,
+        "y": 48921,
+        "u": "wheresnezlin",
+        "f": 1
+      },
+      {
+        "x": 17298,
+        "y": 130945,
+        "u": "lumusab",
+        "f": 1
+      },
+      {
+        "x": 7731,
+        "y": 2914,
+        "u": "elgizio",
+        "f": 0
+      },
+      {
+        "x": 52463,
+        "y": 4908,
+        "u": "louisjames.bb",
+        "f": 1
+      },
+      {
+        "x": 83962,
+        "y": 204039,
+        "u": "kateacrossborderss",
+        "f": 0
+      },
+      {
+        "x": 36606,
+        "y": 382473,
+        "u": "_olessia_",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 14316,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 1351,
+        "y": 35950,
+        "u": "daniel.autostory",
+        "f": null
+      },
+      {
+        "x": 5287,
+        "y": 10058,
+        "u": "hidden.kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 111770,
+        "y": 514687,
+        "u": "sulaimanov_azamat_",
+        "f": 0
+      },
+      {
+        "x": 1181,
+        "y": 264,
+        "u": "maryamgul.yesken",
+        "f": 1
+      },
+      {
+        "x": 225043,
+        "y": 36465,
+        "u": "kaiumovkr",
+        "f": 1
+      },
+      {
+        "x": 76903,
+        "y": 5262,
+        "u": "gostepbysteppe",
+        "f": 1
+      },
+      {
+        "x": 611970,
+        "y": 12880,
+        "u": "wander.da",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 9519,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 9835,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 11460,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 5925,
+        "y": 6427,
+        "u": "ilgiz.go",
+        "f": 0
+      },
+      {
+        "x": 3237,
+        "y": 29548,
+        "u": "nuraikaaah",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 8347,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 2659,
+        "y": 3420,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 4070,
+        "y": 26632,
+        "u": "jackiekgg",
+        "f": 0
+      },
+      {
+        "x": 157830,
+        "y": 1404,
+        "u": "sanmarineo",
+        "f": 1
+      },
+      {
+        "x": 6759,
+        "y": 4098,
+        "u": "ms_tvv",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 7818,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 6555,
+        "y": 1073,
+        "u": "itzzz_jonas",
+        "f": 1
+      },
+      {
+        "x": 4792,
+        "y": 305166,
+        "u": "dennis.kotlyarov",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 11223,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 4405,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 23552,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 31452,
+        "y": 2092,
+        "u": "kyrgyzpic",
+        "f": 0
+      },
+      {
+        "x": 26240,
+        "y": 6601,
+        "u": "itslyudi",
+        "f": null
+      },
+      {
+        "x": 57189,
+        "y": 934,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 7074,
+        "y": 17839,
+        "u": "motyavin",
+        "f": 0
+      },
+      {
+        "x": 3112,
+        "y": 3,
+        "u": "suimonkul677",
+        "f": 0
+      },
+      {
+        "x": 74447,
+        "y": 1158,
+        "u": "rashid.braun",
+        "f": 0
+      },
+      {
+        "x": 4122,
+        "y": 19127,
+        "u": "gekkula",
+        "f": null
+      },
+      {
+        "x": 2659,
+        "y": 179,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 2877,
+        "y": 1103,
+        "u": "bekzat_jeti",
+        "f": 0
+      },
+      {
+        "x": 260945,
+        "y": 26260,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 924345,
+        "y": 141781,
+        "u": "hairidin_22",
+        "f": 1
+      },
+      {
+        "x": 38675,
+        "y": 40702,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 741893,
+        "y": 107197,
+        "u": "24_kg",
+        "f": 0
+      },
+      {
+        "x": 52463,
+        "y": 77004,
+        "u": "louisjames.bb",
+        "f": 1
+      },
+      {
+        "x": 315988,
+        "y": 11919,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 225271,
+        "y": 78737,
+        "u": "jony_traveler",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 522,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 10916,
+        "y": 17864,
+        "u": "_nuradil.kg_01_",
+        "f": null
+      },
+      {
+        "x": 12531,
+        "y": 775,
+        "u": "omurkadyrv",
+        "f": 0
+      },
+      {
+        "x": 408141,
+        "y": 53275,
+        "u": "rizaa.kg",
+        "f": 1
+      },
+      {
+        "x": 16914,
+        "y": 10412,
+        "u": "ryan.znt",
+        "f": 1
+      },
+      {
+        "x": 259389,
+        "y": 51584,
+        "u": "arsen.bzb",
+        "f": 1
+      },
+      {
+        "x": 3779,
+        "y": 3065,
+        "u": "mikethewhitebelt",
+        "f": 0
+      },
+      {
+        "x": 26240,
+        "y": 4824,
+        "u": "itslyudi",
+        "f": null
+      },
+      {
+        "x": 48,
+        "y": 200,
+        "u": "kyrgyzstanunfiltered",
+        "f": 0
+      },
+      {
+        "x": 62181,
+        "y": 27727,
+        "u": "azizaqurbonova1",
+        "f": null
+      },
+      {
+        "x": 1699251,
+        "y": 8526,
+        "u": "travelogue_by_chithran",
+        "f": 1
+      },
+      {
+        "x": 1372,
+        "y": 2447,
+        "u": "e__gaido",
+        "f": 1
+      },
+      {
+        "x": 16480,
+        "y": 3,
+        "u": "line_nverse",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 5549,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 2284,
+        "y": 763,
+        "u": "danielmwoods",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 8350,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 24010,
+        "y": 14850,
+        "u": "smchronicles",
+        "f": 1
+      },
+      {
+        "x": 617534,
+        "y": 51278,
+        "u": "jonsoriginals",
+        "f": 1
+      },
+      {
+        "x": 119456,
+        "y": 12003,
+        "u": "travelwithorses",
+        "f": 1
+      },
+      {
+        "x": 18364,
+        "y": 2922,
+        "u": "aidosov_k",
+        "f": 1
+      },
+      {
+        "x": 48295,
+        "y": 5301,
+        "u": "turatbekov30",
+        "f": 0
+      },
+      {
+        "x": 163680,
+        "y": 8309,
+        "u": "nazar.23.melnikov",
+        "f": 1
+      },
+      {
+        "x": 338153,
+        "y": 30236,
+        "u": "guessnotlost",
+        "f": 1
+      },
+      {
+        "x": 23931,
+        "y": 29898,
+        "u": "1akhaltekinec",
+        "f": 0
+      },
+      {
+        "x": 36568,
+        "y": 6233,
+        "u": "sooronbaeva_aikanysh",
+        "f": 0
+      },
+      {
+        "x": 1136,
+        "y": 212,
+        "u": "wingingitwithjv",
+        "f": 1
+      },
+      {
+        "x": 31044,
+        "y": 684,
+        "u": "natadecoco_ee",
+        "f": 1
+      },
+      {
+        "x": 1771,
+        "y": 4500,
+        "u": "hidden_gems_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 19094,
+        "y": 507,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 491792,
+        "y": 73004,
+        "u": "nur.cholpon",
+        "f": 0
+      },
+      {
+        "x": 225271,
+        "y": 186774,
+        "u": "jony_traveler",
+        "f": 0
+      },
+      {
+        "x": 142464,
+        "y": 45206,
+        "u": "kgznk",
+        "f": 0
+      },
+      {
+        "x": 11611,
+        "y": 3067,
+        "u": "sydykovich21",
+        "f": 0
+      },
+      {
+        "x": 2227,
+        "y": 10928,
+        "u": "real_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 17138,
+        "y": 531,
+        "u": "pawiswow",
+        "f": 1
+      },
+      {
+        "x": 6499,
+        "y": 3,
+        "u": "offroad_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 13959,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 308409,
+        "y": 128931,
+        "u": "toktogonova1",
+        "f": null
+      },
+      {
+        "x": 13435,
+        "y": 894,
+        "u": "poet_fedin",
+        "f": 1
+      },
+      {
+        "x": 17821,
+        "y": 43920,
+        "u": "holly_cj",
+        "f": 1
+      },
+      {
+        "x": 13363,
+        "y": 1454,
+        "u": "rabiia.md",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 37796,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 15313,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 3604,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 5469,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 22298,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 31452,
+        "y": 3582,
+        "u": "kyrgyzpic",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 32942,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 49819,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 260945,
+        "y": 30715,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 62549,
+        "y": 31144,
+        "u": "ibraim.explorer",
+        "f": 0
+      },
+      {
+        "x": 1644,
+        "y": 6641,
+        "u": "zarofiddin_bilal",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 50411,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 63601,
+        "y": 4685,
+        "u": "meder.myrzaev",
+        "f": 0
+      },
+      {
+        "x": 26026,
+        "y": 571,
+        "u": "songkol_nomads_life",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 4693,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 12946,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 133819,
+        "y": 43433,
+        "u": "travelproof_tjark",
+        "f": 1
+      },
+      {
+        "x": 283550,
+        "y": 63118,
+        "u": "alexbroggitravels",
+        "f": 1
+      },
+      {
+        "x": 491,
+        "y": 76962,
+        "u": "bu_rhan5020",
+        "f": 0
+      },
+      {
+        "x": 47268,
+        "y": 4161,
+        "u": "amandakhoo",
+        "f": 1
+      },
+      {
+        "x": 142464,
+        "y": 12416,
+        "u": "kgznk",
+        "f": 0
+      },
+      {
+        "x": 294109,
+        "y": 27141,
+        "u": "nukroyss",
+        "f": 1
+      },
+      {
+        "x": 14892,
+        "y": 1048,
+        "u": "kyrgyzstanphototours",
+        "f": 0
+      },
+      {
+        "x": 10639,
+        "y": 10474,
+        "u": "alibek.bishkek",
+        "f": 1
+      },
+      {
+        "x": 26240,
+        "y": 724,
+        "u": "itslyudi",
+        "f": null
+      },
+      {
+        "x": 260945,
+        "y": 1533,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 306182,
+        "y": 9805,
+        "u": "jackharding",
+        "f": 1
+      },
+      {
+        "x": 3148,
+        "y": 3978,
+        "u": "electro_ssstorm",
+        "f": 1
+      },
+      {
+        "x": 4112,
+        "y": 3376,
+        "u": "kaikaidapanda",
+        "f": 1
+      },
+      {
+        "x": 46407,
+        "y": 714,
+        "u": "hyewerrrrrr",
+        "f": 1
+      },
+      {
+        "x": 35355,
+        "y": 17829,
+        "u": "diassovvna",
+        "f": null
+      },
+      {
+        "x": 10653,
+        "y": 205,
+        "u": "kittybeee",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 565,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 96589,
+        "y": 36163,
+        "u": "kyrgyzstan.reels",
+        "f": 0
+      },
+      {
+        "x": 15344,
+        "y": 2069,
+        "u": "marat_abdraev",
+        "f": 0
+      },
+      {
+        "x": 19286,
+        "y": 836,
+        "u": "paweljagiello_photography",
+        "f": 1
+      },
+      {
+        "x": 19094,
+        "y": 3924,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 32796,
+        "y": 478,
+        "u": "elaman__kyrgyz",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 14320,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 77712,
+        "y": 71543,
+        "u": "abad.312",
+        "f": 0
+      },
+      {
+        "x": 10492,
+        "y": 34718,
+        "u": "joni_tajybekov",
+        "f": null
+      },
+      {
+        "x": 4685,
+        "y": 2030,
+        "u": "kk.ainuska",
+        "f": 0
+      },
+      {
+        "x": 741893,
+        "y": 9844,
+        "u": "24_kg",
+        "f": 0
+      },
+      {
+        "x": 23571,
+        "y": 14117,
+        "u": "stukach.kg",
+        "f": 0
+      },
+      {
+        "x": 117320,
+        "y": 2307,
+        "u": "ferryhu_",
+        "f": 1
+      },
+      {
+        "x": 8968,
+        "y": 29803,
+        "u": "madina.wian",
+        "f": 0
+      },
+      {
+        "x": 14144,
+        "y": 3115,
+        "u": "elishadonkin",
+        "f": 1
+      },
+      {
+        "x": 636,
+        "y": 8575,
+        "u": "kyrgyzdaar",
+        "f": 0
+      },
+      {
+        "x": 94588,
+        "y": 59017,
+        "u": "allyasyamimi",
+        "f": 1
+      },
+      {
+        "x": 58635,
+        "y": 42601,
+        "u": "artur1.90",
+        "f": 1
+      },
+      {
+        "x": 6688,
+        "y": 3691,
+        "u": "not_another_fitness_girl",
+        "f": 0
+      },
+      {
+        "x": 11065,
+        "y": 587,
+        "u": "evvgeniag",
+        "f": 1
+      },
+      {
+        "x": 6534,
+        "y": 1277,
+        "u": "matteocividini",
+        "f": 1
+      },
+      {
+        "x": 1800,
+        "y": 1248,
+        "u": "trout_fishing_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 82571,
+        "y": 100019,
+        "u": "malakai.barclay",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 11489,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 3715,
+        "y": 6286,
+        "u": "tropa_kg",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 6103,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 11634,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 24485,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 32832,
+        "y": 1139,
+        "u": "kanat_sharipbekov",
+        "f": 0
+      },
+      {
+        "x": 5497,
+        "y": 9625,
+        "u": "dr_morsli",
+        "f": 1
+      },
+      {
+        "x": 32832,
+        "y": 3283,
+        "u": "kanat_sharipbekov",
+        "f": 0
+      },
+      {
+        "x": 2659,
+        "y": 16979,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 17821,
+        "y": 2241,
+        "u": "holly_cj",
+        "f": 1
+      },
+      {
+        "x": 7757,
+        "y": 127293,
+        "u": "eun.nice",
+        "f": 1
+      },
+      {
+        "x": 10639,
+        "y": 15522,
+        "u": "alibek.bishkek",
+        "f": 1
+      },
+      {
+        "x": 38037,
+        "y": 81838,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 225271,
+        "y": 353079,
+        "u": "jony_traveler",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 40953,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 408141,
+        "y": 40732,
+        "u": "rizaa.kg",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 53441,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 1136,
+        "y": 4482,
+        "u": "wingingitwithjv",
+        "f": 1
+      },
+      {
+        "x": 2838,
+        "y": 12111,
+        "u": "irljeni",
+        "f": 1
+      },
+      {
+        "x": 19094,
+        "y": 25596,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 195367,
+        "y": 16309,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 5246,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 43843,
+        "y": 893,
+        "u": "kyrgyzstan.guide",
+        "f": 0
+      },
+      {
+        "x": 15344,
+        "y": 212,
+        "u": "marat_abdraev",
+        "f": 0
+      },
+      {
+        "x": 256831,
+        "y": 1864,
+        "u": "tatsolbe",
+        "f": 1
+      },
+      {
+        "x": 10590,
+        "y": 1272,
+        "u": "nomad_games_ethnovillage",
+        "f": 0
+      },
+      {
+        "x": 2522,
+        "y": 1824,
+        "u": "sidequestkel",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 2282,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 119149,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 31044,
+        "y": 3198,
+        "u": "natadecoco_ee",
+        "f": 1
+      },
+      {
+        "x": 62549,
+        "y": 13054,
+        "u": "ibraim.explorer",
+        "f": 0
+      },
+      {
+        "x": 226787,
+        "y": 2399,
+        "u": "whereintheworldiselshu",
+        "f": 1
+      },
+      {
+        "x": 2134,
+        "y": 3,
+        "u": "jaincie",
+        "f": 1
+      },
+      {
+        "x": 47268,
+        "y": 30522,
+        "u": "amandakhoo",
+        "f": 1
+      },
+      {
+        "x": 4008,
+        "y": 38279,
+        "u": "biyikhousekg",
+        "f": 0
+      },
+      {
+        "x": 669,
+        "y": 421,
+        "u": "urmatulya",
+        "f": 1
+      },
+      {
+        "x": 106327,
+        "y": 8105,
+        "u": "alena_almaz__",
+        "f": 0
+      },
+      {
+        "x": 11065,
+        "y": 791,
+        "u": "evvgeniag",
+        "f": 1
+      },
+      {
+        "x": 361,
+        "y": 248,
+        "u": "mountain_magic_tours",
+        "f": 0
+      },
+      {
+        "x": 22474,
+        "y": 25835,
+        "u": "itsshaylajay",
+        "f": 1
+      },
+      {
+        "x": 21035,
+        "y": 4276,
+        "u": "new__kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 2419,
+        "y": 105237,
+        "u": "kyrgyz_sky",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 49773,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 1002,
+        "y": 18543,
+        "u": "keremet_yurt_camp",
+        "f": 0
+      },
+      {
+        "x": 3715,
+        "y": 5373,
+        "u": "tropa_kg",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 4440,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 28012,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 283550,
+        "y": 87387,
+        "u": "alexbroggitravels",
+        "f": 1
+      },
+      {
+        "x": 315988,
+        "y": 6602,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 623,
+        "y": 2969,
+        "u": "ivamasha.kyz",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 63925,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 4112,
+        "y": 700,
+        "u": "kaikaidapanda",
+        "f": 1
+      },
+      {
+        "x": 607,
+        "y": 1427,
+        "u": "nirzonopu007",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 21258,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 32796,
+        "y": 12976,
+        "u": "elaman__kyrgyz",
+        "f": 1
+      },
+      {
+        "x": 127037,
+        "y": 11768,
+        "u": "wintrskyes",
+        "f": 1
+      },
+      {
+        "x": 383,
+        "y": 95413,
+        "u": "a1liewaas",
+        "f": null
+      },
+      {
+        "x": 260945,
+        "y": 204159,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 1856,
+        "y": 12040,
+        "u": "ellachengbradshaw",
+        "f": 1
+      },
+      {
+        "x": 10659,
+        "y": 5873,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 23065,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 191237,
+        "y": 1853,
+        "u": "f3uae",
+        "f": 1
+      },
+      {
+        "x": 1161362,
+        "y": 17675,
+        "u": "adamradclifts",
+        "f": 1
+      },
+      {
+        "x": 315988,
+        "y": 105226,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 942,
+        "y": 484,
+        "u": "real_gara",
+        "f": 1
+      },
+      {
+        "x": 30414,
+        "y": 3,
+        "u": "travelswithrena",
+        "f": null
+      },
+      {
+        "x": 1329,
+        "y": 793,
+        "u": "kairat_the_wonderer",
+        "f": 0
+      },
+      {
+        "x": 93396,
+        "y": 64264,
+        "u": "elina.eminova.amg",
+        "f": 0
+      },
+      {
+        "x": 114776,
+        "y": 47095,
+        "u": "dju_bb",
+        "f": null
+      },
+      {
+        "x": 1840,
+        "y": 248,
+        "u": "rayana__md",
+        "f": 0
+      },
+      {
+        "x": 13918,
+        "y": 4007,
+        "u": "de_knees__",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 6776,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 16480,
+        "y": 21564,
+        "u": "line_nverse",
+        "f": 0
+      },
+      {
+        "x": 57429,
+        "y": 1120,
+        "u": "ljsabx",
+        "f": 1
+      },
+      {
+        "x": 11512,
+        "y": 1539,
+        "u": "farohiddin.nazirov",
+        "f": 1
+      },
+      {
+        "x": 1706,
+        "y": 4166,
+        "u": "eemirexp",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 7322,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 36606,
+        "y": 5145,
+        "u": "_olessia_",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 1869,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 17727,
+        "y": 1178,
+        "u": "lider_nookat",
+        "f": null
+      },
+      {
+        "x": 6688,
+        "y": 4737,
+        "u": "not_another_fitness_girl",
+        "f": 0
+      },
+      {
+        "x": 38675,
+        "y": 6531,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 5287,
+        "y": 1419,
+        "u": "hidden.kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 6887,
+        "y": 227,
+        "u": "ourtravels_withkids",
+        "f": 1
+      },
+      {
+        "x": 315765,
+        "y": 3561,
+        "u": "nouraabdi_",
+        "f": null
+      },
+      {
+        "x": 11611,
+        "y": 4719,
+        "u": "sydykovich21",
+        "f": 0
+      },
+      {
+        "x": 19094,
+        "y": 2373,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 8272,
+        "y": 3829,
+        "u": "guneseroglu",
+        "f": 1
+      },
+      {
+        "x": 2642,
+        "y": 9972,
+        "u": "_agynov_",
+        "f": 1
+      },
+      {
+        "x": 4636,
+        "y": 3552,
+        "u": "travellerbaha",
+        "f": 0
+      },
+      {
+        "x": 38675,
+        "y": 2584,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 315988,
+        "y": 479,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 6399,
+        "y": 3,
+        "u": "travelwith.eba",
+        "f": 1
+      },
+      {
+        "x": 354314,
+        "y": 1679,
+        "u": "gypsyinsneakers",
+        "f": 1
+      },
+      {
+        "x": 5287,
+        "y": 1091,
+        "u": "hidden.kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 12173,
+        "y": 430,
+        "u": "varnak_arina",
+        "f": 0
+      },
+      {
+        "x": 4643,
+        "y": 180168,
+        "u": "raz1ma",
+        "f": 0
+      },
+      {
+        "x": 766,
+        "y": 20906,
+        "u": "hey_faidhhh",
+        "f": 1
+      },
+      {
+        "x": 39246,
+        "y": 62789,
+        "u": "boxontour_",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 7616,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 4008,
+        "y": 103381,
+        "u": "biyikhousekg",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 30219,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 10590,
+        "y": 21580,
+        "u": "nomad_games_ethnovillage",
+        "f": 0
+      },
+      {
+        "x": 16541,
+        "y": 16321,
+        "u": "muhtesem_kyrgyzstan_travel",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 20844,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 2659,
+        "y": 299,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 16558,
+        "y": 7065,
+        "u": "evgen_bek_kg",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 6925,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 4070,
+        "y": 29638,
+        "u": "jackiekgg",
+        "f": 0
+      },
+      {
+        "x": 3709,
+        "y": 53964,
+        "u": "johndao_7",
+        "f": null
+      },
+      {
+        "x": 1771,
+        "y": 218,
+        "u": "hidden_gems_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 4736,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 193189,
+        "y": 89413,
+        "u": "side_quest_project",
+        "f": 1
+      },
+      {
+        "x": 31044,
+        "y": 10656,
+        "u": "natadecoco_ee",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 11932,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 35770,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 57429,
+        "y": 1516,
+        "u": "ljsabx",
+        "f": 1
+      },
+      {
+        "x": 14276,
+        "y": 12152,
+        "u": "rekord_72_crafts",
+        "f": null
+      },
+      {
+        "x": 281726,
+        "y": 3056,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 7804,
+        "y": 13444,
+        "u": "dinaranomad",
+        "f": 1
+      },
+      {
+        "x": 137475,
+        "y": 23706,
+        "u": "atalar_izi",
+        "f": 0
+      },
+      {
+        "x": 365,
+        "y": 41,
+        "u": "ankitabarbi",
+        "f": 1
+      },
+      {
+        "x": 1970,
+        "y": 14146,
+        "u": "abdrahmanovv4",
+        "f": null
+      },
+      {
+        "x": 32832,
+        "y": 5598,
+        "u": "kanat_sharipbekov",
+        "f": 0
+      },
+      {
+        "x": 260945,
+        "y": 78215,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 315988,
+        "y": 1111,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 26240,
+        "y": 20322,
+        "u": "itslyudi",
+        "f": null
+      },
+      {
+        "x": 195367,
+        "y": 62152,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 3558,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 50288,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 2577,
+        "y": 112499,
+        "u": "mirko.colloca",
+        "f": null
+      },
+      {
+        "x": 18470,
+        "y": 178915,
+        "u": "katharinaklr",
+        "f": null
+      },
+      {
+        "x": 664943,
+        "y": 20180,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 9544,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 15125,
+        "y": 78211,
+        "u": "aiamannoy",
+        "f": 0
+      },
+      {
+        "x": 3715,
+        "y": 56971,
+        "u": "tropa_kg",
+        "f": 0
+      },
+      {
+        "x": 43380,
+        "y": 9626,
+        "u": "mariliaapetrou",
+        "f": 1
+      },
+      {
+        "x": 11512,
+        "y": 3725,
+        "u": "farohiddin.nazirov",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 2690,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 3162,
+        "y": 6632,
+        "u": "_vidyaeva",
+        "f": null
+      },
+      {
+        "x": 7418,
+        "y": 868,
+        "u": "sutalinov",
+        "f": 0
+      },
+      {
+        "x": 1136,
+        "y": 463,
+        "u": "wingingitwithjv",
+        "f": 1
+      },
+      {
+        "x": 73923,
+        "y": 4596,
+        "u": "explorewithjishqb",
+        "f": 1
+      },
+      {
+        "x": 4679,
+        "y": 417,
+        "u": "abdymysaev.g",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 20915,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 8472,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 42039,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 5925,
+        "y": 13897,
+        "u": "ilgiz.go",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 40522,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 38675,
+        "y": 1585,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 5089,
+        "y": 142,
+        "u": "kangaroonomads",
+        "f": 0
+      },
+      {
+        "x": 41887,
+        "y": 2050,
+        "u": "reisplaatje",
+        "f": 1
+      },
+      {
+        "x": 6688,
+        "y": 1224,
+        "u": "not_another_fitness_girl",
+        "f": 0
+      },
+      {
+        "x": 62133,
+        "y": 3,
+        "u": "mayaturdalieva_",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 19667,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 1880,
+        "y": 124,
+        "u": "gennadiizakirov",
+        "f": 0
+      },
+      {
+        "x": 7944,
+        "y": 25365,
+        "u": "iamt_anny",
+        "f": 1
+      },
+      {
+        "x": 19094,
+        "y": 1307,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 195367,
+        "y": 5798,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 28995,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 11512,
+        "y": 12094,
+        "u": "farohiddin.nazirov",
+        "f": 1
+      },
+      {
+        "x": 63601,
+        "y": 2374,
+        "u": "meder.myrzaev",
+        "f": 0
+      },
+      {
+        "x": 11177,
+        "y": 648,
+        "u": "writuparna_nath",
+        "f": 1
+      },
+      {
+        "x": 1136,
+        "y": 3214,
+        "u": "wingingitwithjv",
+        "f": 1
+      },
+      {
+        "x": 29833,
+        "y": 6557,
+        "u": "horseridingkyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 457,
+        "y": 3466,
+        "u": "sahil_shores",
+        "f": 0
+      },
+      {
+        "x": 3237,
+        "y": 561,
+        "u": "nuraikaaah",
+        "f": 0
+      },
+      {
+        "x": 4643,
+        "y": 328781,
+        "u": "raz1ma",
+        "f": 0
+      },
+      {
+        "x": 107900,
+        "y": 5358,
+        "u": "dogaacaar",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 7793,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 26026,
+        "y": 2877,
+        "u": "songkol_nomads_life",
+        "f": 0
+      },
+      {
+        "x": 608147,
+        "y": 16019,
+        "u": "albertdrosphotography",
+        "f": 1
+      },
+      {
+        "x": 19094,
+        "y": 8915,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 281726,
+        "y": 3316,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 1915,
+        "y": 1268,
+        "u": "yrsque",
+        "f": null
+      },
+      {
+        "x": 32832,
+        "y": 1266,
+        "u": "kanat_sharipbekov",
+        "f": 0
+      },
+      {
+        "x": 29833,
+        "y": 28705,
+        "u": "horseridingkyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 22293,
+        "y": 44948,
+        "u": "ysmanalievaai",
+        "f": null
+      },
+      {
+        "x": 32381,
+        "y": 27202,
+        "u": "elesdad",
+        "f": null
+      },
+      {
+        "x": 1880,
+        "y": 2255,
+        "u": "gennadiizakirov",
+        "f": 0
+      },
+      {
+        "x": 1357,
+        "y": 36846,
+        "u": "almazbekov.ulik",
+        "f": null
+      },
+      {
+        "x": 281726,
+        "y": 15383,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 8413,
+        "y": 2656,
+        "u": "baktiyar_asan_",
+        "f": 1
+      },
+      {
+        "x": 6122,
+        "y": 1152,
+        "u": "ricoglck",
+        "f": 1
+      },
+      {
+        "x": 1915,
+        "y": 2252,
+        "u": "yrsque",
+        "f": null
+      },
+      {
+        "x": 636,
+        "y": 775,
+        "u": "kyrgyzdaar",
+        "f": 0
+      },
+      {
+        "x": 26125,
+        "y": 35199,
+        "u": "medet.mp4",
+        "f": 1
+      },
+      {
+        "x": 6673,
+        "y": 81805,
+        "u": "journeyious.trips",
+        "f": 0
+      },
+      {
+        "x": 43259,
+        "y": 7261,
+        "u": "irfanasherin",
+        "f": 1
+      },
+      {
+        "x": 3779,
+        "y": 373,
+        "u": "mikethewhitebelt",
+        "f": 0
+      },
+      {
+        "x": 1511,
+        "y": 1061,
+        "u": "arsen.kubatbekov",
+        "f": 0
+      },
+      {
+        "x": 644842,
+        "y": 22317,
+        "u": "arstanott",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 40160,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 21186,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 704035,
+        "y": 2985,
+        "u": "chubbytrekka",
+        "f": 1
+      },
+      {
+        "x": 2731,
+        "y": 1883,
+        "u": "leeaatkin",
+        "f": 1
+      },
+      {
+        "x": 43843,
+        "y": 27995,
+        "u": "kyrgyzstan.guide",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 2416,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 5089,
+        "y": 11389,
+        "u": "kangaroonomads",
+        "f": 0
+      },
+      {
+        "x": 32538,
+        "y": 22048,
+        "u": "wheresnezlin",
+        "f": 1
+      },
+      {
+        "x": 32796,
+        "y": 359,
+        "u": "elaman__kyrgyz",
+        "f": 1
+      },
+      {
+        "x": 26240,
+        "y": 3173,
+        "u": "itslyudi",
+        "f": null
+      },
+      {
+        "x": 220784,
+        "y": 59005,
+        "u": "heyimkaunain",
+        "f": 1
+      },
+      {
+        "x": 16558,
+        "y": 209,
+        "u": "evgen_bek_kg",
+        "f": 0
+      },
+      {
+        "x": 3779,
+        "y": 1225,
+        "u": "mikethewhitebelt",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 104730,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 19416,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 13741,
+        "y": 6463,
+        "u": "alatoovision",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 13290,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 19585,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 47268,
+        "y": 2865,
+        "u": "amandakhoo",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 32401,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 4112,
+        "y": 10650,
+        "u": "kaikaidapanda",
+        "f": 1
+      },
+      {
+        "x": 8211,
+        "y": 1680,
+        "u": "nurtilek003__",
+        "f": null
+      },
+      {
+        "x": 1136,
+        "y": 220,
+        "u": "wingingitwithjv",
+        "f": 1
+      },
+      {
+        "x": 1784,
+        "y": 3,
+        "u": "lykwatsera_",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 34797,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 16294,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 19094,
+        "y": 4228,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 11611,
+        "y": 15854,
+        "u": "sydykovich21",
+        "f": 0
+      },
+      {
+        "x": 32289,
+        "y": 26056,
+        "u": "shabdan_athlete",
+        "f": 0
+      },
+      {
+        "x": 1161362,
+        "y": 1634,
+        "u": "adamradclifts",
+        "f": 1
+      },
+      {
+        "x": 395926,
+        "y": 2023,
+        "u": "easemytrip",
+        "f": 1
+      },
+      {
+        "x": 4070,
+        "y": 7335,
+        "u": "jackiekgg",
+        "f": 0
+      },
+      {
+        "x": 153026,
+        "y": 254,
+        "u": "alfajr_travel.kg",
+        "f": 1
+      },
+      {
+        "x": 704035,
+        "y": 5371,
+        "u": "chubbytrekka",
+        "f": 1
+      },
+      {
+        "x": 1477365,
+        "y": 15760,
+        "u": "onethebaha",
+        "f": 0
+      },
+      {
+        "x": 249902,
+        "y": 41561,
+        "u": "falafelinhotpott",
+        "f": 1
+      },
+      {
+        "x": 30414,
+        "y": 3,
+        "u": "travelswithrena",
+        "f": null
+      },
+      {
+        "x": 260945,
+        "y": 99001,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 7476,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 4921,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 2917,
+        "y": 4962,
+        "u": "mia_lames",
+        "f": 1
+      },
+      {
+        "x": 14526,
+        "y": 1845,
+        "u": "blank_amarillo",
+        "f": 1
+      },
+      {
+        "x": 14892,
+        "y": 1693,
+        "u": "kyrgyzstanphototours",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 3037,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 47268,
+        "y": 18234,
+        "u": "amandakhoo",
+        "f": 1
+      },
+      {
+        "x": 2961,
+        "y": 509,
+        "u": "galuhajengprabeswari",
+        "f": 1
+      },
+      {
+        "x": 14144,
+        "y": 1093,
+        "u": "elishadonkin",
+        "f": 1
+      },
+      {
+        "x": 6499,
+        "y": 3,
+        "u": "offroad_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 902,
+        "y": 53,
+        "u": "vitenc",
+        "f": 0
+      },
+      {
+        "x": 22474,
+        "y": 2739,
+        "u": "itsshaylajay",
+        "f": 1
+      },
+      {
+        "x": 4122,
+        "y": 30333,
+        "u": "gekkula",
+        "f": null
+      },
+      {
+        "x": 10659,
+        "y": 11740,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 14696,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 2084,
+        "y": 707,
+        "u": "aytenheryerde2",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 10072,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 16542,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 354314,
+        "y": 3,
+        "u": "gypsyinsneakers",
+        "f": 1
+      },
+      {
+        "x": 127037,
+        "y": 5050,
+        "u": "wintrskyes",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 38739,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 3709,
+        "y": 1014,
+        "u": "kadyr_surkeev_",
+        "f": null
+      },
+      {
+        "x": 283550,
+        "y": 20731,
+        "u": "alexbroggitravels",
+        "f": 1
+      },
+      {
+        "x": 16914,
+        "y": 125,
+        "u": "ryan.znt",
+        "f": 1
+      },
+      {
+        "x": 52584,
+        "y": 5934,
+        "u": "mrcurrency.de",
+        "f": null
+      },
+      {
+        "x": 315988,
+        "y": 5329,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 2631,
+        "y": 400,
+        "u": "halmi_road",
+        "f": 1
+      },
+      {
+        "x": 31225,
+        "y": 7249,
+        "u": "shanth.eg",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 24775,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 18614,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 57189,
+        "y": 4800,
+        "u": "_alikov",
+        "f": 0
+      },
+      {
+        "x": 31044,
+        "y": 4819,
+        "u": "natadecoco_ee",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 39596,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 48751,
+        "y": 2406,
+        "u": "robinlamhj",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 8042,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 14892,
+        "y": 4330,
+        "u": "kyrgyzstanphototours",
+        "f": 0
+      },
+      {
+        "x": 2659,
+        "y": 3181,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 39549,
+        "y": 5628,
+        "u": "muslim777kg",
+        "f": null
+      },
+      {
+        "x": 635334,
+        "y": 55003,
+        "u": "aknur_and_aikol",
+        "f": 0
+      },
+      {
+        "x": 17298,
+        "y": 69591,
+        "u": "lumusab",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 16722,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 9008,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 54102,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 39246,
+        "y": 982,
+        "u": "boxontour_",
+        "f": 0
+      },
+      {
+        "x": 78352,
+        "y": 2490,
+        "u": "joao_aspinto",
+        "f": 1
+      },
+      {
+        "x": 1711,
+        "y": 7203,
+        "u": "raiymbek_",
+        "f": 1
+      },
+      {
+        "x": 20361,
+        "y": 727,
+        "u": "violetbiru",
+        "f": 1
+      },
+      {
+        "x": 5637,
+        "y": 10,
+        "u": "kyrgyzstan_travels",
+        "f": 0
+      },
+      {
+        "x": 953,
+        "y": 10836,
+        "u": "maltsevman",
+        "f": 1
+      },
+      {
+        "x": 1696,
+        "y": 295,
+        "u": "vylovestravel",
+        "f": 1
+      },
+      {
+        "x": 47114,
+        "y": 60,
+        "u": "tristans_expeditions",
+        "f": 0
+      },
+      {
+        "x": 4122,
+        "y": 54858,
+        "u": "gekkula",
+        "f": null
+      },
+      {
+        "x": 7647,
+        "y": 3,
+        "u": "alexxsadventures",
+        "f": 1
+      },
+      {
+        "x": 10974,
+        "y": 68916,
+        "u": "eldarchik.02",
+        "f": null
+      },
+      {
+        "x": 39045,
+        "y": 3105,
+        "u": "jaka_ivancic",
+        "f": 1
+      },
+      {
+        "x": 265764,
+        "y": 6301,
+        "u": "entre2poles",
+        "f": 1
+      },
+      {
+        "x": 9120,
+        "y": 223,
+        "u": "nielstravels",
+        "f": 1
+      },
+      {
+        "x": 403,
+        "y": 902,
+        "u": "nl.fomenko",
+        "f": 0
+      },
+      {
+        "x": 8066,
+        "y": 828,
+        "u": "bektai_ch",
+        "f": 0
+      },
+      {
+        "x": 1477365,
+        "y": 7304,
+        "u": "onethebaha",
+        "f": 0
+      },
+      {
+        "x": 16848,
+        "y": 901,
+        "u": "mrv.trzglu",
+        "f": 1
+      },
+      {
+        "x": 28092,
+        "y": 1773,
+        "u": "jaguarstriking",
+        "f": 1
+      },
+      {
+        "x": 47114,
+        "y": 203,
+        "u": "tristans_expeditions",
+        "f": 0
+      },
+      {
+        "x": 37633,
+        "y": 2063,
+        "u": "ab_daniella",
+        "f": null
+      },
+      {
+        "x": 16851,
+        "y": 28774,
+        "u": "ninambakker",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 1059,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 1904,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 10659,
+        "y": 2261,
+        "u": "bykazzakov",
+        "f": 0
+      },
+      {
+        "x": 32796,
+        "y": 141,
+        "u": "elaman__kyrgyz",
+        "f": 1
+      },
+      {
+        "x": 2631,
+        "y": 524,
+        "u": "halmi_road",
+        "f": 1
+      },
+      {
+        "x": 41887,
+        "y": 1068,
+        "u": "reisplaatje",
+        "f": 1
+      },
+      {
+        "x": 111407,
+        "y": 45215,
+        "u": "nadiasultanx",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 10974,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 5287,
+        "y": 37,
+        "u": "hidden.kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 7824,
+        "y": 7423,
+        "u": "pirim_ergeshov",
+        "f": 0
+      },
+      {
+        "x": 1372,
+        "y": 3227,
+        "u": "e__gaido",
+        "f": 1
+      },
+      {
+        "x": 1467,
+        "y": 3,
+        "u": "zanybekamanbekov07",
+        "f": 0
+      },
+      {
+        "x": 569981,
+        "y": 47439,
+        "u": "bugunku.kg",
+        "f": null
+      },
+      {
+        "x": 315988,
+        "y": 2569,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 1085,
+        "y": 14810,
+        "u": "kut_spec_auto_kg",
+        "f": null
+      },
+      {
+        "x": 5925,
+        "y": 2524,
+        "u": "ilgiz.go",
+        "f": 0
+      },
+      {
+        "x": 569981,
+        "y": 43882,
+        "u": "bugunku.kg",
+        "f": null
+      },
+      {
+        "x": 2659,
+        "y": 2109,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 32796,
+        "y": 1436,
+        "u": "elaman__kyrgyz",
+        "f": 1
+      },
+      {
+        "x": 24010,
+        "y": 3,
+        "u": "smchronicles",
+        "f": 1
+      },
+      {
+        "x": 1229,
+        "y": 68,
+        "u": "mashburger",
+        "f": 1
+      },
+      {
+        "x": 9143,
+        "y": 80592,
+        "u": "996_kairat",
+        "f": 0
+      },
+      {
+        "x": 225271,
+        "y": 5276,
+        "u": "jony_traveler",
+        "f": 0
+      },
+      {
+        "x": 2659,
+        "y": 315,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 28818,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 19670,
+        "y": 5229,
+        "u": "twinsalkanovy",
+        "f": 1
+      },
+      {
+        "x": 16327,
+        "y": 1709,
+        "u": "skiimage",
+        "f": 0
+      },
+      {
+        "x": 30152,
+        "y": 1880,
+        "u": "hometrulee",
+        "f": 1
+      },
+      {
+        "x": 82571,
+        "y": 889,
+        "u": "malakai.barclay",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 16838,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 16480,
+        "y": 14280,
+        "u": "line_nverse",
+        "f": 0
+      },
+      {
+        "x": 6122,
+        "y": 1608,
+        "u": "ricoglck",
+        "f": 1
+      },
+      {
+        "x": 375147,
+        "y": 38152,
+        "u": "orolbai_uulu_myktybek",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 7392,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 3135,
+        "y": 3,
+        "u": "toogotrack",
+        "f": 0
+      },
+      {
+        "x": 1444081,
+        "y": 50906,
+        "u": "davidmaluco",
+        "f": null
+      },
+      {
+        "x": 2182,
+        "y": 1205,
+        "u": "marchellweg",
+        "f": 0
+      },
+      {
+        "x": 210943,
+        "y": 61092,
+        "u": "sydyman_junior",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 19065,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 12535,
+        "y": 1528,
+        "u": "jaewoofilm",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 4509,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 3771,
+        "y": 144,
+        "u": "apostolosm",
+        "f": 1
+      },
+      {
+        "x": 766,
+        "y": 3,
+        "u": "dimitrovvaa",
+        "f": 1
+      },
+      {
+        "x": 838,
+        "y": 1500,
+        "u": "makusyaa",
+        "f": 1
+      },
+      {
+        "x": 16848,
+        "y": 424,
+        "u": "mrv.trzglu",
+        "f": 1
+      },
+      {
+        "x": 2658,
+        "y": 358,
+        "u": "drahteshxm",
+        "f": 1
+      },
+      {
+        "x": 6330,
+        "y": 388,
+        "u": "alaaalyahiwi",
+        "f": 1
+      },
+      {
+        "x": 18364,
+        "y": 5844,
+        "u": "aidosov_k",
+        "f": 1
+      },
+      {
+        "x": 9586,
+        "y": 3127,
+        "u": "mobali_store_ozgon",
+        "f": 1
+      },
+      {
+        "x": 13929,
+        "y": 19352,
+        "u": "zholon.usa",
+        "f": 1
+      },
+      {
+        "x": 2272,
+        "y": 6,
+        "u": "saya.shai",
+        "f": 1
+      },
+      {
+        "x": 6989,
+        "y": 1195,
+        "u": "rustam_traveler",
+        "f": 0
+      },
+      {
+        "x": 6499,
+        "y": 3,
+        "u": "offroad_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 154401,
+        "y": 15423,
+        "u": "nomad_kyrgyzstanru",
+        "f": null
+      },
+      {
+        "x": 4887,
+        "y": 2301,
+        "u": "arslan_t_668",
+        "f": 1
+      },
+      {
+        "x": 14306,
+        "y": 30554,
+        "u": "aigul_aicreator",
+        "f": null
+      },
+      {
+        "x": 18047,
+        "y": 2363,
+        "u": "kyrgyzgirl__",
+        "f": 0
+      },
+      {
+        "x": 15425,
+        "y": 333,
+        "u": "walkerlust",
+        "f": 1
+      },
+      {
+        "x": 236385,
+        "y": 19645,
+        "u": "kgsegodnya",
+        "f": null
+      },
+      {
+        "x": 170225,
+        "y": 43464,
+        "u": "gulya_narmatova",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 2506,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 820,
+        "y": 43,
+        "u": "shopok_guesthouse",
+        "f": 0
+      },
+      {
+        "x": 51318,
+        "y": 5961,
+        "u": "lachie.porter",
+        "f": 1
+      },
+      {
+        "x": 4369,
+        "y": 1160,
+        "u": "kyrgyz_holidays",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 19232,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 4400,
+        "y": 57,
+        "u": "barefoot_travelling",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 2631,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 12821,
+        "y": 3,
+        "u": "adylbekov_96",
+        "f": 1
+      },
+      {
+        "x": 4070,
+        "y": 7954,
+        "u": "jackiekgg",
+        "f": 0
+      },
+      {
+        "x": 21035,
+        "y": 22288,
+        "u": "new__kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 29833,
+        "y": 4698,
+        "u": "horseridingkyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 69998,
+        "y": 10068,
+        "u": "roamwithfik",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 55057,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 1511,
+        "y": 23030,
+        "u": "arsen.kubatbekov",
+        "f": 0
+      },
+      {
+        "x": 635334,
+        "y": 64364,
+        "u": "aknur_and_aikol",
+        "f": 0
+      },
+      {
+        "x": 58013,
+        "y": 4361,
+        "u": "beixin",
+        "f": 1
+      },
+      {
+        "x": 16848,
+        "y": 11066,
+        "u": "mrv.trzglu",
+        "f": 1
+      },
+      {
+        "x": 3341,
+        "y": 846,
+        "u": "iraaalmeda",
+        "f": 1
+      },
+      {
+        "x": 114776,
+        "y": 1975,
+        "u": "dju_bb",
+        "f": null
+      },
+      {
+        "x": 569981,
+        "y": 12746,
+        "u": "bugunku.kg",
+        "f": null
+      },
+      {
+        "x": 12460,
+        "y": 88,
+        "u": "_mayu44",
+        "f": null
+      },
+      {
+        "x": 5386,
+        "y": 9655,
+        "u": "jailobekovvv",
+        "f": 1
+      },
+      {
+        "x": 59275,
+        "y": 62473,
+        "u": "sanjarkg_",
+        "f": 0
+      },
+      {
+        "x": 623,
+        "y": 1447,
+        "u": "ivamasha.kyz",
+        "f": 0
+      },
+      {
+        "x": 38037,
+        "y": 12028,
+        "u": "byjenish",
+        "f": 0
+      },
+      {
+        "x": 2620,
+        "y": 849,
+        "u": "samandrachtravel",
+        "f": 1
+      },
+      {
+        "x": 3168,
+        "y": 228,
+        "u": "hey.imsapiia",
+        "f": 1
+      },
+      {
+        "x": 36055,
+        "y": 78957,
+        "u": "kudri.exe",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 15965,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 1602,
+        "y": 8854,
+        "u": "maksad_guide",
+        "f": 0
+      },
+      {
+        "x": 3715,
+        "y": 21100,
+        "u": "tropa_kg",
+        "f": 0
+      },
+      {
+        "x": 29833,
+        "y": 11066,
+        "u": "horseridingkyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 6555,
+        "y": 384,
+        "u": "itzzz_jonas",
+        "f": 1
+      },
+      {
+        "x": 17727,
+        "y": 1210,
+        "u": "lider_nookat",
+        "f": null
+      },
+      {
+        "x": 195367,
+        "y": 3440,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 15243,
+        "y": 732,
+        "u": "esrakayaphoto",
+        "f": 0
+      },
+      {
+        "x": 1143,
+        "y": 4160,
+        "u": "klimenkoasya75",
+        "f": 0
+      },
+      {
+        "x": 9882,
+        "y": 1560,
+        "u": "nurgulzh_00",
+        "f": 0
+      },
+      {
+        "x": 17510,
+        "y": 26192,
+        "u": "tolgonai.19.10.03",
+        "f": 0
+      },
+      {
+        "x": 93929,
+        "y": 21682,
+        "u": "danieltremsky",
+        "f": 1
+      },
+      {
+        "x": 3092,
+        "y": 44753,
+        "u": "aman7983885",
+        "f": null
+      },
+      {
+        "x": 10402,
+        "y": 256,
+        "u": "thrillsandfollies",
+        "f": 1
+      },
+      {
+        "x": 315988,
+        "y": 5296,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 5759,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 9170,
+        "y": 1071,
+        "u": "paivapic",
+        "f": 1
+      },
+      {
+        "x": 749,
+        "y": 4959,
+        "u": "aralash_kgz15",
+        "f": null
+      },
+      {
+        "x": 38922,
+        "y": 17083,
+        "u": "animator.dym.manas",
+        "f": 0
+      },
+      {
+        "x": 283550,
+        "y": 4865,
+        "u": "alexbroggitravels",
+        "f": 1
+      },
+      {
+        "x": 29833,
+        "y": 5210,
+        "u": "horseridingkyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 18735,
+        "y": 66473,
+        "u": "mun.inspek",
+        "f": 0
+      },
+      {
+        "x": 19094,
+        "y": 5092,
+        "u": "amanbaev.drone",
+        "f": null
+      },
+      {
+        "x": 2413,
+        "y": 233,
+        "u": "gavindsafiulin",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 4323,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 260923,
+        "y": 5070,
+        "u": "yarloslavic",
+        "f": 1
+      },
+      {
+        "x": 6122,
+        "y": 1107,
+        "u": "ricoglck",
+        "f": 1
+      },
+      {
+        "x": 2373,
+        "y": 107,
+        "u": "linstravelmoments",
+        "f": 1
+      },
+      {
+        "x": 8606,
+        "y": 135,
+        "u": "khafid_kei",
+        "f": 1
+      },
+      {
+        "x": 154401,
+        "y": 11237,
+        "u": "nomad_kyrgyzstanru",
+        "f": null
+      },
+      {
+        "x": 18676,
+        "y": 1815,
+        "u": "_mariapontillo_",
+        "f": 1
+      },
+      {
+        "x": 19912,
+        "y": 9648,
+        "u": "manas_kortej_delfin_na_zakaz",
+        "f": null
+      },
+      {
+        "x": 6122,
+        "y": 667,
+        "u": "ricoglck",
+        "f": 1
+      },
+      {
+        "x": 59287,
+        "y": 1321,
+        "u": "perspectives.with.andrea",
+        "f": 1
+      },
+      {
+        "x": 2321,
+        "y": 1589,
+        "u": "suluum__",
+        "f": null
+      },
+      {
+        "x": 1696,
+        "y": 190,
+        "u": "vylovestravel",
+        "f": 1
+      },
+      {
+        "x": 636,
+        "y": 14,
+        "u": "sergevancauwenbergh",
+        "f": 1
+      },
+      {
+        "x": 62549,
+        "y": 63824,
+        "u": "ibraim.explorer",
+        "f": 0
+      },
+      {
+        "x": 195367,
+        "y": 8339,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 10639,
+        "y": 9221,
+        "u": "alibek.bishkek",
+        "f": 1
+      },
+      {
+        "x": 12531,
+        "y": 2998,
+        "u": "omurkadyrv",
+        "f": 0
+      },
+      {
+        "x": 31044,
+        "y": 3058,
+        "u": "natadecoco_ee",
+        "f": 1
+      },
+      {
+        "x": 8200,
+        "y": 8898,
+        "u": "alga__kyrgyz",
+        "f": 0
+      },
+      {
+        "x": 38675,
+        "y": 3245,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 1696,
+        "y": 219,
+        "u": "vylovestravel",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 5082,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 62549,
+        "y": 7259,
+        "u": "ibraim.explorer",
+        "f": 0
+      },
+      {
+        "x": 29833,
+        "y": 3604,
+        "u": "horseridingkyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 1357,
+        "y": 1339,
+        "u": "almazbekov.ulik",
+        "f": null
+      },
+      {
+        "x": 43526,
+        "y": 21615,
+        "u": "bahtiyar.shahnazar",
+        "f": 1
+      },
+      {
+        "x": 38675,
+        "y": 5502,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 6085,
+        "y": 265,
+        "u": "velitgazel",
+        "f": 1
+      },
+      {
+        "x": 12531,
+        "y": 2463,
+        "u": "omurkadyrv",
+        "f": 0
+      },
+      {
+        "x": 3339305,
+        "y": 11234,
+        "u": "anjelika_kairatova_original",
+        "f": 0
+      },
+      {
+        "x": 315988,
+        "y": 10561,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 7137,
+        "y": 4557,
+        "u": "pairedtogether",
+        "f": 1
+      },
+      {
+        "x": 4791,
+        "y": 2496,
+        "u": "guesthouse.tolok",
+        "f": null
+      },
+      {
+        "x": 5890,
+        "y": 866,
+        "u": "shahboz_camera",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 7483,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 50476,
+        "y": 1280,
+        "u": "akynbaike",
+        "f": 1
+      },
+      {
+        "x": 38675,
+        "y": 1134,
+        "u": "ivanenkovamasha",
+        "f": 1
+      },
+      {
+        "x": 924345,
+        "y": 45522,
+        "u": "hairidin_22",
+        "f": 1
+      },
+      {
+        "x": 111407,
+        "y": 3157,
+        "u": "nadiasultanx",
+        "f": 1
+      },
+      {
+        "x": 195367,
+        "y": 6068,
+        "u": "gladkov_nikolai",
+        "f": 0
+      },
+      {
+        "x": 2659,
+        "y": 785,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 26162,
+        "y": 1623,
+        "u": "nazik_anarbek",
+        "f": 1
+      },
+      {
+        "x": 151052,
+        "y": 3,
+        "u": "giansvisuals",
+        "f": 1
+      },
+      {
+        "x": 18676,
+        "y": 945,
+        "u": "_mariapontillo_",
+        "f": 1
+      },
+      {
+        "x": 752,
+        "y": 3,
+        "u": "miraidatalasbekova",
+        "f": null
+      },
+      {
+        "x": 32832,
+        "y": 1014,
+        "u": "kanat_sharipbekov",
+        "f": 0
+      },
+      {
+        "x": 26125,
+        "y": 7660,
+        "u": "medet.mp4",
+        "f": 1
+      },
+      {
+        "x": 27761,
+        "y": 320,
+        "u": "jingwensathome",
+        "f": 1
+      },
+      {
+        "x": 1206,
+        "y": 129,
+        "u": "easyisabel",
+        "f": 1
+      },
+      {
+        "x": 40020,
+        "y": 24576,
+        "u": "violahelen_",
+        "f": 1
+      },
+      {
+        "x": 36606,
+        "y": 3,
+        "u": "_olessia_",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 6600,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 241,
+        "y": 19,
+        "u": "ambientraveler",
+        "f": 1
+      },
+      {
+        "x": 2511,
+        "y": 3,
+        "u": "joeheng_",
+        "f": 1
+      },
+      {
+        "x": 38922,
+        "y": 13370,
+        "u": "animator.dym.manas",
+        "f": 0
+      },
+      {
+        "x": 13911,
+        "y": 4848,
+        "u": "kgz_w124",
+        "f": 0
+      },
+      {
+        "x": 19256,
+        "y": 4591,
+        "u": "dair_avto_kitai",
+        "f": null
+      },
+      {
+        "x": 120450,
+        "y": 51651,
+        "u": "adiletazimov",
+        "f": 0
+      },
+      {
+        "x": 16001,
+        "y": 10632,
+        "u": "erzat.bakytbekovich",
+        "f": 1
+      },
+      {
+        "x": 154401,
+        "y": 42437,
+        "u": "nomad_kyrgyzstanru",
+        "f": null
+      },
+      {
+        "x": 3459393,
+        "y": 97092,
+        "u": "abdurahmon_fazilov",
+        "f": 1
+      },
+      {
+        "x": 315988,
+        "y": 3736,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 1233,
+        "y": 3,
+        "u": "my.kurashitabi",
+        "f": 1
+      },
+      {
+        "x": 6872,
+        "y": 3453,
+        "u": "broncowildclub",
+        "f": 1
+      },
+      {
+        "x": 875,
+        "y": 2263,
+        "u": "daler.nurmanbetov",
+        "f": 0
+      },
+      {
+        "x": 623,
+        "y": 13644,
+        "u": "ivamasha.kyz",
+        "f": 0
+      },
+      {
+        "x": 27846,
+        "y": 1169,
+        "u": "quvonch.now",
+        "f": null
+      },
+      {
+        "x": 236385,
+        "y": 38492,
+        "u": "kgsegodnya",
+        "f": null
+      },
+      {
+        "x": 23297,
+        "y": 12561,
+        "u": "aigerim_burambayeva",
+        "f": 1
+      },
+      {
+        "x": 260945,
+        "y": 4893,
+        "u": "juliakursten",
+        "f": 1
+      },
+      {
+        "x": 66716,
+        "y": 21531,
+        "u": "taxch1.oka",
+        "f": null
+      },
+      {
+        "x": 17727,
+        "y": 10330,
+        "u": "lider_nookat",
+        "f": null
+      },
+      {
+        "x": 1915,
+        "y": 241,
+        "u": "centralasianbeauty",
+        "f": 1
+      },
+      {
+        "x": 748,
+        "y": 1029,
+        "u": "arctic_and_astro",
+        "f": null
+      },
+      {
+        "x": 21035,
+        "y": 11,
+        "u": "new__kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 6793,
+        "y": 71087,
+        "u": "argymak.manas",
+        "f": null
+      },
+      {
+        "x": 16851,
+        "y": 1602,
+        "u": "ninambakker",
+        "f": 1
+      },
+      {
+        "x": 58120,
+        "y": 54517,
+        "u": "eldin_balasykg",
+        "f": null
+      },
+      {
+        "x": 81496,
+        "y": 4875,
+        "u": "ainazik_li",
+        "f": 0
+      },
+      {
+        "x": 14729,
+        "y": 139612,
+        "u": "waynare",
+        "f": 1
+      },
+      {
+        "x": 13918,
+        "y": 3509,
+        "u": "de_knees__",
+        "f": 1
+      },
+      {
+        "x": 315988,
+        "y": 8253,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 7053,
+        "y": 59821,
+        "u": "isken.tm",
+        "f": 0
+      },
+      {
+        "x": 43396,
+        "y": 7676,
+        "u": "bxkqmusic",
+        "f": 0
+      },
+      {
+        "x": 57429,
+        "y": 978,
+        "u": "ljsabx",
+        "f": 1
+      },
+      {
+        "x": 66716,
+        "y": 29243,
+        "u": "taxch1.oka",
+        "f": null
+      },
+      {
+        "x": 7616,
+        "y": 1177,
+        "u": "murodzhonkholdarov",
+        "f": null
+      },
+      {
+        "x": 4369,
+        "y": 17560,
+        "u": "kyrgyz_holidays",
+        "f": 0
+      },
+      {
+        "x": 265119,
+        "y": 8225,
+        "u": "tomklockerphoto",
+        "f": 1
+      },
+      {
+        "x": 38948,
+        "y": 194,
+        "u": "kataomed",
+        "f": 1
+      },
+      {
+        "x": 3789,
+        "y": 106,
+        "u": "else.wherekristin",
+        "f": 1
+      },
+      {
+        "x": 81496,
+        "y": 8801,
+        "u": "ainazik_li",
+        "f": 0
+      },
+      {
+        "x": 5287,
+        "y": 17988,
+        "u": "hidden.kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 417575,
+        "y": 3607,
+        "u": "fatmanur",
+        "f": 1
+      },
+      {
+        "x": 57295,
+        "y": 28485,
+        "u": "shulikovlad",
+        "f": 1
+      },
+      {
+        "x": 18470,
+        "y": 1273,
+        "u": "katharinaklr",
+        "f": null
+      },
+      {
+        "x": 30152,
+        "y": 514,
+        "u": "hometrulee",
+        "f": 1
+      },
+      {
+        "x": 2564,
+        "y": 3,
+        "u": "proudpimkhram",
+        "f": 1
+      },
+      {
+        "x": 278944,
+        "y": 20704,
+        "u": "meder_muzik",
+        "f": null
+      },
+      {
+        "x": 315988,
+        "y": 3726,
+        "u": "jordlg",
+        "f": 0
+      },
+      {
+        "x": 120,
+        "y": 109,
+        "u": "bektaitour",
+        "f": 0
+      },
+      {
+        "x": 72956,
+        "y": 17054,
+        "u": "kymyz_travel.group",
+        "f": 0
+      },
+      {
+        "x": 4122,
+        "y": 4688,
+        "u": "gekkula",
+        "f": null
+      },
+      {
+        "x": 10418,
+        "y": 742,
+        "u": "wonderful_nature61",
+        "f": 1
+      },
+      {
+        "x": 7572,
+        "y": 33768,
+        "u": "bishdaily",
+        "f": null
+      },
+      {
+        "x": 420,
+        "y": 21153,
+        "u": "okhabibullaevv",
+        "f": null
+      },
+      {
+        "x": 21035,
+        "y": 26,
+        "u": "new__kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 6599,
+        "y": 42934,
+        "u": "pandabekkg",
+        "f": 0
+      },
+      {
+        "x": 17727,
+        "y": 11560,
+        "u": "lider_nookat",
+        "f": null
+      },
+      {
+        "x": 120702,
+        "y": 388632,
+        "u": "german.verdant",
+        "f": 1
+      },
+      {
+        "x": 3237,
+        "y": 758,
+        "u": "nuraikaaah",
+        "f": 0
+      },
+      {
+        "x": 25696,
+        "y": 15723,
+        "u": "ubaqyt",
+        "f": 0
+      },
+      {
+        "x": 1360,
+        "y": 3,
+        "u": "b.baigazy.k",
+        "f": 0
+      },
+      {
+        "x": 3709,
+        "y": 534,
+        "u": "kadyr_surkeev_",
+        "f": null
+      },
+      {
+        "x": 4070,
+        "y": 2212,
+        "u": "jackiekgg",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 19201,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 19286,
+        "y": 291,
+        "u": "paweljagiello_photography",
+        "f": 1
+      },
+      {
+        "x": 8251,
+        "y": 15075,
+        "u": "tour_guide_kyrgyzstan_",
+        "f": 0
+      },
+      {
+        "x": 920,
+        "y": 102,
+        "u": "alinkossay",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 6231,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 2642,
+        "y": 1021,
+        "u": "_agynov_",
+        "f": 1
+      },
+      {
+        "x": 5089,
+        "y": 219,
+        "u": "kangaroonomads",
+        "f": 0
+      },
+      {
+        "x": 5386,
+        "y": 124801,
+        "u": "jailobekovvv",
+        "f": 1
+      },
+      {
+        "x": 473130,
+        "y": 21224,
+        "u": "currenttimeasia",
+        "f": 1
+      },
+      {
+        "x": 68421,
+        "y": 10336,
+        "u": "_antonhugo",
+        "f": 1
+      },
+      {
+        "x": 5833,
+        "y": 725,
+        "u": "george._.ath",
+        "f": 1
+      },
+      {
+        "x": 548,
+        "y": 173,
+        "u": "theradgerboys",
+        "f": null
+      },
+      {
+        "x": 1741,
+        "y": 56,
+        "u": "myagkaya1984",
+        "f": 1
+      },
+      {
+        "x": 3341,
+        "y": 454,
+        "u": "iraaalmeda",
+        "f": 1
+      },
+      {
+        "x": 664943,
+        "y": 5482,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 35924,
+        "y": 386,
+        "u": "turmush.ru",
+        "f": 0
+      },
+      {
+        "x": 2659,
+        "y": 301,
+        "u": "alisinagraphy",
+        "f": 0
+      },
+      {
+        "x": 3237,
+        "y": 6830,
+        "u": "nuraikaaah",
+        "f": 0
+      },
+      {
+        "x": 10253,
+        "y": 1438,
+        "u": "peruvianomad",
+        "f": 1
+      },
+      {
+        "x": 36606,
+        "y": 1918,
+        "u": "_olessia_",
+        "f": 1
+      },
+      {
+        "x": 7057,
+        "y": 83,
+        "u": "atlas_kg",
+        "f": 0
+      },
+      {
+        "x": 7321,
+        "y": 596,
+        "u": "alysh_zal",
+        "f": 0
+      },
+      {
+        "x": 1126,
+        "y": 3,
+        "u": "jamesdesmond_",
+        "f": 1
+      },
+      {
+        "x": 82571,
+        "y": 1091,
+        "u": "malakai.barclay",
+        "f": 1
+      },
+      {
+        "x": 35153,
+        "y": 80064,
+        "u": "maxcherkasov",
+        "f": 0
+      },
+      {
+        "x": 38948,
+        "y": 167,
+        "u": "kataomed",
+        "f": 1
+      },
+      {
+        "x": 6624,
+        "y": 3,
+        "u": "raisarahmii",
+        "f": 1
+      },
+      {
+        "x": 19286,
+        "y": 342,
+        "u": "paweljagiello_photography",
+        "f": 1
+      },
+      {
+        "x": 30152,
+        "y": 962,
+        "u": "hometrulee",
+        "f": 1
+      },
+      {
+        "x": 281726,
+        "y": 4158,
+        "u": "tynchtykmr",
+        "f": 0
+      },
+      {
+        "x": 43843,
+        "y": 774,
+        "u": "kyrgyzstan.guide",
+        "f": 0
+      },
+      {
+        "x": 6311,
+        "y": 382,
+        "u": "matsudai_04",
+        "f": 1
+      },
+      {
+        "x": 17298,
+        "y": 464,
+        "u": "lumusab",
+        "f": 1
+      },
+      {
+        "x": 5006,
+        "y": 21697,
+        "u": "aziza.131623",
+        "f": null
+      },
+      {
+        "x": 766,
+        "y": 38001,
+        "u": "hey_faidhhh",
+        "f": 1
+      },
+      {
+        "x": 13741,
+        "y": 10985,
+        "u": "alatoovision",
+        "f": 0
+      },
+      {
+        "x": 664943,
+        "y": 7569,
+        "u": "muhtesem_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 26325733,
+        "y": 243643,
+        "u": "abiresag",
+        "f": null
+      },
+      {
+        "x": 8479,
+        "y": 2096,
+        "u": "azatnomad",
+        "f": 0
+      },
+      {
+        "x": 18364,
+        "y": 3030,
+        "u": "aidosov_k",
+        "f": 1
+      },
+      {
+        "x": 5925,
+        "y": 61008,
+        "u": "ilgiz.go",
+        "f": null
+      },
+      {
+        "x": 664943,
+        "y": 531199,
+        "u": "muhtesem_kyrgyzstan",
+        "f": null
+      },
+      {
+        "x": 6127,
+        "y": 7244,
+        "u": "saltanat_alybaeva_",
+        "f": 0
+      },
+      {
+        "x": 7466929,
+        "y": 82242,
+        "u": "yuji_beleza",
+        "f": 1
+      },
+      {
+        "x": 97991,
+        "y": 54132,
+        "u": "akchabar",
+        "f": null
+      },
+      {
+        "x": 49656,
+        "y": 202684,
+        "u": "medinka.tt",
+        "f": 0
+      },
+      {
+        "x": 68421,
+        "y": 180378,
+        "u": "_antonhugo",
+        "f": null
+      },
+      {
+        "x": 391521,
+        "y": 176,
+        "u": "medianews.kg",
+        "f": null
+      },
+      {
+        "x": 1670,
+        "y": 51789,
+        "u": "nurjigit_752",
+        "f": null
+      },
+      {
+        "x": 397561,
+        "y": 4329,
+        "u": "kyrgyzpresident",
+        "f": 0
+      },
+      {
+        "x": 28729,
+        "y": 6231,
+        "u": "lo_ki922",
+        "f": 0
+      },
+      {
+        "x": 6762,
+        "y": 16649,
+        "u": "kyrgyzkainitaly",
+        "f": 1
+      },
+      {
+        "x": 283389,
+        "y": 9194,
+        "u": "architecturehub_",
+        "f": null
+      },
+      {
+        "x": 12804,
+        "y": 12341,
+        "u": "syrga.gold",
+        "f": null
+      },
+      {
+        "x": 281726,
+        "y": 43067,
+        "u": "tynchtykmr",
+        "f": null
+      },
+      {
+        "x": 151088,
+        "y": 58206,
+        "u": "offtrackroza",
+        "f": 1
+      },
+      {
+        "x": 92124,
+        "y": 85857,
+        "u": "dadline.asan3",
+        "f": 0
+      },
+      {
+        "x": 21035,
+        "y": 11773,
+        "u": "new__kyrgyzstan",
+        "f": null
+      },
+      {
+        "x": 154401,
+        "y": 5738,
+        "u": "nomad_kyrgyzstanru",
+        "f": null
+      },
+      {
+        "x": 18031,
+        "y": 9219,
+        "u": "mykty__kyz",
+        "f": null
+      },
+      {
+        "x": 83296,
+        "y": 560,
+        "u": "vestikg",
+        "f": null
+      },
+      {
+        "x": 2128,
+        "y": 25407,
+        "u": "talgat_sadyrbek",
+        "f": null
+      },
+      {
+        "x": 354314,
+        "y": 15078,
+        "u": "gypsyinsneakers",
+        "f": null
+      },
+      {
+        "x": 17587,
+        "y": 9363,
+        "u": "janylmyrza.pro",
+        "f": null
+      },
+      {
+        "x": 11512,
+        "y": 11839,
+        "u": "farohiddin.nazirov",
+        "f": null
+      },
+      {
+        "x": 239926,
+        "y": 3391,
+        "u": "ruslanyouguy",
+        "f": 1
+      },
+      {
+        "x": 2560,
+        "y": 1690,
+        "u": "jumsam13",
+        "f": 0
+      },
+      {
+        "x": 50476,
+        "y": 1867,
+        "u": "akynbaike",
+        "f": null
+      },
+      {
+        "x": 6127,
+        "y": 4705,
+        "u": "saltanat_alybaeva_",
+        "f": 0
+      },
+      {
+        "x": 6089,
+        "y": 28872,
+        "u": "theeong_",
+        "f": null
+      },
+      {
+        "x": 663,
+        "y": 4146,
+        "u": "nazzi__lem",
+        "f": null
+      },
+      {
+        "x": 3886,
+        "y": 55004,
+        "u": "kubat_bektashov",
+        "f": null
+      },
+      {
+        "x": 4150,
+        "y": 1985,
+        "u": "nurbayll",
+        "f": null
+      },
+      {
+        "x": 15125,
+        "y": 48175,
+        "u": "aiamannoy",
+        "f": null
+      },
+      {
+        "x": 58388,
+        "y": 2644,
+        "u": "misuzu_kyrgyzstan",
+        "f": null
+      },
+      {
+        "x": 40123,
+        "y": 26421,
+        "u": "sutjournal",
+        "f": null
+      },
+      {
+        "x": 283550,
+        "y": 370767,
+        "u": "alexbroggitravels",
+        "f": null
+      },
+      {
+        "x": 195367,
+        "y": 7619,
+        "u": "gladkov_nikolai",
+        "f": null
+      },
+      {
+        "x": 753,
+        "y": 91,
+        "u": "kyrgyzstan_trip_tour",
+        "f": 0
+      },
+      {
+        "x": 281726,
+        "y": 167138,
+        "u": "tynchtykmr",
+        "f": null
+      },
+      {
+        "x": 5925,
+        "y": 13986,
+        "u": "ilgiz.go",
+        "f": null
+      },
+      {
+        "x": 705,
+        "y": 943,
+        "u": "tolkunbek.kochmambetov",
+        "f": 0
+      },
+      {
+        "x": 3033,
+        "y": 17582,
+        "u": "tairtabaldiev",
+        "f": 0
+      },
+      {
+        "x": 7418,
+        "y": 1240,
+        "u": "sutalinov",
+        "f": null
+      },
+      {
+        "x": 1893,
+        "y": 3430,
+        "u": "marsel_akimjanov",
+        "f": null
+      },
+      {
+        "x": 10590,
+        "y": 31507,
+        "u": "nomad_games_ethnovillage",
+        "f": null
+      },
+      {
+        "x": 15125,
+        "y": 44394,
+        "u": "aiamannoy",
+        "f": null
+      },
+      {
+        "x": 10659,
+        "y": 18105,
+        "u": "bykazzakov",
+        "f": null
+      },
+      {
+        "x": 281726,
+        "y": 46317,
+        "u": "tynchtykmr",
+        "f": null
+      },
+      {
+        "x": 281726,
+        "y": 13137,
+        "u": "tynchtykmr",
+        "f": null
+      },
+      {
+        "x": 13770,
+        "y": 5098,
+        "u": "thenomads.travel",
+        "f": null
+      },
+      {
+        "x": 16222,
+        "y": 14035,
+        "u": "optimus___soul",
+        "f": null
+      },
+      {
+        "x": 540015,
+        "y": 50821,
+        "u": "okeana___",
+        "f": null
+      },
+      {
+        "x": 421803,
+        "y": 80100,
+        "u": "seymayolda",
+        "f": null
+      },
+      {
+        "x": 38786,
+        "y": 1134,
+        "u": "aiana.ai.kg",
+        "f": null
+      },
+      {
+        "x": 664943,
+        "y": 630479,
+        "u": "muhtesem_kyrgyzstan",
+        "f": null
+      },
+      {
+        "x": 6089,
+        "y": 4080,
+        "u": "theeong_",
+        "f": null
+      },
+      {
+        "x": 62549,
+        "y": 72595,
+        "u": "ibraim.explorer",
+        "f": null
+      },
+      {
+        "x": 129652,
+        "y": 21948,
+        "u": "powderhounds",
+        "f": null
+      },
+      {
+        "x": 11679,
+        "y": 3269,
+        "u": "akb.alsu",
+        "f": 1
+      },
+      {
+        "x": 13770,
+        "y": 64179,
+        "u": "thenomads.travel",
+        "f": null
+      },
+      {
+        "x": 690,
+        "y": 11958,
+        "u": "w.katarzynaa",
+        "f": 1
+      },
+      {
+        "x": 1987,
+        "y": 2117,
+        "u": "riccardowithtwoc",
+        "f": null
+      },
+      {
+        "x": 6834,
+        "y": 45734,
+        "u": "streunerz",
+        "f": null
+      },
+      {
+        "x": 933,
+        "y": 819,
+        "u": "guide_ali_kyrgyzstan",
+        "f": 0
+      },
+      {
+        "x": 283550,
+        "y": 867716,
+        "u": "alexbroggitravels",
+        "f": null
+      },
+      {
+        "x": 61708,
+        "y": 19209,
+        "u": "nathan_halloran",
+        "f": null
+      },
+      {
+        "x": 354314,
+        "y": 610,
+        "u": "gypsyinsneakers",
+        "f": null
+      },
+      {
+        "x": 24025,
+        "y": 2931,
+        "u": "feliz_tpl",
+        "f": null
+      },
+      {
+        "x": 57189,
+        "y": 128728,
+        "u": "_alikov",
+        "f": null
+      },
+      {
+        "x": 2432,
+        "y": 4471,
+        "u": "marie_travelstory",
+        "f": null
+      },
+      {
+        "x": 155961,
+        "y": 3,
+        "u": "grace.andrews",
+        "f": null
+      },
+      {
+        "x": 22474,
+        "y": 121747,
+        "u": "itsshaylajay",
+        "f": null
+      },
+      {
+        "x": 7517,
+        "y": 214,
+        "u": "keepithalalwithmarrium",
+        "f": 1
+      },
+      {
+        "x": 111407,
+        "y": 3,
+        "u": "nadiasultanx",
+        "f": null
+      },
+      {
+        "x": 538,
+        "y": 76,
+        "u": "horse_ride_kyrgyzstan",
+        "f": null
+      },
+      {
+        "x": 18290,
+        "y": 349,
+        "u": "sul6aned",
+        "f": null
+      },
+      {
+        "x": 51318,
+        "y": 19178,
+        "u": "lachie.porter",
+        "f": null
+      },
+      {
+        "x": 11694,
+        "y": 23565,
+        "u": "whereis.christie",
+        "f": 1
+      },
+      {
+        "x": 83284,
+        "y": 241,
+        "u": "phillippfeiffer_",
+        "f": null
+      },
+      {
+        "x": 6542,
+        "y": 5945,
+        "u": "jackhatesyou",
+        "f": 0
+      },
+      {
+        "x": 79,
+        "y": 2020,
+        "u": "camtravels.spam",
+        "f": null
+      },
+      {
+        "x": 74447,
+        "y": 12032,
+        "u": "rashid.braun",
+        "f": null
+      },
+      {
+        "x": 32796,
+        "y": 14295,
+        "u": "elaman__kyrgyz",
+        "f": null
+      },
+      {
+        "x": 5550,
+        "y": 24533,
+        "u": "alinabigudi",
+        "f": null
+      },
+      {
+        "x": 94588,
+        "y": 67969,
+        "u": "allyasyamimi",
+        "f": null
+      },
+      {
+        "x": 799992,
+        "y": 8835,
+        "u": "a1234music",
+        "f": null
+      },
+      {
+        "x": 6981,
+        "y": 164845,
+        "u": "ninoinyourcountry",
+        "f": null
+      },
+      {
+        "x": 918,
+        "y": 117,
+        "u": "stephanietudino",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 1216,
+        "u": "_alikov",
+        "f": null
+      },
+      {
+        "x": 32796,
+        "y": 15635,
+        "u": "elaman__kyrgyz",
+        "f": null
+      },
+      {
+        "x": 11512,
+        "y": 70787,
+        "u": "farohiddin.nazirov",
+        "f": null
+      },
+      {
+        "x": 1161362,
+        "y": 1793,
+        "u": "adamradclifts",
+        "f": null
+      },
+      {
+        "x": 45983,
+        "y": 4916,
+        "u": "paulrabic",
+        "f": null
+      },
+      {
+        "x": 281726,
+        "y": 44864,
+        "u": "tynchtykmr",
+        "f": null
+      },
+      {
+        "x": 7744,
+        "y": 295,
+        "u": "juanicofernandez",
+        "f": null
+      },
+      {
+        "x": 36256,
+        "y": 139929,
+        "u": "sinemexplorer",
+        "f": null
+      },
+      {
+        "x": 13475,
+        "y": 4287,
+        "u": "alisherhan_kg",
+        "f": null
+      },
+      {
+        "x": 354314,
+        "y": 1151,
+        "u": "gypsyinsneakers",
+        "f": null
+      },
+      {
+        "x": 57429,
+        "y": 9010,
+        "u": "ljsabx",
+        "f": null
+      },
+      {
+        "x": 1136,
+        "y": 7887,
+        "u": "wingingitwithjv",
+        "f": null
+      },
+      {
+        "x": 32796,
+        "y": 357,
+        "u": "elaman__kyrgyz",
+        "f": null
+      },
+      {
+        "x": 15772,
+        "y": 3,
+        "u": "anth0nypics",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 10011,
+        "u": "_alikov",
+        "f": null
+      },
+      {
+        "x": 1376,
+        "y": 79898,
+        "u": "burulayy05",
+        "f": null
+      },
+      {
+        "x": 283550,
+        "y": 2248,
+        "u": "alexbroggitravels",
+        "f": null
+      },
+      {
+        "x": 1329,
+        "y": 22537,
+        "u": "kairat_the_wonderer",
+        "f": null
+      },
+      {
+        "x": 63601,
+        "y": 2678,
+        "u": "meder.myrzaev",
+        "f": null
+      },
+      {
+        "x": 1220,
+        "y": 123,
+        "u": "jays.05",
+        "f": 0
+      },
+      {
+        "x": 33446,
+        "y": 798,
+        "u": "tinixadventure",
+        "f": null
+      },
+      {
+        "x": 4313,
+        "y": 11185,
+        "u": "adikxtin",
+        "f": 0
+      },
+      {
+        "x": 33674,
+        "y": 715,
+        "u": "joeltkl",
+        "f": 1
+      },
+      {
+        "x": 15344,
+        "y": 1821,
+        "u": "marat_abdraev",
+        "f": null
+      },
+      {
+        "x": 5690,
+        "y": 4649,
+        "u": "kadyrkulovvaa_",
+        "f": 0
+      },
+      {
+        "x": 914059,
+        "y": 3325,
+        "u": "sayannath",
+        "f": null
+      },
+      {
+        "x": 20528,
+        "y": 177,
+        "u": "maddieandluke_travels",
+        "f": null
+      },
+      {
+        "x": 29242,
+        "y": 7,
+        "u": "maikl_sake",
+        "f": null
+      },
+      {
+        "x": 38675,
+        "y": 3312,
+        "u": "ivanenkovamasha",
+        "f": null
+      },
+      {
+        "x": 38791,
+        "y": 113,
+        "u": "charliesheehann",
+        "f": 1
+      },
+      {
+        "x": 3033,
+        "y": 79807,
+        "u": "tairtabaldiev",
+        "f": 0
+      },
+      {
+        "x": 440,
+        "y": 472,
+        "u": "wiwanders",
+        "f": null
+      },
+      {
+        "x": 33446,
+        "y": 2778,
+        "u": "tinixadventure",
+        "f": null
+      },
+      {
+        "x": 1136,
+        "y": 2324,
+        "u": "wingingitwithjv",
+        "f": null
+      },
+      {
+        "x": 2175,
+        "y": 40931,
+        "u": "samrbright",
+        "f": null
+      },
+      {
+        "x": 18290,
+        "y": 3945,
+        "u": "sul6aned",
+        "f": null
+      },
+      {
+        "x": 12276,
+        "y": 4414,
+        "u": "farahmjb",
+        "f": null
+      },
+      {
+        "x": 7295,
+        "y": 123,
+        "u": "maceraliyorum",
+        "f": null
+      },
+      {
+        "x": 36606,
+        "y": 49599,
+        "u": "_olessia_",
+        "f": null
+      },
+      {
+        "x": 13551,
+        "y": 201,
+        "u": "meryzhu",
+        "f": 0
+      },
+      {
+        "x": 6877,
+        "y": 20830,
+        "u": "a1ievv.n",
+        "f": null
+      },
+      {
+        "x": 36606,
+        "y": 24865,
+        "u": "_olessia_",
+        "f": null
+      },
+      {
+        "x": 83284,
+        "y": 2427,
+        "u": "phillippfeiffer_",
+        "f": null
+      },
+      {
+        "x": 3033,
+        "y": 275,
+        "u": "tairtabaldiev",
+        "f": 0
+      },
+      {
+        "x": 32987,
+        "y": 1441,
+        "u": "kahramanbaki",
+        "f": null
+      },
+      {
+        "x": 678,
+        "y": 840,
+        "u": "myrzabekooovv",
+        "f": 1
+      },
+      {
+        "x": 692,
+        "y": 15180,
+        "u": "1a1ga1",
+        "f": null
+      },
+      {
+        "x": 33079,
+        "y": 97425,
+        "u": "jackstravelling",
+        "f": 1
+      },
+      {
+        "x": 57189,
+        "y": 3238,
+        "u": "_alikov",
+        "f": null
+      },
+      {
+        "x": 24010,
+        "y": 24608,
+        "u": "smchronicles",
+        "f": null
+      },
+      {
+        "x": 32796,
+        "y": 424,
+        "u": "elaman__kyrgyz",
+        "f": null
+      },
+      {
+        "x": 3715,
+        "y": 35289,
+        "u": "tropa_kg",
+        "f": null
+      },
+      {
+        "x": 4070,
+        "y": 14041,
+        "u": "jackiekgg",
+        "f": null
+      },
+      {
+        "x": 29833,
+        "y": 7003,
+        "u": "horseridingkyrgyzstan",
+        "f": null
+      },
+      {
+        "x": 20528,
+        "y": 282,
+        "u": "maddieandluke_travels",
+        "f": null
+      },
+      {
+        "x": 13718,
+        "y": 3,
+        "u": "laiopri",
+        "f": 0
+      },
+      {
+        "x": 36060,
+        "y": 3,
+        "u": "qoorchaq",
+        "f": null
+      },
+      {
+        "x": 3454,
+        "y": 7374,
+        "u": "carlsjourneyx",
+        "f": 1
+      },
+      {
+        "x": 68614,
+        "y": 15227,
+        "u": "rezazianur",
+        "f": null
+      },
+      {
+        "x": 1097,
+        "y": 5562,
+        "u": "kaitlynnolan__",
+        "f": null
+      },
+      {
+        "x": 35355,
+        "y": 788,
+        "u": "diassovvna",
+        "f": null
+      },
+      {
+        "x": 320766,
+        "y": 190551,
+        "u": "calebwielhouwer",
+        "f": 1
+      },
+      {
+        "x": 2349,
+        "y": 404,
+        "u": "nicolas.travel.visuals",
+        "f": 0
+      },
+      {
+        "x": 196236,
+        "y": 8177,
+        "u": "adogoes",
+        "f": 1
+      },
+      {
+        "x": 5993,
+        "y": 82112,
+        "u": "khasankhamdyev",
+        "f": null
+      },
+      {
+        "x": 129050,
+        "y": 3,
+        "u": "dubaiairports",
+        "f": null
+      },
+      {
+        "x": 13770,
+        "y": 2475,
+        "u": "thenomads.travel",
+        "f": null
+      },
+      {
+        "x": 29833,
+        "y": 2749,
+        "u": "horseridingkyrgyzstan",
+        "f": null
+      },
+      {
+        "x": 5332,
+        "y": 3253,
+        "u": "nuradiler",
+        "f": null
+      },
+      {
+        "x": 210,
+        "y": 2813,
+        "u": "theaneesway",
+        "f": null
+      },
+      {
+        "x": 280487,
+        "y": 77579,
+        "u": "upsm_kg",
+        "f": null
+      },
+      {
+        "x": 4975,
+        "y": 633,
+        "u": "aknazar_rysbek_",
+        "f": null
+      },
+      {
+        "x": 83284,
+        "y": 4305,
+        "u": "phillippfeiffer_",
+        "f": null
+      },
+      {
+        "x": 15265,
+        "y": 433,
+        "u": "ukinkyrgyzstan",
+        "f": 1
+      },
+      {
+        "x": 10225,
+        "y": 17432,
+        "u": "nuuurkyz",
+        "f": null
+      },
+      {
+        "x": 6555,
+        "y": 97,
+        "u": "itzzz_jonas",
+        "f": null
+      },
+      {
+        "x": 142464,
+        "y": 4168,
+        "u": "kgznk",
+        "f": null
+      },
+      {
+        "x": 16886,
+        "y": 33221,
+        "u": "anarkulov.chg",
+        "f": null
+      },
+      {
+        "x": 59287,
+        "y": 440,
+        "u": "perspectives.with.andrea",
+        "f": null
+      },
+      {
+        "x": 48755,
+        "y": 7596,
+        "u": "jeromememe",
+        "f": 1
+      },
+      {
+        "x": 19754,
+        "y": 22580,
+        "u": "bektenov_1",
+        "f": null
+      },
+      {
+        "x": 22644,
+        "y": 14325,
+        "u": "staywild.travel",
+        "f": null
+      },
+      {
+        "x": 11625,
+        "y": 97117,
+        "u": "fredkales",
+        "f": null
+      },
+      {
+        "x": 72377,
+        "y": 1500,
+        "u": "rozarysbek",
+        "f": null
+      },
+      {
+        "x": 52940,
+        "y": 6170,
+        "u": "muazzam_khamzaeva",
+        "f": null
+      },
+      {
+        "x": 56117,
+        "y": 573,
+        "u": "gudo4ek_travel",
+        "f": null
+      },
+      {
+        "x": 18031,
+        "y": 386,
+        "u": "mykty__kyz",
+        "f": null
+      },
+      {
+        "x": 10232,
+        "y": 3,
+        "u": "theultimatetravelcompany",
+        "f": null
+      },
+      {
+        "x": 21690,
+        "y": 2663,
+        "u": "zaferdincher",
+        "f": null
+      }
+    ],
+    "top": [
+      {
+        "u": "a1liewaas",
+        "l": 95413,
+        "fol": 383,
+        "mult": 249
+      },
+      {
+        "u": "bu_rhan5020",
+        "l": 76962,
+        "fol": 491,
+        "mult": 157
+      },
+      {
+        "u": "lumusab",
+        "l": 1955645,
+        "fol": 17298,
+        "mult": 113
+      },
+      {
+        "u": "travellerbaha",
+        "l": 385326,
+        "fol": 4636,
+        "mult": 83
+      },
+      {
+        "u": "raz1ma",
+        "l": 328781,
+        "fol": 4643,
+        "mult": 71
+      },
+      {
+        "u": "dennis.kotlyarov",
+        "l": 305166,
+        "fol": 4792,
+        "mult": 64
+      }
+    ]
+  },
+  "superfans": {
+    "top": [
+      {
+        "u": "tynchtykmr",
+        "posts": 61,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 281726
+      },
+      {
+        "u": "attokurovnm",
+        "posts": 40,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": null
+      },
+      {
+        "u": "muhtesem_kyrgyzstan",
+        "posts": 36,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 664943
+      },
+      {
+        "u": "gladkov_nikolai",
+        "posts": 31,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 195367
+      },
+      {
+        "u": "byjenish",
+        "posts": 27,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 38037
+      },
+      {
+        "u": "bykazzakov",
+        "posts": 22,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 10659
+      },
+      {
+        "u": "_alikov",
+        "posts": 21,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 57189
+      },
+      {
+        "u": "jordlg",
+        "posts": 21,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 315988
+      },
+      {
+        "u": "juliakursten",
+        "posts": 17,
+        "country": "Belgium",
+        "foreign": 1,
+        "followers": 260945
+      },
+      {
+        "u": "catchagypsea",
+        "posts": 13,
+        "country": null,
+        "foreign": 1,
+        "followers": null
+      },
+      {
+        "u": "alisinagraphy",
+        "posts": 13,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 2659
+      },
+      {
+        "u": "simonnikolaus_",
+        "posts": 13,
+        "country": null,
+        "foreign": 1,
+        "followers": null
+      },
+      {
+        "u": "gorod24_bishkek",
+        "posts": 12,
+        "country": null,
+        "foreign": null,
+        "followers": null
+      },
+      {
+        "u": "amanbaev.drone",
+        "posts": 12,
+        "country": null,
+        "foreign": null,
+        "followers": 19094
+      },
+      {
+        "u": "elaman__kyrgyz",
+        "posts": 10,
+        "country": "Turkey",
+        "foreign": 1,
+        "followers": 32796
+      },
+      {
+        "u": "alexbroggitravels",
+        "posts": 10,
+        "country": null,
+        "foreign": 1,
+        "followers": 283550
+      },
+      {
+        "u": "ivanenkovamasha",
+        "posts": 10,
+        "country": "Belgium",
+        "foreign": 1,
+        "followers": 38675
+      },
+      {
+        "u": "salma.masrour",
+        "posts": 10,
+        "country": null,
+        "foreign": 1,
+        "followers": null
+      },
+      {
+        "u": "gyun_s",
+        "posts": 10,
+        "country": null,
+        "foreign": 1,
+        "followers": null
+      },
+      {
+        "u": "kyrgyzest.tours",
+        "posts": 9,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": null
+      },
+      {
+        "u": "natadecoco_ee",
+        "posts": 8,
+        "country": "Kazakhstan",
+        "foreign": 1,
+        "followers": 31044
+      },
+      {
+        "u": "ibraim.explorer",
+        "posts": 8,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 62549
+      },
+      {
+        "u": "jony_traveler",
+        "posts": 8,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 225271
+      },
+      {
+        "u": "horseridingkyrgyzstan",
+        "posts": 8,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 29833
+      },
+      {
+        "u": "farohiddin.nazirov",
+        "posts": 8,
+        "country": "Uzbekistan",
+        "foreign": 1,
+        "followers": 11512
+      },
+      {
+        "u": "nomads__paradise",
+        "posts": 8,
+        "country": "Kazakhstan",
+        "foreign": 1,
+        "followers": null
+      },
+      {
+        "u": "paige_tingey",
+        "posts": 7,
+        "country": null,
+        "foreign": 1,
+        "followers": null
+      },
+      {
+        "u": "azimto",
+        "posts": 7,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": null
+      },
+      {
+        "u": "kgznk",
+        "posts": 7,
+        "country": "Kyrgyzstan",
+        "foreign": 0,
+        "followers": 142464
+      },
+      {
+        "u": "wingingitwithjv",
+        "posts": 7,
+        "country": "India",
+        "foreign": 1,
+        "followers": 1136
+      }
+    ],
+    "dist": [
+      {
+        "k": "1",
+        "v": 878
+      },
+      {
+        "k": "2",
+        "v": 159
+      },
+      {
+        "k": "3-5",
+        "v": 92
+      },
+      {
+        "k": "6-10",
+        "v": 36
+      },
+      {
+        "k": "11+",
+        "v": 14
+      }
+    ],
+    "once_pct": 74
+  }
+}

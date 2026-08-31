@@ -1,0 +1,84 @@
+---
+import type { ViralityRow } from "../../lib/data-story";
+
+interface Props {
+  rows: ViralityRow[];
+}
+
+const { rows } = Astro.props;
+---
+
+<div class="ladder">
+  {
+    rows.map((r) => (
+      <div class="lrow">
+        <div class="lu">
+          <a class="ig" href={r.href} target="_blank" rel="noopener">
+            @{r.username}
+          </a>
+        </div>
+        <div class="track">
+          <div class="fill" style={`width:${r.widthPct}%`} />
+        </div>
+        <div class="lmeta">
+          {r.ratio} <b>×{r.mult}</b>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .ladder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .lrow {
+    display: grid;
+    grid-template-columns: 150px 1fr auto;
+    gap: 12px;
+    align-items: center;
+  }
+  .lu {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--ink-2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .track {
+    position: relative;
+    height: 12px;
+    background: var(--data-track);
+    border-radius: 0 4px 4px 0;
+  }
+  .fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 4px 4px 0;
+    background: var(--accent);
+  }
+  .lmeta {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .lmeta b {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .ig {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+  }
+  .ig:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+</style>

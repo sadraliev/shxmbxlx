@@ -1,0 +1,78 @@
+---
+interface Props {
+  bars: { foreignH: number; restH: number; tip: string }[];
+  axis: { label: string; span: number }[];
+  height?: number;
+  gap?: number;
+}
+
+const { bars, axis, height = 220, gap = 6 } = Astro.props;
+---
+
+<div class="tl">
+  <div class="tlbars" style={`height:${height}px;gap:${gap}px`}>
+    {
+      bars.map((b) => (
+        <div class="tlcol" data-tip={b.tip}>
+          <div class="seg rest top" style={`height:${b.restH}%`} />
+          <div class="seg foreign" style={`height:${b.foreignH}%`} />
+        </div>
+      ))
+    }
+  </div>
+  <div class="tlaxis" style={`gap:${gap}px`}>
+    {axis.map((a) => <span style={`flex:${a.span}`}>{a.label}</span>)}
+  </div>
+</div>
+
+<style>
+  .tl {
+    margin-top: 8px;
+  }
+  .tlbars {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 10px;
+  }
+  .tlcol {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    height: 100%;
+    position: relative;
+    min-width: 0;
+  }
+  .seg {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+  }
+  .seg.rest {
+    background: var(--data);
+    opacity: 0.34;
+  }
+  .seg.foreign {
+    background: var(--accent);
+    border-radius: 0;
+  }
+  .seg.top {
+    border-radius: 3px 3px 0 0;
+  }
+  .tlcol:hover .seg.rest {
+    opacity: 0.5;
+  }
+  .tlaxis {
+    display: flex;
+    margin-top: 9px;
+  }
+  .tlaxis span {
+    flex: 1;
+    text-align: center;
+    font-size: 10px;
+    color: var(--muted);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+</style>
